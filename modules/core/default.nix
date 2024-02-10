@@ -12,7 +12,7 @@
   lib = nixpkgs.lib;
 in {
   nathannix = lib.nixosSystem {
-    specialArgs = {inherit self inputs username flake_path;};
+    specialArgs = {inherit self inputs username;};
     modules =
       [(import ./bootloader.nix)]
       ++ [(import ./hardware.nix)]
