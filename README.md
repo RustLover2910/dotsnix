@@ -1,2 +1,1 @@
-# dotsnix
-My Personal Nix Rig
+My Personal Rig
