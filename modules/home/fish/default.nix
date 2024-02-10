@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{ pkgs
+, username
+, flake_path
+, ...
+}: {
   programs.fish = {
     enable = true;
     shellInit = "scheme set catppuccin";
