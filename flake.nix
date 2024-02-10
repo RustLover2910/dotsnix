@@ -43,11 +43,12 @@
   outputs = { nixpkgs, self, ... } @ inputs:
     let
       username = "nathannix";
+      flake_path = "/home/${username}/dotsnix";
     in
     {
       #overlays.default = selfPkgs.overlay;
       nixosConfigurations = import ./modules/core/default.nix {
-        inherit self nixpkgs inputs username;
+        inherit self nixpkgs inputs username flake_path;
       };
     };
 }

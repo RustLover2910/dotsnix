@@ -1,4 +1,4 @@
-{ inputs, username, ... }: {
+{ inputs, username, flake_path, ... }: {
   imports =
     # [(import ./waybar)]
     # ++ [(import ./firefox)]
