@@ -1,15 +1,12 @@
-{ inputs, pkgs, ... }:
 {
-  home.packages = (with pkgs; [
-    #aichat # Chat with gpt-3.5/chatgpt in terminal.
-    #bitwise # cli tool for bit / hex manipulation
-    # discord
+  inputs,
+  pkgs,
+  ...
+}: {
+  home.packages = with pkgs; [
     eza # ls replacement
-    # entr # perform action when file change
-    #file # Show file information 
     fzf # fuzzy finder
     go
-    #jdk17 # java
     openjdk17-bootstrap
     filelight
     lazygit
@@ -23,7 +20,6 @@
     ripgrep # grep replacement
     todo # cli todo list
     toipe # typing test in the terminal
-    #cinnamon.nemo-with-extensions # file manager
     yazi # terminal file manager
     yt-dlp
     #gnome.zenity
@@ -49,6 +45,9 @@
     spicetify-cli
     hyprpicker
     kate
+    cliphist
+    wl-clipboard
+    obs-studio
     vscodium
     fishPlugins.autopair
     fishPlugins.colored-man-pages
@@ -69,5 +68,5 @@
     xdg-utils
     inputs.alejandra.defaultPackage.${system}
     inputs.RustLover.packages.${system}.default
-  ]);
+  ];
 }
