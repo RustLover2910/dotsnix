@@ -1,7 +1,8 @@
-{ pkgs
-, username
-, flake_path
-, ...
+{
+  pkgs,
+  username,
+  flake_path,
+  ...
 }: {
   programs.fish = {
     enable = true;
@@ -10,6 +11,7 @@
       nix-sw = "sudo nixos-rebuild switch --flake ${flake_path}#${username}";
       nix-up = "sudo nixos-rebuild switch --upgrade --flake ${flake_path}#${username}";
       nix-fup = "sudo nix flake update ${flake_path}#";
+      cdnix = "cd ~/dotsnix && codium ~/dotsnix";
     };
   };
   programs.zoxide = {
