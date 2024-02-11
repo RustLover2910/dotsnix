@@ -1,4 +1,4 @@
-{ inputs, username, flake_path, ... }: {
+{ inputs, username, ... }: {
   imports =
     # [(import ./waybar)]
     # ++ [(import ./firefox)]
@@ -23,6 +23,6 @@
     ++ [ (import ./mako) ]            # notification deamon
     #++ [ (import ./scripts) ]         # personal scripts
     # ++ [ (import ./starship) ]
-    #++ [ (import ./nvim) ]
+    ++ [ (import ./qt) ]
     ++ [ (import ./package) ];
 }
