@@ -19,11 +19,22 @@
   };
 
   environment = {
-    sessionVariables.NIXOS_OZONE_WL = "1";
+    sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+      GDK_BACKEND = "wayland";
+      GTK_USE_PORTAL = "1";
+      QT_QPA_PLATFORMTHEME = "qt5ct";
+      QT_QPA_PLATFORM = "wayland";
+    };
     variables.EDITOR = "nvim";
     systemPackages = with pkgs; [
       wget
       curl
+      libsForQt5.qtstyleplugin-kvantum
+      libsForQt5.lightly
+      qt6Packages.qt6ct
+      qt6.qtwayland
+      qt5.qtwayland
       git
     ];
   };
