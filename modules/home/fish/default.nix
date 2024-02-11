@@ -12,7 +12,7 @@
       cl = "clear";
       re = "fish";
       del = "sudo nix-collect-garbage -d ";
-      l = "eza --icons  -a --group-directories-first -1"; #EZA_ICON_SPACING=2
+      l = "eza --icons  -a -T --group-directories-first -1"; #EZA_ICON_SPACING=2
       ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
       cdnix = "cd ~/dotsnix && codium ~/dotsnix";
     };
