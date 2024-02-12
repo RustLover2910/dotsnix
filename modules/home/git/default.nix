@@ -1,16 +1,15 @@
-{ pkgs, ... }: 
-{
+{pkgs, ...}: {
   programs.git = {
     enable = true;
-    
-    userName = "Frost-Phoenix";
-    userEmail = "67cyril6767@gmail.com";
-    
-    extraConfig = { 
+
+    userName = "RustLover2910";
+    userEmail = "abyssalyrics2910@gmail.com";
+
+    extraConfig = {
       init.defaultBranch = "main";
-      credential.helper = "store";
+      #credential.helper = "store";
     };
   };
 
-  home.packages = [ pkgs.gh ];
+  home.packages = [pkgs.gh];
 }
