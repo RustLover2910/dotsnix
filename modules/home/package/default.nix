@@ -26,16 +26,15 @@
     toipe # typing test in the terminal
     yazi # terminal file manager
     yt-dlp
-    #gnome.zenity
 
     # C / C++
     gcc
     grc
     gnumake
 
-    # bleachbit # cache cleaner
+    bleachbit # cache cleaner
     cmatrix
-    qbittorrent-qt5
+    qbittorrent-qt5 #torrent
     gparted # partition manager
     ffmpeg
     swaylock-effects
