@@ -21,26 +21,25 @@
   environment = {
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
-      GDK_BACKEND = "wayland";
-      GTK_USE_PORTAL = "1";
+      # GDK_BACKEND = "wayland";
+      #GTK_USE_PORTAL = "1";
       QT_QPA_PLATFORMTHEME = "qt5ct";
-      QT_QPA_PLATFORM = "wayland";
+      # QT_QPA_PLATFORM = "wayland";
     };
     variables.EDITOR = "nvim";
     systemPackages = with pkgs; [
       wget
-      curl
       libsForQt5.qtstyleplugin-kvantum
-      libsForQt5.lightly
+      libsForQt5.qt5ct
       qt6Packages.qt6ct
-      qt6.qtwayland
-      qt5.qtwayland
+      curl
       git
     ];
   };
 
   fonts.fontDir.enable = true;
   fonts.packages = with pkgs; [
+    noto-fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" "MartianMono" "FiraCode" "DroidSansMono" ]; })
   ];
 

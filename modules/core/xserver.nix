@@ -7,9 +7,9 @@
       variant = "";
     };
     displayManager = {
-      sddm.enable = true;
+      gdm.enable = true;
     };
-    desktopManager.plasma5.enable = true;
+    desktopManager.gnome.enable = true;
   };
   # To prevent getting stuck at shutdown
   systemd.extraConfig = "DefaultTimeoutStopSec=10s";

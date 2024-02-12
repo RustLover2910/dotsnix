@@ -1,7 +1,6 @@
-{
-  inputs,
-  pkgs,
-  ...
+{ inputs
+, pkgs
+, ...
 }: {
   home.packages = with pkgs; [
     eza # ls replacement
@@ -9,8 +8,12 @@
     go
     openjdk17-bootstrap
     filelight
+    wl-screenrec
+    wf-recorder
     lazygit
     github-desktop
+    gnome.gnome-tweaks
+    openvpn
     libreoffice
     nitch # systhem fetch util
     du-dust
@@ -37,6 +40,7 @@
     swaylock-effects
 
     vlc
+    cinnamon.nemo-with-extensions
     floorp
     kitty
     okular

@@ -1,14 +1,6 @@
 { pkgs, ... }:
 {
-  fonts.fontconfig.enable = true;
   home.packages = [
-    (pkgs.nerdfonts.override {
-      fonts = [
-        "JetBrainsMono"
-        "MartianMono"
-        "FiraCode"
-      ];
-    })
     #pkgs.twemoji-color-font
     pkgs.noto-fonts-emoji
   ];
