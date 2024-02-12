@@ -7,7 +7,7 @@
 
     font = {
       name = "MartianMono Nerd Fontt";
-      size = 13;
+      size = 14;
     };
 
     settings = {

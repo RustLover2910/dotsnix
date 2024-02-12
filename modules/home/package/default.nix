@@ -1,7 +1,6 @@
-{
-  inputs,
-  pkgs,
-  ...
+{ inputs
+, pkgs
+, ...
 }: {
   home.packages = with pkgs; [
     eza # ls replacement
@@ -53,8 +52,6 @@
     wl-clipboard
     obs-studio
     vscodium
-    fishPlugins.autopair
-    fishPlugins.colored-man-pages
     man-pages # extra man pages
     mpv # video player
     ncdu # disk space
