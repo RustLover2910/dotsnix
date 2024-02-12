@@ -27,9 +27,9 @@
       # nix-fup = "sudo nix flake update /home/${username}/dotsnix#";
       del = "sudo nix-collect-garbage -d ";
     };
-    programs.zoxide = {
-      enable = true;
-      enableFishIntegration = true;
-    };
+  };
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
   };
 }
