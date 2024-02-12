@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   home.packages = [
     #pkgs.twemoji-color-font
     pkgs.noto-fonts-emoji
@@ -13,17 +12,14 @@
     };
     iconTheme = {
       name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "frappe";
-        accent = "blue";
-      };
+      package = pkgs.tela-icon-theme;
     };
     theme = {
       name = "Catppuccin-Frappe-Standard-Blue-Dark";
       package = pkgs.catppuccin-gtk.override {
-        accents = [ "blue" ];
+        accents = ["blue"];
         size = "standard";
-        tweaks = [ "rimless" ];
+        tweaks = ["rimless"];
         variant = "frappe";
       };
     };
