@@ -23,7 +23,8 @@
       nnix = "z ~/dotsnix && nvim ~/dotsnix ";
     };
     shellAbbrs = {
-      c = "z ";
+      c = "z";
+      gitsh = "ssh -vT git@github.com";
       nix-ts = "sudo nixos-rebuild test --flake /home/${username}/dotsnix#nathannix";
       nix-sw = "sudo nixos-rebuild switch --flake /home/${username}/dotsnix#nathannix";
       nix-up = "sudo nix flake update /home/${username}/dotsnix# && sudo nixos-rebuild switch --upgrade --flake /home/${username}/dotsnix#nathannix";
