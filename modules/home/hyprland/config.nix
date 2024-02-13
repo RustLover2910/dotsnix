@@ -1,15 +1,15 @@
 { ... }:
-let
-  color = (import ../../variables/colors.nix);
-  window_manager = (import ../../variables/window_manager.nix);
-in
+#let
+# color = (import ../../variables/colors.nix);
+# window_manager = (import ../../variables/window_manager.nix);
+#in
 {
   wayland.windowManager.hyprland = {
     extraConfig = "
       $mainMod = SUPER
 
       monitor=,preferred,auto,auto
-      monitor=,1920x1200,auto,auto
+      monitor=,1920x1200,auto,1.0
 
       # autostart
       exec-once = systemctl --user import-environment &
@@ -17,9 +17,9 @@ in
       exec-once = dbus-update-activation-environment --systemd &
       exec-once = nm-applet &
       exec-once = wl-paste --primary --watch wl-copy --primary --clear
-      exec-once = swaybg -m fill -i $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) &
-      exec-once = sleep 1 && swaylock
-      exec-once = hyprctl setcursor Nordzy-cursors 22 &
+      #exec-once = swaybg -m fill -i $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) &
+      #exec-once = sleep 1 && swaylock
+      exec-once = hyprctl setcursor Nordzy-cursors 24 &
       exec-once = waybar &
       exec-once = mako &
 
@@ -31,10 +31,10 @@ in
       }
 
       misc {
-        disable_autoreload = true
+       # disable_autoreload = true
         disable_hyprland_logo = true
-        always_follow_on_dnd = true
-        layers_hog_keyboard_focus = true
+        #always_follow_on_dnd = true
+        #layers_hog_keyboard_focus = true
         animate_manual_resizes = false
         enable_swallow = true
         # swallow_regex =
@@ -137,23 +137,23 @@ in
 
       # keybindings
       bind = $mainMod, Return, exec, kitty
-      bind = ALT, Return, exec, kitty --title float_kitty
-      bind = $mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'
+      bind = $mainMod, T, exec, kitty --title float_kitty
+      bind = $mainMod SHIFT, T, exec, kitty
       bind = $mainMod, B, exec, firefox
-      bind = $mainMod, Q, killactive,
+      bind = $mainMod, C, killactive,
       bind = $mainMod, F, fullscreen, 0
       bind = $mainMod SHIFT, F, fullscreen, 1
       bind = $mainMod, Space, togglefloating,
       bind = $mainMod, D, exec, pkill wofi || wofi --show drun
-      bind = $mainMod, Escape, exec, swaylock
-      bind = $mainMod SHIFT, Escape, exec, shutdown-script
+     # bind = $mainMod, Escape, exec, swaylock
+     # bind = $mainMod SHIFT, Escape, exec, shutdown-script
       bind = $mainMod, P, pseudo,
       bind = $mainMod, J, togglesplit,
       bind = $mainMod, E, exec, nemo
-      bind = $mainMod SHIFT, B, exec, pkill -SIGUSR1 .waybar-wrapped
-      bind = $mainMod, C ,exec, hyprpicker -a
-      bind = $mainMod, G,exec, $HOME/.local/bin/toggle_layout
-      bind = $mainMod, W,exec, pkill wofi || wallpaper-picker
+     # bind = $mainMod SHIFT, B, exec, pkill -SIGUSR1 .waybar-wrapped
+      bind = $mainMod, Z,exec, hyprpicker -a
+     # bind = $mainMod, G,exec, $HOME/.local/bin/toggle_layout
+     # bind = $mainMod, W,exec, pkill wofi || wallpaper-picker
       
       # screenshot
       bind = $mainMod, Print, exec, grimblast --notify --cursor save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png
@@ -188,7 +188,7 @@ in
       bind = $mainMod SHIFT, 8, movetoworkspace, 8
       bind = $mainMod SHIFT, 9, movetoworkspace, 9
       bind = $mainMod SHIFT, 0, movetoworkspace, 10
-      bind = $mainMod CTRL, c, movetoworkspace, empty
+     # bind = $mainMod CTRL, c, movetoworkspace, empty
       
       # window control
       bind = $mainMod SHIFT, left, movewindow, l
@@ -205,9 +205,9 @@ in
       bind = $mainMod ALT, down, moveactive, 0 80
       
       # media and volume controls
-      bind = ,XF86AudioRaiseVolume,exec, pamixer -i 2
-      bind = ,XF86AudioLowerVolume,exec, pamixer -d 2
-      bind = ,XF86AudioMute,exec, pamixer -t
+      #bind = ,XF86AudioRaiseVolume,exec, pamixer -i 2
+     # bind = ,XF86AudioLowerVolume,exec, pamixer -d 2
+     # bind = ,XF86AudioMute,exec, pamixer -t
       bind = ,XF86AudioPlay,exec, playerctl play-pause
       bind = ,XF86AudioNext,exec, playerctl next
       bind = ,XF86AudioPrev,exec, playerctl previous
@@ -220,15 +220,15 @@ in
       bindm = $mainMod, mouse:273, resizewindow
       
       # windowrule
-      windowrule = float,audacious
-      windowrule = workspace 8 silent, audacious
+     # windowrule = float,audacious
+     # windowrule = workspace 8 silent, audacious
       windowrule = pin,wofi
       windowrule = float,wofi
       windowrule = noborder,wofi
       windowrule = tile, neovide
       windowrule = idleinhibit focus,mpv
       windowrule = float,udiskie
-      windowrule = float,title:^(Transmission)$
+     # windowrule = float,title:^(Transmission)$
       windowrule = float,title:^(Volume Control)$
       windowrule = float,title:^(Firefox — Sharing Indicator)$
       windowrule = move 0 0,title:^(Firefox — Sharing Indicator)$
