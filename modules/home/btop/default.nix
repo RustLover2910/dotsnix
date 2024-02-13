@@ -5,7 +5,7 @@
     settings = {
       color_theme = "catppuccin";
       theme_background = false;
-      update_ms = 500;
+      update_ms = 400;
     };
   };
   home.packages = with pkgs; [nvtop-intel];
