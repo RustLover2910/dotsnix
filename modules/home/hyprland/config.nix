@@ -9,7 +9,7 @@
       $mainMod = SUPER
 
       monitor=,preferred,auto,auto
-      monitor=,1920x1200,auto,1.0
+      monitor=,1920x1080,auto,1.0
 
       # autostart
       exec-once = systemctl --user import-environment &
@@ -20,7 +20,7 @@
       #exec-once = swaybg -m fill -i $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) &
       #exec-once = sleep 1 && swaylock
       exec-once = hyprctl setcursor Nordzy-cursors 24 &
-      exec-once = waybar &
+      #exec-once = waybar &
       exec-once = mako &
 
       input {
