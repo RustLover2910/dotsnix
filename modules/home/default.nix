@@ -9,7 +9,9 @@
     ++ [(import ./kitty)]
     ++ [(import ./wofi)]
     ++ [(import ./fish)]
+    ++ [(import ./cava)]
     ++ [(import ./gtk)]
+    ++ [(import ./starship)]
     ++ [(import ./qt)]
     ++ [(import ./mako)] # notification deamon
     ++ [(import ./git)]
