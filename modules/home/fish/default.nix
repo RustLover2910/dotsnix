@@ -14,13 +14,13 @@
     enable = true;
     shellInit = " set -U fish_greeting"; #  && scheme set catppuccin ";
     shellAliases = {
-      cd = "z";
+      #cd = "z";
       cl = "clear ";
       re = "fish ";
       l = " eza  --icons -a -T --group-directories-first -1 "; #EZA_ICON_SPACING=2
       ll = " eza --icons -a --group-directories-first -1 --no-user --long ";
       cdnix = "z ~/dotsnix && codium ~/dotsnix ";
-      nvnix = "z ~/dotsnix && nvim ~/dotsnix ";
+      nnix = "z ~/dotsnix && nvim ~/dotsnix ";
     };
     shellAbbrs = {
       nix-ts = "sudo nixos-rebuild test --flake /home/${username}/dotsnix#nathannix";
