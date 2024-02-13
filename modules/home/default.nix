@@ -8,7 +8,7 @@
     ++ [ (import ./kitty) ]
     ++ [ (import ./wofi) ]
     ++ [ (import ./fish) ]
-    ++ [ (import ./hyprland) ]
+    # ++ [ (import ./hyprland) ]
     ++ [ (import ./cava) ]
     ++ [ (import ./gtk) ]
     ++ [ (import ./starship) ]

@@ -6,7 +6,7 @@
     theme = "Catppuccin-Frappe";
 
     font = {
-      name = "MartianMono Nerd Fontt";
+      name = "MartianMono Nerd Font";
       size = 14;
     };
 
