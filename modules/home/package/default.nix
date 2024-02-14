@@ -12,6 +12,8 @@
     wf-recorder
     lazygit
     github-desktop
+    font-manager
+    #fontforge
     gnome.gnome-tweaks
     openvpn
     libreoffice

@@ -1,7 +1,6 @@
-{
-  lib,
-  inputs,
-  ...
+{ lib
+, inputs
+, ...
 }: {
   programs.starship = {
     enable = true;
@@ -32,8 +31,8 @@
         };
 
         directory.substitutions = {
-          "~" = "󰋞";
-          "Documents" = " ";
+          "~" = "󰋞 ";
+          "Documents" = "󰈙 ";
           "Downloads" = " ";
           "Music" = " ";
           "Pictures" = " ";
