@@ -15,6 +15,9 @@
     shellInit = " set -U fish_greeting"; #  && scheme set catppuccin ";
     shellAliases = {
       #cd = "z";
+      gg = "lazygit";
+      cwp = "warp-cli connect";
+      dwp = "warp-cli disconnect";
       cl = "clear ";
       re = "fish ";
       l = " eza  --icons -a -T --group-directories-first -1 "; #EZA_ICON_SPACING=2
@@ -27,6 +30,8 @@
       ee = "yazi";
       gitsh = "ssh -vT git@github.com";
       npkg = "nvim /home/${username}/dotsnix/modules/home/package/default.nix";
+      nhm = "nvim /home/${username}/dotsnix/modules/home/";
+      nco = "nvim /home/${username}/dotsnix/modules/core/";
       nix-ts = "sudo nixos-rebuild test --flake /home/${username}/dotsnix#nathannix";
       nix-sw = "sudo nixos-rebuild switch --flake /home/${username}/dotsnix#nathannix";
       nix-up = "sudo nix flake update /home/${username}/dotsnix# && sudo nixos-rebuild switch --upgrade --flake /home/${username}/dotsnix#nathannix";
