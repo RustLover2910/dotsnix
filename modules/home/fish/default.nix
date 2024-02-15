@@ -28,7 +28,7 @@
     shellAbbrs = {
       e = "z";
       ee = "yazi";
-      gitsh = "ssh -vT git@github.com";
+      gitsh = "ssh -T git@github.com";
       npkg = "nvim /home/${username}/dotsnix/modules/home/package/default.nix";
       nhm = "nvim /home/${username}/dotsnix/modules/home/";
       nco = "nvim /home/${username}/dotsnix/modules/core/";
