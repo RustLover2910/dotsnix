@@ -1,15 +1,15 @@
-{ inputs, pkgs, ...}: 
+{ inputs, pkgs, ... }:
 {
   home.packages = with pkgs; [
     # swww
-    swaybg
+    #swaybg
     inputs.hypr-contrib.packages.${pkgs.system}.grimblast
     hyprpicker
     wofi
     grim
     slurp
     wl-clipboard
-    # cliphist
+    cliphist
     wf-recorder
     glib
     wayland

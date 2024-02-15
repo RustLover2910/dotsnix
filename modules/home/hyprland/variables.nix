@@ -23,6 +23,6 @@
     XDG_SESSION_TYPE = "wayland";
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
-    GTK_THEME = "Catppuccin-Frappe-Standard-Frappe-Dark";
+    GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
   };
 }

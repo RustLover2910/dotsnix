@@ -19,13 +19,13 @@
   };
 
   environment = {
-    sessionVariables = {
-      NIXOS_OZONE_WL = "1";
-      # GDK_BACKEND = "wayland";
-      #GTK_USE_PORTAL = "1";
-      QT_QPA_PLATFORMTHEME = "qt5ct";
-      # QT_QPA_PLATFORM = "wayland";
-    };
+    #sessionVariables = {
+    #  NIXOS_OZONE_WL = "1";
+    # GDK_BACKEND = "wayland";
+    #GTK_USE_PORTAL = "1";
+    #  QT_QPA_PLATFORMTHEME = "qt5ct";
+    # QT_QPA_PLATFORM = "wayland";
+    # };
     variables.EDITOR = "nvim";
     systemPackages = with pkgs; [
       wget
