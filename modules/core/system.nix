@@ -40,6 +40,9 @@
   fonts.fontDir.enable = true;
   fonts.packages = with pkgs; [
     noto-fonts
+    dosis
+    raleway
+    comfortaa
     (nerdfonts.override { fonts = [ "JetBrainsMono" "MartianMono" "FiraCode" "DroidSansMono" ]; })
   ];
 

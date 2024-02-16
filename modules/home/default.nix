@@ -11,6 +11,7 @@
     ++ [ (import ./hyprland) ]
     ++ [ (import ./cava) ]
     ++ [ (import ./gtk) ]
+    #  ++ [ (import ./viber) ]
     ++ [ (import ./starship) ]
     ++ [ (import ./qt) ]
     ++ [ (import ./mako) ] # notification deamon

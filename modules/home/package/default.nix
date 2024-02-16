@@ -6,27 +6,27 @@
     eza # ls replacement
     fzf # fuzzy finder
     go
-    openjdk17-bootstrap
-    filelight
+    openjdk17-bootstrap # for minecraft
+    filelight # disk usage analyzer
     wl-screenrec
     wf-recorder
     lazygit
-    github-desktop
     font-manager
-    #fontforge
     gnome.gnome-tweaks
     openvpn
     libreoffice
+    bitwarden-cli
     nitch # systhem fetch util
-    du-dust
-    zoxide
+    du-dust # disk space visualizer
+    zoxide # faster cd
     pipx # Install Python applications in isolated environments
     prismlauncher # minecraft launcher
     ripgrep # grep replacement
     todo # cli todo list
-    toipe # typing test in the terminal
+    toipe # typing test in the terminala
+    notesnook # note taking app
     yazi # terminal file manager
-    yt-dlp
+    yt-dlp # yt vid downloader
 
     # C / C++
     gcc
@@ -41,16 +41,14 @@
     swaylock-effects
 
     vlc
-    cinnamon.nemo-with-extensions
-    floorp
+    cinnamon.nemo-with-extensions # file manager
+    floorp # firefox fork
     kitty
-    okular
     imv # image viewer
     libnotify
     spicetify-cli
-    hyprpicker
-    kate
-    cliphist
+    hyprpicker # color picker
+    cliphist # clipboard manager
     wl-clipboard
     obs-studio
     vscodium
