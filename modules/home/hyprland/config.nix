@@ -8,8 +8,9 @@
     extraConfig = "
       $mainMod = SUPER
 
-      monitor=,preferred,auto,auto
-      monitor=,1920x1080,auto,1.0
+      monitor=eDP-1,1920x1080@60,0x0,1
+     # monitor=,preferred,auto,auto
+      #monitor=,1920x1080,auto,1.0
 
       # autostart
       exec-once = systemctl --user import-environment &

@@ -67,7 +67,9 @@
     wget
     telegram-desktop
     xdg-utils
-    inputs.alejandra.defaultPackage.${system}
-    inputs.RustLover.packages.${system}.default
+    inputs.alejandra.defaultPackage.${system} #formator
+    inputs.RustLover.packages.${system}.default #nvim-neve 
+
+    polkit-gnome #polkit gnome
   ];
 }
