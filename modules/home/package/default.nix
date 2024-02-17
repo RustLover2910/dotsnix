@@ -1,6 +1,7 @@
-{ inputs
-, pkgs
-, ...
+{
+  inputs,
+  pkgs,
+  ...
 }: {
   home.packages = with pkgs; [
     eza # ls replacement
@@ -68,7 +69,8 @@
     telegram-desktop
     xdg-utils
     inputs.alejandra.defaultPackage.${system} #formator
-    inputs.RustLover.packages.${system}.default #nvim-neve 
+    inputs.RustLover.packages.${system}.default #nvim-neve
+    #inputs.hyprland-contrib.packages.${pkgs.system}.grimblast #grimblast
 
     polkit_gnome #polkit gnome
   ];

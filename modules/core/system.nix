@@ -1,15 +1,15 @@
-{ self, pkgs, lib, inputs, ... }:
 {
+  self,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   # imports = [ inputs.nix-gaming.nixosModules.default ];
   nix = {
     settings = {
       auto-optimise-store = true;
-      experimental-features = [ "nix-command" "flakes" ];
-    };
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 3d";
+      experimental-features = ["nix-command" "flakes"];
     };
   };
   nixpkgs = {
@@ -19,13 +19,6 @@
   };
 
   environment = {
-    #sessionVariables = {
-    #  NIXOS_OZONE_WL = "1";
-    # GDK_BACKEND = "wayland";
-    #GTK_USE_PORTAL = "1";
-    #  QT_QPA_PLATFORMTHEME = "qt5ct";
-    # QT_QPA_PLATFORM = "wayland";
-    # };
     variables.EDITOR = "nvim";
     systemPackages = with pkgs; [
       wget
@@ -43,7 +36,16 @@
     dosis
     raleway
     comfortaa
-    (nerdfonts.override { fonts = [ "JetBrainsMono" "MartianMono" "FiraCode" "DroidSansMono" ]; })
+    quicksand
+    montserrat
+    (nerdfonts.override {
+      fonts = [
+        "JetBrainsMono"
+        "MartianMono"
+        "FiraCode"
+        "DroidSansMono"
+      ];
+    })
   ];
 
   time.timeZone = "Asia/Yangon";

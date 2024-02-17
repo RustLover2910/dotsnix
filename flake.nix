@@ -1,14 +1,20 @@
 {
-  description = "FrostPhoenix's nixos configuration";
+  description = "ultimatumnix's nixos configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
 
-    hypr-contrib.url = "github:hyprwm/contrib";
+    hyprland-contrib = {
+      url = "github:hyprwm/contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprpicker.url = "github:hyprwm/hyprpicker";
 
-    alejandra.url = "github:kamadorueda/alejandra/3.0.0";
+    alejandra = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:kamadorueda/alejandra/3.0.0";
+    };
 
     nix-gaming.url = "github:fufexan/nix-gaming";
 
@@ -46,7 +52,6 @@
     ...
   } @ inputs: let
     username = "nathannix";
-    #flake_path = "/home/${username}/dotsnix";
   in {
     nixosConfigurations = import ./modules/core/default.nix {
       inherit self nixpkgs inputs username;
