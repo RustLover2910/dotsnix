@@ -10,11 +10,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1708172014,
-        "narHash": "sha256-Yj0sSTWX+RoSoAvYLNkM2T4xk/w6VJLupfp9VGc71T4=",
+        "lastModified": 1708174624,
+        "narHash": "sha256-Tng078c+GozP7MNBoRWOXQfUq9VC0NwtjgsNmy7ikvc=",
         "owner": "RustLover2910",
         "repo": "Nixvim-neve",
-        "rev": "0135e9349fbddb9d78b188ee99766ffcdebc2499",
+        "rev": "004021f8f6d2743ca496d2c001a742e79145c0fa",
         "type": "github"
       },
       "original": {
