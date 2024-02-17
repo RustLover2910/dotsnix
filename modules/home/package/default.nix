@@ -70,6 +70,6 @@
     inputs.alejandra.defaultPackage.${system} #formator
     inputs.RustLover.packages.${system}.default #nvim-neve 
 
-    polkit-gnome #polkit gnome
+    polkit_gnome #polkit gnome
   ];
 }
