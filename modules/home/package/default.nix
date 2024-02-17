@@ -10,6 +10,7 @@
     openjdk17-bootstrap # for minecraft
     filelight # disk usage analyzer
     wl-screenrec
+    gimp
     wf-recorder
     lazygit
     font-manager
