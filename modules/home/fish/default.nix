@@ -1,8 +1,8 @@
-{ pkgs
-, username
-, ...
+{
+  pkgs,
+  username,
+  ...
 }: {
-
   home.packages = with pkgs; [
     fishPlugins.fzf-fish
     fishPlugins.autopair
@@ -26,6 +26,7 @@
       nnix = "z ~/dotsnix && nvim ~/dotsnix ";
     };
     shellAbbrs = {
+      sshgit = "ssh-add /home/${username}/.ssh/id_ed25519";
       e = "z";
       ee = "yazi";
       gitsh = "ssh -T git@github.com";
