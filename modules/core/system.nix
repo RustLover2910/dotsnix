@@ -28,6 +28,11 @@
       curl
       git
     ];
+    #gnome
+    gnome.excludePackages = with pkgs; [
+      epiphany
+      gnome.totem
+    ];
   };
 
   fonts.fontDir.enable = true;
