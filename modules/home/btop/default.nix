@@ -8,5 +8,8 @@
       update_ms = 400;
     };
   };
-  home.packages = with pkgs; [nvtop-intel];
+  home.packages = with pkgs; [
+    nvtop-intel
+    #intel_gpu_top
+  ];
 }

@@ -74,5 +74,6 @@
     #inputs.hyprland-contrib.packages.${pkgs.system}.grimblast #grimblast
 
     polkit_gnome #polkit gnome
+    powertop
   ];
 }
