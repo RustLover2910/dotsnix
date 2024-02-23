@@ -46,7 +46,7 @@
     cinnamon.nemo-with-extensions # file manager
     floorp # firefox fork
     kitty
-    imv # image viewer
+    #imv # image viewer
     libnotify
     spicetify-cli
     hyprpicker # color picker
@@ -75,5 +75,8 @@
 
     polkit_gnome #polkit gnome
     powertop
+    htop
+
+    speedtest-rs #speedtest
   ];
 }
