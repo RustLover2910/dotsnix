@@ -1,13 +1,12 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.kitty = {
     enable = true;
 
     theme = "Catppuccin-Frappe";
 
     font = {
-      name = "MartianMono Nerd Font";
-      size = 13;
+      name = "JetBrainsMono Nerd Font";
+      size = 14;
     };
 
     settings = {
@@ -19,4 +18,3 @@
     };
   };
 }
-

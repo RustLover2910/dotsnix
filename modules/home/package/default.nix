@@ -45,6 +45,7 @@
     vlc
     cinnamon.nemo-with-extensions # file manager
     floorp # firefox fork
+    motrix
     kitty
     #imv # image viewer
     libnotify
