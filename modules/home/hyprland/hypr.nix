@@ -1,10 +1,8 @@
-{ ... }:
-{
+{username, ...}: {
   wayland.windowManager.hyprland = {
     #enable = true;
 
     settings = {
-
       monitor = "eDP-1,1920x1080@60,0x0,1";
       input = {
         kb_layout = "us, de";
@@ -19,18 +17,16 @@
         sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
       };
 
-      general =
-        {
-          gaps_in = 5;
-          gaps_out = 7;
-          border_size = 3;
-          #col.active_border = 0xffb4befe 0xffeba0ac 0xff74c7ec 45deg
-          "col.active_border" = "0xffeebebe 0xffca9ee6 0xffeebebe 45deg";
-          "col.inactive_border" = "0xff303446";
-          layout = "dwindle";
-          "no_border_on_floating" = true;
-        };
-
+      general = {
+        gaps_in = 5;
+        gaps_out = 7;
+        border_size = 3;
+        #col.active_border = 0xffb4befe 0xffeba0ac 0xff74c7ec 45deg
+        "col.active_border" = "0xffeebebe 0xffca9ee6 0xffeebebe 45deg";
+        "col.inactive_border" = "0xff303446";
+        layout = "dwindle";
+        "no_border_on_floating" = true;
+      };
 
       misc = {
         # disable_hyprland_logo = 1;
@@ -40,8 +36,6 @@
       };
 
       decoration = {
-        # See https://wiki.hyprland.org/Configuring/Variables/ for more
-
         rounding = 5;
 
         blur = {
@@ -99,7 +93,82 @@
       gestures = {
         workspace_swipe = 1;
       };
+      # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+      bind = [
+        "$mainMod, T, exec, kitty"
+        "$mainMod, W, exec, floorp"
+        "$mainMod, C, killactive"
+        #"$mainMod, Q, exit,"
+        "$mainMod, E, exec, nemo"
+        "$mainMod, E, exec, kitty --hold yazi"
+        "$mainMod, V, togglefloating,"
+        "$mainMod, R, exec, "
+        "$mainMod, P, pseudo, # dwindle"
+        "$mainMod, J, togglesplit, # dwindle" # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+        # Move focus with mainMod + arrow keys
+        "$mainMod, left, movefocus, l"
+        "$mainMod, right, movefocus, r"
+        "$mainMod, up, movefocus, u"
+        "$mainMod, down, movefocus, d"
+        # Switch workspaces with mainMod + [0-9]
+        "$mainMod, 1, workspace, 1"
+        "$mainMod, 2, workspace, 2"
+        "$mainMod, 3, workspace, 3"
+        "$mainMod, 4, workspace, 4"
+        "$mainMod, 5, workspace, 5"
+        "$mainMod, 6, workspace, 6"
+        "$mainMod, 7, workspace, 7"
+        "$mainMod, 8, workspace, 8"
+        "$mainMod, 9, workspace, 9"
+        "$mainMod, 0, workspace, 10"
+        # Move active window to a workspace with mainMod + SHIFT + [0-9]
+        "$mainMod SHIFT, 1, movetoworkspace, 1"
+        "$mainMod SHIFT, 2, movetoworkspace, 2"
+        "$mainMod SHIFT, 3, movetoworkspace, 3"
+        "$mainMod SHIFT, 4, movetoworkspace, 4"
+        "$mainMod SHIFT, 5, movetoworkspace, 5"
+        "$mainMod SHIFT, 6, movetoworkspace, 6"
+        "$mainMod SHIFT, 7, movetoworkspace, 7"
+        "$mainMod SHIFT, 8, movetoworkspace, 8"
+        "$mainMod SHIFT, 9, movetoworkspace, 9"
+        "$mainMod SHIFT, 0, movetoworkspace, 10"
 
+        # Scroll through existing workspaces with mainMod + scroll
+        "$mainMod, mouse_down, workspace, e+1"
+        "$mainMod, mouse_up, workspace, e-1"
+        # Screenshot Area
+        # "$mainMod, , exec, bash /home/${username}/.config/rofi/bin/screenshot.sh"
+        # "$mainMod SHIFT, S, exec, grimblast copy area"
+        # Lockscreen
+        # "$mainMod SHIFT, L, exec, $lockCommand"
+        # Rofi
+        #"$mainMod SHIFT, P, exec, bash /home/${username}/.config/rofi/bin/powermenu.sh"
+        #"$mainMod SHIFT, B, exec, rofi-bluetooth"
+
+        "$mainMod, Z, exec, hyprpicker -a"
+        "mainMod, R, exec, killall rofi || /home/${username}/.config/rofi/scripts/launcher_t1" #rofi -show drun
+        "$mainMod, Q, exec, killall rofi || /home/${username}/.config/rofi/scripts/powermenu_t2"
+        # "$mainMod SHIFT, W, exec, wpaperctl previous-wallpaper"
+
+        # Mute
+        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+      ];
+      bindm = [
+        "$mainMod, mouse:272, movewindow"
+        "$mainMod, mouse:273, resizewindow"
+      ];
+
+      binde = [
+        # Volume
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-"
+        "SHIFT, XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SOURCE@ 5%+"
+        "SHIFT, XF86AudioLowerVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SOURCE@ 5%-"
+        # Brightness
+        ", xf86monbrightnessup, exec, brightnessctl set 10%+"
+        ", xf86monbrightnessdown, exec, brightnessctl set 10%-"
+      ];
     };
   };
 }

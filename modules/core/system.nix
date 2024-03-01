@@ -40,9 +40,11 @@
     noto-fonts
     dosis
     raleway
+    quattrocento
     comfortaa
     quicksand
     montserrat
+    merriweather
     (nerdfonts.override {
       fonts = [
         "JetBrainsMono"
@@ -55,6 +57,11 @@
 
   time.timeZone = "Asia/Yangon";
   i18n.defaultLocale = "en_US.UTF-8";
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "openssl-1.1.1w"
+    ];
+  };
   system.stateVersion = "23.11";
 }

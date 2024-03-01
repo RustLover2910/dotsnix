@@ -7,6 +7,10 @@
     eza # ls replacement
     fzf # fuzzy finder
     go
+    #chromium
+    ungoogled-chromium
+    inkscape
+
     openjdk17-bootstrap # for minecraft
     filelight # disk usage analyzer
     wl-screenrec
@@ -77,6 +81,8 @@
     polkit_gnome #polkit gnome
     powertop
     htop
+
+    viber
 
     speedtest-rs #speedtest
   ];

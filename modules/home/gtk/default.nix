@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   home.packages = [
     #pkgs.twemoji-color-font
     pkgs.noto-fonts-emoji
@@ -7,8 +7,8 @@
   gtk = {
     enable = true;
     font = {
-      name = "MartianMono Nerd Font";
-      size = 11;
+      name = "Montserrat";
+      size = 13;
     };
     iconTheme = {
       name = "Papirus-Dark";
@@ -20,9 +20,9 @@
     theme = {
       name = "Catppuccin-Frappe-Standard-Blue-Dark";
       package = pkgs.catppuccin-gtk.override {
-        accents = [ "blue" ];
+        accents = ["blue"];
         size = "standard";
-        tweaks = [ "rimless" ];
+        tweaks = ["rimless"];
         variant = "frappe";
       };
     };
@@ -39,6 +39,5 @@
       package = pkgs.nordzy-cursor-theme;
       size = 24;
     };
-
   };
 }
