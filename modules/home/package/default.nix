@@ -50,6 +50,16 @@
     cliphist # clipboard manager
     wl-clipboard
     translate-shell
+    wf-recorder
+    lazygit
+    nix-search-cli
+    wget
+    man-pages # extra man pages
+    mpv # video player
+    ncdu # disk space
+    powertop
+    speedtest-rs #speedtest
+    htop
 
     #torrent/downloader
     qbittorrent-qt5 #torrent
@@ -67,18 +77,15 @@
     libnotify
     obs-studio
     vscodium
-    man-pages # extra man pages
-    mpv # video player
-    ncdu # disk space
-    # openssl
+
+    #audio
     pamixer # pulseaudio command line mixer
     pavucontrol # pulseaudio volume controle (GUI)
     playerctl # controller for media players
+
     qalculate-gtk # calculator
     unzip
     zoom-us
-    nix-search-cli
-    wget
     telegram-desktop
     xdg-utils
     inputs.alejandra.defaultPackage.${system} #formator
@@ -86,11 +93,7 @@
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast #grimblast
 
     polkit_gnome #polkit gnome
-    powertop
-    htop
 
     viber
-
-    speedtest-rs #speedtest
   ];
 }
