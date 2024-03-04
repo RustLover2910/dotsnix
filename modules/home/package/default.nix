@@ -7,56 +7,64 @@
     eza # ls replacement
     fzf # fuzzy finder
     go
+
     #chromium
     ungoogled-chromium
     inkscape
 
     openjdk17-bootstrap # for minecraft
+    prismlauncher #minecraft
+
     filelight # disk usage analyzer
-    wl-screenrec
-    gimp
-    wf-recorder
-    lazygit
+    gparted
+    cinnamon.nemo-with-extensions # file manager
+
     font-manager
     gnome.gnome-tweaks
     openvpn
     libreoffice
-    bitwarden-cli
-    nitch # systhem fetch util
-    du-dust # disk space visualizer
-    zoxide # faster cd
+
     pipx # Install Python applications in isolated environments
-    prismlauncher # minecraft launcher
-    ripgrep # grep replacement
-    todo # cli todo list
-    toipe # typing test in the terminala
     notesnook # note taking app
-    yazi # terminal file manager
-    yt-dlp # yt vid downloader
 
     # C / C++
     gcc
     grc
     gnumake
 
-    bleachbit # cache cleaner
+    #niche cli tools
     cmatrix
-    qbittorrent-qt5 #torrent
-    gparted # partition manager
-    ffmpeg
-    swaylock-effects
-
-    vlc
-    cinnamon.nemo-with-extensions # file manager
-    floorp # firefox fork
-    motrix
-    kitty
-    #imv # image viewer
-    libnotify
+    bitwarden-cli
+    du-dust # disk space visualizer
+    nitch # systhem fetch util
+    zoxide # faster cd
+    ripgrep # grep replacement
+    todo # cli todo list
+    toipe # typing test in the terminal
+    yazi # terminal file manager
+    yt-dlp # yt vid downloader
+    wf-recorder
+    lazygit
     spicetify-cli
     hyprpicker # color picker
     cliphist # clipboard manager
     wl-clipboard
+    translate-shell
+
+    #torrent/downloader
+    qbittorrent-qt5 #torrent
+    motrix
+
+    ffmpeg
+    # swaylock-effects #lockscreen
+    hypridle
+    hyprlock
+
+    vlc
+    floorp # firefox fork
+    kitty
+    # imv # image viewer
+    libnotify
     obs-studio
     vscodium
     man-pages # extra man pages
@@ -68,7 +76,6 @@
     playerctl # controller for media players
     qalculate-gtk # calculator
     unzip
-    translate-shell
     zoom-us
     nix-search-cli
     wget
@@ -76,7 +83,7 @@
     xdg-utils
     inputs.alejandra.defaultPackage.${system} #formator
     inputs.RustLover.packages.${system}.default #nvim-neve
-    #inputs.hyprland-contrib.packages.${pkgs.system}.grimblast #grimblast
+    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast #grimblast
 
     polkit_gnome #polkit gnome
     powertop
