@@ -8,9 +8,13 @@
     fzf # fuzzy finder
     go
 
-    #chromium
-    ungoogled-chromium
+    #bowsers
+    ungoogled-chromium #chromium
+    floorp # firefox fork
+
+    #image
     inkscape
+    libsForQt5.gwenview
 
     openjdk17-bootstrap # for minecraft
     prismlauncher #minecraft
@@ -18,6 +22,7 @@
     filelight # disk usage analyzer
     gparted
     cinnamon.nemo-with-extensions # file manager
+    yazi # cli file manager
 
     font-manager
     gnome.gnome-tweaks
@@ -37,11 +42,11 @@
     bitwarden-cli
     du-dust # disk space visualizer
     nitch # systhem fetch util
+    neofetch # system fetch
     zoxide # faster cd
     ripgrep # grep replacement
     todo # cli todo list
     toipe # typing test in the terminal
-    yazi # terminal file manager
     yt-dlp # yt vid downloader
     wf-recorder
     lazygit
@@ -55,7 +60,6 @@
     nix-search-cli
     wget
     man-pages # extra man pages
-    mpv # video player
     ncdu # disk space
     powertop
     speedtest-rs #speedtest
@@ -71,7 +75,7 @@
     hyprlock
 
     vlc
-    floorp # firefox fork
+    mpv # video players
     kitty
     # imv # image viewer
     libnotify

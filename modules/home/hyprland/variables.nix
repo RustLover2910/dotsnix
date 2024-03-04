@@ -15,7 +15,7 @@
     QT_QPA_PLATFORM = "xcb";
     QT_QPA_PLATFORMTHEME = "qt5ct";
     # QT_SCALE_FACTOR = "1.5";
-    QT_STYLE_OVERRIDE = "kvantum";
+    #QT_STYLE_OVERRIDE = "qt5ct";
     MOZ_ENABLE_WAYLAND = "1";
     WLR_BACKEND = "vulkan";
     WLR_RENDERER = "vulkan";
