@@ -10,6 +10,7 @@
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
+    blueman
     cloudflare-warp
   ];
 

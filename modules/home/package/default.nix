@@ -51,13 +51,13 @@
     wf-recorder
     lazygit
     spicetify-cli
-    hyprpicker # color picker
     cliphist # clipboard manager
     wl-clipboard
     translate-shell
     wf-recorder
     lazygit
     nix-search-cli
+    fd
     wget
     man-pages # extra man pages
     ncdu # disk space
@@ -70,9 +70,8 @@
     motrix
 
     ffmpeg
+    python311
     # swaylock-effects #lockscreen
-    hypridle
-    hyprlock
 
     vlc
     mpv # video players
@@ -94,7 +93,7 @@
     xdg-utils
     inputs.alejandra.defaultPackage.${system} #formator
     inputs.RustLover.packages.${system}.default #nvim-neve
-    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast #grimblast
+    #inputs.hyprland-contrib.packages.${pkgs.system}.grimblast #grimblast
 
     polkit_gnome #polkit gnome
 

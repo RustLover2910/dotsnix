@@ -1,17 +1,16 @@
-{ 
-    custom ? {
-        font = "JetBrainsMono Nerd Font";
-        fontsize = "12";
-        primary_accent = "cba6f7";
-        secondary_accent = "89b4fa";
-        tertiary_accent = "cdd6f4";
-        background = "11111B";
-        opacity = ".98";
-        cursor = "Numix-Cursor";
-    },
-    ... 
-}:
 {
+  custom ? {
+    font = "JetBrainsMono Nerd Font";
+    fontsize = "14";
+    primary_accent = "cba6f7";
+    secondary_accent = "89b4fa";
+    tertiary_accent = "cdd6f4";
+    background = "11111B";
+    opacity = ".98";
+    cursor = "Numix-Cursor";
+  },
+  ...
+}: {
   programs.waybar.style = ''
     * {
         border: none;
@@ -60,8 +59,16 @@
         background-size: 200% 200%;
     }
 
-    #tray, #pulseaudio, #network, #cpu, #memory, #disk,
-    #custom-playerctl.backward, #custom-playerctl.play, #custom-playerctl.forward{
+    #tray,
+    #pulseaudio,
+    #network,
+    #cpu,
+    #memory,
+    #disk,
+    #battery,
+    #custom-playerctl.backward,
+    #custom-playerctl.play,
+    #custom-playerctl.forward {
         background: #${custom.palette.tertiary_background_hex};
         font-weight: bold;
         margin: 5px 0px;
@@ -76,13 +83,20 @@
     }
     #memory {
         color: #${custom.tertiary_accent};
-        border-radius: 0px 0 0px 0px;      
+        border-radius: 0px 0 0px 0px;
         padding-left: 9px;
         padding-right: 9px;
     }
+    #battery {
+      color: #${custom.tertiary_accent};
+      font-weight: bold;
+      border-radius: 0px 24px 10px 0px;
+      padding-left: 9px;
+      padding-right: 15px;
+    }
     #disk {
         color: #${custom.tertiary_accent};
-        border-radius: 0px 24px 10px 0px;      
+        border-radius: 0px 24px 10px 0px;
         padding-left: 9px;
         padding-right: 15px;
     }
@@ -101,13 +115,16 @@
         padding-right: 9px;
         margin-left: 7px;
     }
-    #network {
+    #language{
         color: #${custom.tertiary_accent};
-        border-radius: 0px 24px 10px 0px;      
+        border-radius: 0px 24px 10px 0px;
+        background: #${custom.palette.tertiary_background_hex};
+        font-weight: bold;
+        margin: 5px 0px;
         padding-left: 9px;
         padding-right: 15px;
     }
-    
+
     #clock {
         color: #${custom.tertiary_accent};
         background: #${custom.palette.tertiary_background_hex};
@@ -128,7 +145,7 @@
 
     #custom-playerctl.backward, #custom-playerctl.play, #custom-playerctl.forward {
         background: #${custom.palette.tertiary_background_hex};
-        font-size: 22px;
+        font-size: 23px;
     }
     #custom-playerctl.backward:hover, #custom-playerctl.play:hover, #custom-playerctl.forward:hover{
         color: #${custom.tertiary_accent};
@@ -155,7 +172,7 @@
         padding-right: 15px;
         border-radius: 16px;
         margin-top: 5px;
-        margin-bottom: 5px;
+        margin-bottom: 3px;
         font-weight: normal;
         font-style: normal;
     }

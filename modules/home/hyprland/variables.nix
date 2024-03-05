@@ -15,7 +15,7 @@
     QT_QPA_PLATFORM = "xcb";
     QT_QPA_PLATFORMTHEME = "qt5ct";
     # QT_SCALE_FACTOR = "1.5";
-    #QT_STYLE_OVERRIDE = "qt5ct";
+    QT_STYLE_OVERRIDE = "kvantum";
     MOZ_ENABLE_WAYLAND = "1";
     WLR_BACKEND = "vulkan";
     WLR_RENDERER = "vulkan";
@@ -23,6 +23,6 @@
     XDG_SESSION_TYPE = "wayland";
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
-    #GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
+    GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
   };
 }

@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   services = {
     gvfs.enable = true;
     gnome.gnome-keyring.enable = true;
@@ -8,4 +7,5 @@
     flatpak.enable = true;
     printing.enable = true;
   };
+  programs.ssh.startAgent = true;
 }

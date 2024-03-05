@@ -7,17 +7,23 @@
     swww
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
     hyprpicker
+    hypridle
+    hyprlock
     wofi
+    rofi-wayland
+    brightnessctl
     grim
     slurp
-    wl-clipboard
-    cliphist
-    wf-recorder
     glib
     wayland
     direnv
   ];
-  systemd.user.targets.hyprland-session.Unit.Wants = ["xdg-desktop-autostart.target"];
+  systemd = {
+    user = {
+      targets.hyprland-session.Unit.Wants = ["xdg-desktop-autostart.target"];
+    };
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland = {

@@ -1,9 +1,18 @@
-{username, ...}: {
+{
+  username,
+  pkgs,
+  ...
+}: let
+  #pointer = config.home.pointerCursor;
+  # homeDir = config.home.homeDirectory;
+  #gnomePolkit = ${pkgs.polkit_gnome};
+in {
   wayland.windowManager.hyprland = {
     #enable = true;
 
     settings = {
       monitor = "eDP-1,1920x1080@60,0x0,1";
+
       input = {
         kb_layout = "us, de";
         kb_options = "grp:alt_shift_toggle";
@@ -16,6 +25,21 @@
 
         sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
       };
+
+      exec-once = [
+        "hyprctl setcursor Nordzy-cursors 24 &"
+        "waybar"
+        "nm-applet"
+        "blueman-applet"
+        "mako"
+        "wl-paste --type text --watch cliphist store "
+        "gsettings set org.gnome.desktop.wm.preferences button-layout : "
+        "$(nix eval nixpkgs#polkit_gnome.outPath --raw)/libexec/polkit-gnome-authentication-agent-1"
+        "discord"
+        "viber"
+        "[workspace 4 silent] telegram-desktop"
+        # "/usr/bin/env hyprland-monitor-attached /run/current-system/sw/bin/rokid-attached /run/current-system/sw/bin/rokid-detached"
+      ];
 
       general = {
         gaps_in = 5;
@@ -36,10 +60,10 @@
       };
 
       decoration = {
-        rounding = 5;
+        rounding = 7;
 
         blur = {
-          enabled = true;
+          enabled = false;
           size = 3;
           passes = 1;
           ignore_opacity = 1;
@@ -93,18 +117,19 @@
       gestures = {
         workspace_swipe = 1;
       };
+
+      "$mainMod" = "SUPER";
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = [
         "$mainMod, T, exec, kitty"
         "$mainMod, W, exec, floorp"
         "$mainMod, C, killactive"
-        #"$mainMod, Q, exit,"
         "$mainMod, E, exec, nemo"
-        "$mainMod, E, exec, kitty --hold yazi"
+        "$mainMod SHIFT, E, exec, kitty --hold yazi"
         "$mainMod, V, togglefloating,"
         "$mainMod, R, exec, "
         "$mainMod, P, pseudo, # dwindle"
-        "$mainMod, J, togglesplit, # dwindle" # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+        "$mainMod, J, togglesplit, # dwindle"
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
@@ -138,7 +163,8 @@
         "$mainMod, mouse_up, workspace, e-1"
         # Screenshot Area
         # "$mainMod, , exec, bash /home/${username}/.config/rofi/bin/screenshot.sh"
-        # "$mainMod SHIFT, S, exec, grimblast copy area"
+        "$mainMod SHIFT, S, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
+        "$mainMod, S, exec, busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100"
         # Lockscreen
         # "$mainMod SHIFT, L, exec, $lockCommand"
         # Rofi
@@ -146,7 +172,7 @@
         #"$mainMod SHIFT, B, exec, rofi-bluetooth"
 
         "$mainMod, Z, exec, hyprpicker -a"
-        "mainMod, R, exec, killall rofi || /home/${username}/.config/rofi/scripts/launcher_t1" #rofi -show drun
+        "$mainMod, R, exec, killall rofi || /home/${username}/.config/rofi/scripts/launcher_t1" #rofi -show drun
         "$mainMod, Q, exec, killall rofi || /home/${username}/.config/rofi/scripts/powermenu_t2"
         # "$mainMod SHIFT, W, exec, wpaperctl previous-wallpaper"
 
@@ -166,8 +192,8 @@
         "SHIFT, XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SOURCE@ 5%+"
         "SHIFT, XF86AudioLowerVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SOURCE@ 5%-"
         # Brightness
-        ", xf86monbrightnessup, exec, brightnessctl set 10%+"
-        ", xf86monbrightnessdown, exec, brightnessctl set 10%-"
+        ", xf86monbrightnessup, exec, brightnessctl set 5%+"
+        ", xf86monbrightnessdown, exec, brightnessctl set 5%-"
       ];
     };
   };
