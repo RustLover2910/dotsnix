@@ -71,7 +71,7 @@
         shadow_render_power = 3;
         "col.shadow" = "0x66000000";
         active_opacity = 1.0;
-        inactive_opacity = 0.9;
+        inactive_opacity = 0.8;
       };
 
       animation = {
