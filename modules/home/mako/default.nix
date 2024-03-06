@@ -8,6 +8,8 @@
       enable = true;
       font = "JetBrainsMono Nerd Font 13";
       padding = "15";
+      height = 100;
+      width = 500;
       defaultTimeout = 5000;
       borderSize = 2;
       borderRadius = 5;

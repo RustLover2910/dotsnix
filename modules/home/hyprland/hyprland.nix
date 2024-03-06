@@ -9,6 +9,8 @@
     hyprpicker
     hypridle
     hyprlock
+    hyprpaper
+    wl-gammarelay-rs
     wofi
     rofi-wayland
     brightnessctl

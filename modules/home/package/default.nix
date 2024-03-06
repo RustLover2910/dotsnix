@@ -93,8 +93,6 @@
     xdg-utils
     inputs.alejandra.defaultPackage.${system} #formator
     inputs.RustLover.packages.${system}.default #nvim-neve
-    #inputs.hyprland-contrib.packages.${pkgs.system}.grimblast #grimblast
-
     polkit_gnome #polkit gnome
 
     viber

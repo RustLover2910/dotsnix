@@ -55,7 +55,7 @@
         rounding = 7;
 
         blur = {
-          enabled = false;
+          enabled = true;
           size = 3;
           passes = 1;
           ignore_opacity = 1;
@@ -206,11 +206,12 @@
       windowrule = float, ^(polkit-gnome-authentication-agent-1)$
        windowrulev2 = size 600 200, class:^(polkit-gnome-authentication-agent-1)$
       windowrule = float, ^(kitty)$
-      windowrule = float,^(blueman-manager)$
+      windowrule = float,^(.blueman-manager-wrapped)$
       windowrule = float, ^(Bitwarden)$
       windowrule = noshadow, ^(Windscribe)$
       windowrule = float, title:^(Password Required - Ablaze Floorp)$
       windowrule = float, title:^(Friends List)$
+      windowrulev2 = noblur, class:^(kitty)$
       windowrulev2 = size 1000 600, class:^(kitty)$
       #windowrulev2 = opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(floorp)$
