@@ -6,6 +6,7 @@
     openssh.enable = true;
     flatpak.enable = true;
     printing.enable = true;
+    blueman.enable = true;
   };
   programs.ssh.startAgent = true;
 }

@@ -61,7 +61,7 @@
 
     #tray,
     #pulseaudio,
-    #network,
+    #backlight,
     #cpu,
     #memory,
     #disk,

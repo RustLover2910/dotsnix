@@ -6,7 +6,7 @@
     secondary_accent = "89b4fa";
     tertiary_accent = "f5f5f5";
     background = "11111B";
-    opacity = ".85";
+    opacity = ".9";
     cursor = "Numix-Cursor";
   },
   ...
@@ -35,7 +35,8 @@
       "memory"
       "hyprland/language"
       "pulseaudio"
-      "network"
+      #"network"
+      "backlight"
       "battery"
       "clock"
     ];
@@ -69,8 +70,6 @@
     "custom/playerctl#backward" = {
       format = "󰙣 ";
       on-click = "playerctl previous";
-      on-scroll-up = "playerctl volume .05+";
-      on-scroll-down = "playerctl volume .05-";
     };
     "custom/playerctl#play" = {
       format = "{icon}";
@@ -88,8 +87,6 @@
     "custom/playerctl#forward" = {
       format = "󰙡 ";
       on-click = "playerctl next";
-      on-scroll-up = "playerctl volume .05+";
-      on-scroll-down = "playerctl volume .05-";
     };
     memory = {
       format-alt = "󰟜 {}%";
@@ -113,13 +110,28 @@
       format-linked = "{ifname} (No IP)";
       format-disconnected = "󰖪 ";
     };
+    "backlight" = {
+      device = "intel_backlight";
+      format = "{icon} {percent}%";
+      format-icons = [
+        "󱩎"
+        "󱩏"
+        "󱩐"
+        "󱩑"
+        "󱩒"
+        "󱩓"
+        "󱩔"
+        "󱩕"
+        "󰛨"
+      ];
+    };
     tray = {
       icon-size = 20;
       spacing = 8;
     };
     pulseaudio = {
       format = "{icon} {volume}%";
-      format-muted = "󰖁 {volume}%";
+      format-muted = "󰖁 0%";
       format-icons = {
         default = [
           ""
@@ -127,6 +139,7 @@
         ];
       };
       scroll-step = 5;
+      on-click-right = "pavucontrol || pkill pavucontrol";
       on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
     };
     "custom/launcher" = {

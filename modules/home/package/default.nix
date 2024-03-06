@@ -28,6 +28,7 @@
     gnome.gnome-tweaks
     openvpn
     libreoffice
+    bitwarden
 
     pipx # Install Python applications in isolated environments
     notesnook # note taking app
@@ -39,7 +40,6 @@
 
     #niche cli tools
     cmatrix
-    bitwarden-cli
     du-dust # disk space visualizer
     nitch # systhem fetch util
     neofetch # system fetch

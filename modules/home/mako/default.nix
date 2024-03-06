@@ -1,14 +1,17 @@
-{ config, pkgs, ... }: 
 {
+  config,
+  pkgs,
+  ...
+}: {
   services = {
     mako = {
       enable = true;
-      font = "JetBrainsMono Nerd Font 12";
+      font = "JetBrainsMono Nerd Font 13";
       padding = "15";
       defaultTimeout = 5000;
       borderSize = 2;
       borderRadius = 5;
-      backgroundColor = "#1e1e2e";
+      backgroundColor = "#303446";
       borderColor = "#b4befe";
       progressColor = "over #313244";
       textColor = "#cdd6f4";

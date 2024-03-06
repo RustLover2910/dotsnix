@@ -1,12 +1,4 @@
-{
-  username,
-  pkgs,
-  ...
-}: let
-  #pointer = config.home.pointerCursor;
-  # homeDir = config.home.homeDirectory;
-  #gnomePolkit = ${pkgs.polkit_gnome};
-in {
+{username, ...}: {
   wayland.windowManager.hyprland = {
     #enable = true;
 
@@ -34,7 +26,7 @@ in {
         "mako"
         "wl-paste --type text --watch cliphist store "
         "gsettings set org.gnome.desktop.wm.preferences button-layout : "
-        "$(nix eval nixpkgs#polkit_gnome.outPath --raw)/libexec/polkit-gnome-authentication-agent-1"
+        "polkit-gnome"
         "discord"
         "viber"
         "[workspace 4 silent] telegram-desktop"
@@ -79,7 +71,7 @@ in {
         shadow_render_power = 3;
         "col.shadow" = "0x66000000";
         active_opacity = 1.0;
-        inactive_opacity = 1.0;
+        inactive_opacity = 0.9;
       };
 
       animation = {
@@ -130,11 +122,13 @@ in {
         "$mainMod, R, exec, "
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, J, togglesplit, # dwindle"
+
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
         "$mainMod, up, movefocus, u"
         "$mainMod, down, movefocus, d"
+
         # Switch workspaces with mainMod + [0-9]
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
@@ -179,6 +173,12 @@ in {
         # Mute
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+
+        #Audio
+        ",XF86AudioPlay,exec, playerctl play-pause"
+        ",XF86AudioNext,exec, playerctl next"
+        ",XF86AudioPrev,exec, playerctl previous"
+        ",XF86AudioStop,exec, playerctl stop"
       ];
       bindm = [
         "$mainMod, mouse:272, movewindow"
@@ -196,5 +196,27 @@ in {
         ", xf86monbrightnessdown, exec, brightnessctl set 5%-"
       ];
     };
+    #window rules
+    extraConfig = ''
+      #WindowsRules
+      windowrule = float,wofi
+      windowrule = float, ^(pavucontrol)$
+      windowrulev2 = size 590 500,class:^(pavucontrol)$
+      windowrulev2 = move 1321 50,class:^(pavucontrol)$
+      windowrule = float, ^(polkit-gnome-authentication-agent-1)$
+       windowrulev2 = size 600 200, class:^(polkit-gnome-authentication-agent-1)$
+      windowrule = float, ^(kitty)$
+      windowrule = float,^(blueman-manager)$
+      windowrule = float, ^(Bitwarden)$
+      windowrule = noshadow, ^(Windscribe)$
+      windowrule = float, title:^(Password Required - Ablaze Floorp)$
+      windowrule = float, title:^(Friends List)$
+      windowrulev2 = size 1000 600, class:^(kitty)$
+      #windowrulev2 = opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$
+      windowrulev2 = opacity 1.0 override 1.0 override,class:^(floorp)$
+      #windowrulev2 = noanim,class:^(xwaylandvideobridge)$
+      #windowrulev2 = nofocus,class:^(xwaylandvideobridge)$
+      #windowrulev2 = noinitialfocus,class:^(xwaylandvideobridge)$
+    '';
   };
 }
