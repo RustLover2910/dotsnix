@@ -21,6 +21,9 @@
 
     filelight # disk usage analyzer
     gparted
+    libsForQt5.partitionmanager
+
+    #file manager
     cinnamon.nemo-with-extensions # file manager
     yazi # cli file manager
 

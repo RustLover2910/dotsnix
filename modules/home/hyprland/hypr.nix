@@ -167,7 +167,7 @@
 
         "$mainMod, Z, exec, hyprpicker -a"
         "$mainMod, R, exec, killall rofi || /home/${username}/.config/rofi/scripts/launcher_t1" #rofi -show drun
-        "$mainMod, Q, exec, killall rofi || /home/${username}/.config/rofi/scripts/powermenu_t2"
+        "$mainMod, Q, exec, killall rofi || /home/${username}/.config/rofi/scripts/powermenu_t1"
         # "$mainMod SHIFT, W, exec, wpaperctl previous-wallpaper"
 
         # Mute

@@ -39,6 +39,7 @@
   fonts.fontDir.enable = true;
   fonts.packages = with pkgs; [
     noto-fonts
+    corefonts
     dosis
     raleway
     quattrocento
