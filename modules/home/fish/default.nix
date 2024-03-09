@@ -24,6 +24,7 @@
       ll = " eza --icons -a --group-directories-first -1 --no-user --long ";
       cdnix = "z ~/dotsnix && codium ~/dotsnix ";
       nnix = "z ~/dotsnix && nvim ~/dotsnix ";
+      part = "sudo -E gparted";
     };
     shellAbbrs = {
       sshgit = "ssh-add /home/${username}/.ssh/id_ed25519";

@@ -21,7 +21,6 @@
 
     filelight # disk usage analyzer
     gparted
-    libsForQt5.partitionmanager
 
     #file manager
     cinnamon.nemo-with-extensions # file manager
@@ -69,7 +68,7 @@
     htop
 
     #torrent/downloader
-    qbittorrent-qt5 #torrent
+    deluge #torrent
     motrix
 
     ffmpeg

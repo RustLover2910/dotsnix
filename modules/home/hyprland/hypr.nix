@@ -15,7 +15,7 @@
           natural_scroll = 1;
         };
 
-        sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
+        sensitivity = 0.5; # -1.0 - 1.0, 0 means no modification.
       };
 
       exec-once = [
@@ -122,6 +122,8 @@
         "$mainMod, R, exec, "
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, J, togglesplit, # dwindle"
+        "$mainMod, F, fullscreen, 0"
+        "$mainMod SHIFT, F, fullscreen, 1"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
