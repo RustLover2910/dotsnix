@@ -19,14 +19,15 @@
       };
 
       exec-once = [
+        "hyprpaper"
         "hyprctl setcursor Nordzy-cursors 24 &"
         "waybar"
+        "polkit-gnome"
         "nm-applet"
         "blueman-applet"
         "mako"
         "wl-paste --type text --watch cliphist store "
         "gsettings set org.gnome.desktop.wm.preferences button-layout : "
-        "polkit-gnome"
         "discord"
         "viber"
         "[workspace 4 silent] telegram-desktop"
@@ -45,7 +46,7 @@
       };
 
       misc = {
-        # disable_hyprland_logo = 1;
+        disable_hyprland_logo = 1;
         vfr = true;
         # disable_splash_rendering = true;
         mouse_move_enables_dpms = true;
@@ -60,7 +61,7 @@
           passes = 1;
           ignore_opacity = 1;
           new_optimizations = true;
-          xray = false;
+          xray = true;
         };
         #multisample_edges = true
         fullscreen_opacity = 1;
@@ -213,8 +214,8 @@
       windowrule = noshadow, ^(Windscribe)$
       windowrule = float, title:^(Password Required - Ablaze Floorp)$
       windowrule = float, title:^(Friends List)$
-      windowrulev2 = noblur, class:^(kitty)$
-      windowrulev2 = size 1000 600, class:^(kitty)$
+      windowrulev2 = noblur, title:^(Save Document?)$
+      windowrulev2 = size 1100 600, class:^(kitty)$
       #windowrulev2 = opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(floorp)$
       #windowrulev2 = noanim,class:^(xwaylandvideobridge)$
