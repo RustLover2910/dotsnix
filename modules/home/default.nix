@@ -15,6 +15,7 @@
     ++ [(import ./waybar)]
     ++ [(import ./starship)]
     ++ [(import ./qt)]
+    ++ [(import ./hyprpaper)]
     ++ [(import ./mako)] # notification deamon
     ++ [(import ./git)]
     ++ [(import ./scripts)]

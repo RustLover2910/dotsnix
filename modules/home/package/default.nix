@@ -16,6 +16,9 @@
     inkscape
     libsForQt5.gwenview
 
+    #pdf viewer/editor
+    libsForQt5.okular
+
     openjdk17-bootstrap # for minecraft
     prismlauncher #minecraft
 
@@ -93,7 +96,7 @@
     zoom-us
     telegram-desktop
     xdg-utils
-    inputs.alejandra.defaultPackage.${system} #formator
+    inputs.alejandra.packages.${system}.default #formator
     inputs.RustLover.packages.${system}.default #nvim-neve
     polkit_gnome #polkit gnome
 
