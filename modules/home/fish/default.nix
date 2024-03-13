@@ -27,10 +27,10 @@
       part = "sudo -E gparted";
     };
     shellAbbrs = {
-      sshgit = "ssh-add /home/${username}/.ssh/id_ed25519";
+      sshgit = "ssh-add /home/${username}/.ssh/id_ed25519 && ssh -T git@github.com";
       e = "z";
       ee = "yazi";
-      gitsh = "ssh -T git@github.com";
+      #gitsh = "ssh -T git@github.com";
       npkg = "nvim /home/${username}/dotsnix/modules/home/package/default.nix";
       nhm = "nvim /home/${username}/dotsnix/modules/home/";
       nco = "nvim /home/${username}/dotsnix/modules/core/";

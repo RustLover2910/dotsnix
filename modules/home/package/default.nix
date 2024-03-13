@@ -29,6 +29,11 @@
     cinnamon.nemo-with-extensions # file manager
     yazi # cli file manager
 
+    #notes
+    logseq
+    trilium-desktop
+    obsidian
+
     font-manager
     gnome.gnome-tweaks
     openvpn
@@ -36,7 +41,6 @@
     bitwarden
 
     pipx # Install Python applications in isolated environments
-    notesnook # note taking app
 
     # C / C++
     gcc

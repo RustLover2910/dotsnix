@@ -34,4 +34,5 @@
     # enableNvidiaPatches = false;
     systemd.enable = true;
   };
+  # programs.brightnessctl.enable = true;
 }

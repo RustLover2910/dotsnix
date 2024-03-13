@@ -22,11 +22,12 @@
         "hyprpaper"
         "hyprctl setcursor Nordzy-cursors 24 &"
         "waybar"
+        "wl-paste --type text --watch cliphist store "
         "polkit-gnome"
+        "wl-gammarelay-rs"
         "nm-applet"
         "blueman-applet"
         "mako"
-        "wl-paste --type text --watch cliphist store "
         "gsettings set org.gnome.desktop.wm.preferences button-layout : "
         "discord"
         "viber"
@@ -48,7 +49,7 @@
       misc = {
         disable_hyprland_logo = 1;
         vfr = true;
-        # disable_splash_rendering = true;
+        disable_splash_rendering = true;
         mouse_move_enables_dpms = true;
       };
 
@@ -61,9 +62,8 @@
           passes = 1;
           ignore_opacity = 1;
           new_optimizations = true;
-          xray = true;
+          xray = false;
         };
-        #multisample_edges = true
         fullscreen_opacity = 1;
         drop_shadow = true;
         shadow_ignore_window = true;
@@ -158,10 +158,18 @@
         # Scroll through existing workspaces with mainMod + scroll
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
-        # Screenshot Area
-        # "$mainMod, , exec, bash /home/${username}/.config/rofi/bin/screenshot.sh"
-        "$mainMod SHIFT, S, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
-        "$mainMod, S, exec, busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100"
+
+        #Move Focus
+        "$mainMod, left, movefocus, l"
+        "$mainMod, right, movefocus, r"
+        "$mainMod, up, movefocus, u"
+        "$mainMod, down, movefocus, d"
+
+        # Display Temp(nightlight)
+        "$mainMod SHIFT, R ,exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
+        "$mainMod SHIFT, S, exec, busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100"
+        "$mainMod,S , exec, busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
+
         # Lockscreen
         # "$mainMod SHIFT, L, exec, $lockCommand"
         # Rofi
@@ -171,11 +179,10 @@
         "$mainMod, Z, exec, hyprpicker -a"
         "$mainMod, R, exec, killall rofi || /home/${username}/.config/rofi/scripts/launcher_t1" #rofi -show drun
         "$mainMod, Q, exec, killall rofi || /home/${username}/.config/rofi/scripts/powermenu_t1"
-        # "$mainMod SHIFT, W, exec, wpaperctl previous-wallpaper"
 
         # Mute
-        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
 
         #Audio
         ",XF86AudioPlay,exec, playerctl play-pause"
@@ -202,25 +209,19 @@
     #window rules
     extraConfig = ''
       #WindowsRules
-      windowrule = float,wofi
+      windowrule = float,^(motrix)$
       windowrule = float, ^(pavucontrol)$
-      windowrulev2 = size 590 500,class:^(pavucontrol)$
+      windowrulev2 = size 590 550,class:^(pavucontrol)$
       windowrulev2 = move 1321 50,class:^(pavucontrol)$
       windowrule = float, ^(polkit-gnome-authentication-agent-1)$
-       windowrulev2 = size 600 200, class:^(polkit-gnome-authentication-agent-1)$
       windowrule = float, ^(kitty)$
       windowrule = float,^(.blueman-manager-wrapped)$
       windowrule = float, ^(Bitwarden)$
       windowrule = noshadow, ^(Windscribe)$
       windowrule = float, title:^(Password Required - Ablaze Floorp)$
-      windowrule = float, title:^(Friends List)$
-      windowrulev2 = noblur, title:^(Save Document?)$
-      windowrulev2 = size 1100 600, class:^(kitty)$
-      #windowrulev2 = opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$
+      #windowrulev2 = noblur, class:^(kitty)$
+      windowrulev2 = size 1200 650, class:^(kitty)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(floorp)$
-      #windowrulev2 = noanim,class:^(xwaylandvideobridge)$
-      #windowrulev2 = nofocus,class:^(xwaylandvideobridge)$
-      #windowrulev2 = noinitialfocus,class:^(xwaylandvideobridge)$
     '';
   };
 }
