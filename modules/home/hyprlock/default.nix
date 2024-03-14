@@ -1,8 +1,9 @@
 {...}: {
+  xdg.configFile."hypr/wallpaper".source = ./wallpaper;
   xdg.configFile."hypr/hyprlock.conf".text = ''
     background {
       monitor =
-      path = ~/.config/hypr/paper/lock.png  # only png supported for now
+      path = ~/.config/hypr/wallpaper/lock.png # only png supported for now
       color = rgba(25, 20, 20, 1.0)
 
       # all these options are taken from hyprland, see https://wiki.hyprland.org/Configuring/Variables/#blur for explanations
@@ -15,7 +16,7 @@
       vibrancy_darkness = 0.0
     }
     input-field {
-      monitor =
+      monitor = eDP-1
       size = 200, 50
       outline_thickness = 3
       dots_size = 0.33 # Scale of input-field height, 0.2 - 0.8
@@ -44,17 +45,17 @@
       valign = center
     }
     label {
-    monitor =
-    text = Hi there, $USER
+    monitor = eDP-1
+    text = $USER
     color = rgba(200, 200, 200, 1.0)
     font_size = 25
-    font_family = JetBrainsMono Nerd Font
+    font_family = JetBrainsMono Nerd Font Medium
 
-    position = 0, 80
+    position = 0, 0
     halign = center
     valign = center
     }
   '';
 
-  xdg.configFile."hypr/paper/lock.png".source = ../hyprpaper/paper/lock.png;
+  xdg.configFile."hypr/wallpaper/lock.png".source = ../hyprpaper/paper/lock.png;
 }
