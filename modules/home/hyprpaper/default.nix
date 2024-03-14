@@ -1,8 +1,4 @@
-{
-  pkgs,
-  username,
-  ...
-}: {
+{...}: {
   xdg.configFile."hypr/paper".source = ./paper;
   xdg.configFile."hypr/hyprpaper.conf".text = ''
     preload = ~/.config/hypr/paper/ladyblue.jpg
