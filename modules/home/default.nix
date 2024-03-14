@@ -15,10 +15,11 @@
     ++ [(import ./waybar)]
     ++ [(import ./starship)]
     ++ [(import ./qt)]
-    ++ [(import ./hyprpaper)]
-    ++ [(import ./hyprlock)]
+    #++ [(import ./hyprpaper)]
+    #++ [(import ./hyprlock)]
     ++ [(import ./mako)] # notification deamon
     ++ [(import ./git)]
+    ++ [(import ./rust)]
     ++ [(import ./scripts)]
     ++ [(import ./package)];
 }

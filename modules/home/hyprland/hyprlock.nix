@@ -56,5 +56,5 @@
     }
   '';
 
-  xdg.configFile."hypr/paper/lock.png".source = ../hyprpaper/paper/lock.png;
+  xdg.configFile."hypr/paper/lock.png".source = ./paper/lock.png;
 }
