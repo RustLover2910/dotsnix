@@ -168,7 +168,7 @@
         # Display Temp(nightlight)
         "$mainMod SHIFT, R ,exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
         "$mainMod SHIFT, S, exec, busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100"
-        "$mainMod,S , exec, busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
+        "$mainMod, S , exec, busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
 
         # Lockscreen
         # "$mainMod SHIFT, L, exec, $lockCommand"
