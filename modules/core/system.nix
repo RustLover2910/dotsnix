@@ -24,15 +24,9 @@
       wget
       libsForQt5.qtstyleplugin-kvantum
       libsForQt5.qt5ct
-      #polkit_gnome
       qt6Packages.qt6ct
       curl
       git
-    ];
-    #gnome
-    gnome.excludePackages = with pkgs; [
-      epiphany
-      gnome.totem
     ];
   };
 

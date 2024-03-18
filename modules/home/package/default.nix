@@ -8,6 +8,9 @@
     fzf # fuzzy finder
     go
 
+    # 3d
+    blender
+
     #bowsers
     ungoogled-chromium #chromium
     floorp # firefox fork
@@ -101,7 +104,7 @@
     telegram-desktop
     xdg-utils
     inputs.alejandra.packages.${system}.default #formator
-    inputs.RustLover.packages.${system}.default #nvim-neve
+inputs.RustLover.packages.${system}.default #nvim-neve
     polkit_gnome #polkit gnome
 
     viber

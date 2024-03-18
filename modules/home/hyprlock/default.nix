@@ -51,7 +51,7 @@
     font_size = 25
     font_family = JetBrainsMono Nerd Font Medium
 
-    position = 0, 0
+    position = 0, 50
     halign = center
     valign = center
     }
