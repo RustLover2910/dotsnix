@@ -1,7 +1,5 @@
 {
-  self,
   pkgs,
-  lib,
   inputs,
   ...
 }: {
@@ -29,27 +27,6 @@
       git
     ];
   };
-
-  fonts.fontDir.enable = true;
-  fonts.packages = with pkgs; [
-    noto-fonts
-    corefonts
-    dosis
-    raleway
-    quattrocento
-    comfortaa
-    quicksand
-    montserrat
-    merriweather
-    (nerdfonts.override {
-      fonts = [
-        "JetBrainsMono"
-        "MartianMono"
-        "FiraCode"
-        "DroidSansMono"
-      ];
-    })
-  ];
 
   time.timeZone = "Asia/Yangon";
   i18n.defaultLocale = "en_US.UTF-8";

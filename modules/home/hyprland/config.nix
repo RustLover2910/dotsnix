@@ -171,7 +171,7 @@
         "$mainMod, S , exec, busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
 
         # Lockscreen
-        # "$mainMod SHIFT, L, exec, $lockCommand"
+        "$mainMod SHIFT, L, exec, hyprlock"
         # Rofi
         #"$mainMod SHIFT, P, exec, bash /home/${username}/.config/rofi/bin/powermenu.sh"
         #"$mainMod SHIFT, B, exec, rofi-bluetooth"

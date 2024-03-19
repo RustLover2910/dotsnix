@@ -17,14 +17,14 @@
     }
     input-field {
       monitor = eDP-1
-      size = 200, 50
-      outline_thickness = 3
-      dots_size = 0.33 # Scale of input-field height, 0.2 - 0.8
+      size = 300, 40
+      outline_thickness = 2
+      dots_size = 0.25 # Scale of input-field height, 0.2 - 0.8
       dots_spacing = 0.15 # Scale of dots' absolute size, 0.0 - 1.0
       dots_center = false
       dots_rounding = -1 # -1 default circle, -2 follow input-field rounding
       outer_color = rgb(151515)
-      inner_color = rgb(200, 200, 200)
+      inner_color = rgb(A8C0C2)
       font_color = rgb(10, 10, 10)
       fade_on_empty = true
       fade_timeout = 1000 # Milliseconds before fade_on_empty is triggered.
@@ -44,17 +44,17 @@
       halign = center
       valign = center
     }
-    label {
-    monitor = eDP-1
-    text = $USER
-    color = rgba(200, 200, 200, 1.0)
-    font_size = 25
-    font_family = JetBrainsMono Nerd Font Medium
+    #label {
+    #monitor = eDP-1
+    #text = $USER
+    #color = rgba(200, 200, 200, 1.0)
+    #font_size = 25
+    #font_family = JetBrainsMono Nerd Font Medium
 
-    position = 0, 50
-    halign = center
-    valign = center
-    }
+    #position = 0, 50
+    #halign = center
+    #valign = center
+    #}
   '';
 
   xdg.configFile."hypr/wallpaper/walllock.png".source = ./wallpaper/walllock.png;
