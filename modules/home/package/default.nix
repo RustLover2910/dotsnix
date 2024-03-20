@@ -44,6 +44,10 @@
     bitwarden
 
     pipx # Install Python applications in isolated environments
+    yarn
+
+    #music player
+    amberol
 
     # C / C++
     gcc

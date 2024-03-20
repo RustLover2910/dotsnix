@@ -14,7 +14,7 @@
     ++ [(import ./gtk)]
     ++ [(import ./ags)]
     ++ [(import ./starship)]
-    ++ [(import ./qt)]
+    #++ [(import ./qt)]
     ++ [(import ./mako)] # notification deamon
     ++ [(import ./git)]
     ++ [(import ./rust)]

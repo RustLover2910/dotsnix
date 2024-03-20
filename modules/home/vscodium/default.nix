@@ -1,17 +1,19 @@
-{ pkgs, ... }: 
-{
+{pkgs, ...}: {
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
       # nix language
       bbenoist.nix
-      # nix-shell suport 
+      # nix-shell suport
       arrterian.nix-env-selector
       # python
       ms-python.python
       # C/C++
       ms-vscode.cpptools
+
+      # rust
+      rust-lang.rust-analyzer
 
       # Color theme
       catppuccin.catppuccin-vsc
@@ -26,12 +28,12 @@
       "editor.fontFamily" = "'JetBrainsMono Nerd Font', 'SymbolsNerdFont', 'monospace', monospace";
       "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font', 'SymbolsNerdFont'";
       "editor.fontSize" = 16;
-      "workbench.colorTheme" = "Catppuccin Mocha";
-      "workbench.iconTheme" = "catppuccin-mocha";
+      "workbench.colorTheme" = "Catppuccin Frappe";
+      "workbench.iconTheme" = "catppuccin-frappe";
       "vsicons.dontShowNewVersionMessage" = true;
       "explorer.confirmDragAndDrop" = false;
       "editor.fontLigatures" = true;
-      "editor.minimap.enabled" = false;
+      "editor.minimap.enabled" = true;
       "workbench.startupEditor" = "none";
 
       "editor.formatOnType" = true;
@@ -72,11 +74,6 @@
     };
     # Keybindings
     keybindings = [
-      {
-        key = "ctrl+q";
-        command = "editor.action.commentLine";
-        when = "editorTextFocus && !editorReadonly";
-      }
       {
         key = "ctrl+s";
         command = "workbench.action.files.saveFiles";

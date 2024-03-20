@@ -5,6 +5,7 @@
     dbus.enable = true;
     openssh.enable = true;
     flatpak.enable = true;
+    fwupd.enable = true;
     printing.enable = true;
     blueman.enable = true;
   };

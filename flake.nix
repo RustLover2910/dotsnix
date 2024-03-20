@@ -15,6 +15,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:kamadorueda/alejandra/3.0.0";
     };
+    waybar = {
+      url = "github:alexays/waybar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nix-gaming.url = "github:fufexan/nix-gaming";
 
@@ -28,18 +32,35 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    catppuccin-bat = {
-      url = "github:catppuccin/bat";
-      flake = false;
+    ags = {
+      url = "github:Aylur/ags";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprlock = {
+      url = "github:hyprwm/Hyprlock";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hypridle = {
+      url = "github:hyprwm/Hypridle";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     catppuccin-cava = {
       url = "github:catppuccin/cava";
       flake = false;
     };
+
     catppuccin-starship = {
       url = "github:catppuccin/starship";
       flake = false;
     };
+
     RustLover = {
       url = "github:RustLover2910/Nixvim-neve";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -48,6 +69,7 @@
 
   outputs = {
     nixpkgs,
+    nixvim,
     self,
     ...
   } @ inputs: let

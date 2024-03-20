@@ -3,7 +3,11 @@
     #pkgs.twemoji-color-font
     pkgs.noto-fonts-emoji
   ];
-
+  qt = {
+    enable = true;
+    platformTheme = "gtk";
+    style.name = "Catppuccin-Frappe-Standard-Blue-Dark";
+  };
   gtk = {
     enable = true;
     font = {
