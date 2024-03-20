@@ -12,11 +12,9 @@
     ++ [(import ./hyprland)]
     ++ [(import ./cava)]
     ++ [(import ./gtk)]
-    ++ [(import ./waybar)]
+    ++ [(import ./ags)]
     ++ [(import ./starship)]
     ++ [(import ./qt)]
-    #++ [(import ./hyprpaper)]
-    # ++ [(import ./hyprlock)]
     ++ [(import ./mako)] # notification deamon
     ++ [(import ./git)]
     ++ [(import ./rust)]

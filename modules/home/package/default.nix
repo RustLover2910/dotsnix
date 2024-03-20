@@ -17,16 +17,16 @@
 
     #image
     inkscape
-    libsForQt5.gwenview
 
     #pdf viewer/editor
-    libsForQt5.okular
+    xournalpp
 
     openjdk17-bootstrap # for minecraft
     prismlauncher #minecraft
 
     filelight # disk usage analyzer
     gparted
+    baobab
 
     #file manager
     cinnamon.nemo-with-extensions # file manager
@@ -49,6 +49,7 @@
     gcc
     grc
     gnumake
+    cmake
 
     #niche cli tools
     cmatrix
@@ -81,7 +82,14 @@
     deluge #torrent
     motrix
 
+    loupe
+    mapscii
+
     ffmpeg
+    gnome.gnome-maps
+    gnome-text-editor
+    snapshot
+    gnome.gnome-calendar
     python311
     # swaylock-effects #lockscreen
 
@@ -104,9 +112,11 @@
     telegram-desktop
     xdg-utils
     inputs.alejandra.packages.${system}.default #formator
-inputs.RustLover.packages.${system}.default #nvim-neve
+    inputs.RustLover.packages.${system}.default #nvim-neve
     polkit_gnome #polkit gnome
 
     viber
+
+    #avinci-resolve
   ];
 }

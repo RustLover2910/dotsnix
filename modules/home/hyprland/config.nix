@@ -189,6 +189,10 @@
         ",XF86AudioNext,exec, playerctl next"
         ",XF86AudioPrev,exec, playerctl previous"
         ",XF86AudioStop,exec, playerctl stop"
+
+        # screenshot
+        "$mainMod, Print, exec, grimblast --notify --cursor save area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
+        ",Print, exec, grimblast --notify --cursor  copy area"
       ];
       bindm = [
         "$mainMod, mouse:272, movewindow"

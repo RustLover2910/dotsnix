@@ -4,7 +4,9 @@
       enable = true;
       driSupport = true;
       driSupport32Bit = true;
-      extraPackages = with pkgs; [];
+      extraPackages = with pkgs; [
+        intel-compute-runtime
+      ];
     };
     enableRedistributableFirmware = true;
     bluetooth.enable = true;
@@ -25,10 +27,6 @@
         CPU_MAX_PERF_ON_AC = 100;
         CPU_MIN_PERF_ON_BAT = 0;
         CPU_MAX_PERF_ON_BAT = 90;
-
-        #Optional helps save long term battery health
-        #START_CHARGE_THRESH_BAT0 = 50; # 40 and bellow it starts to charge
-        #STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
       };
     };
   };
