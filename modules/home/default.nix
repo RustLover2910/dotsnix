@@ -13,8 +13,8 @@
     ++ [(import ./cava)]
     ++ [(import ./gtk)]
     ++ [(import ./ags)]
+    #++ [(import ./waybar)]
     ++ [(import ./starship)]
-    #++ [(import ./qt)]
     ++ [(import ./mako)] # notification deamon
     ++ [(import ./git)]
     ++ [(import ./rust)]
