@@ -121,6 +121,6 @@
 
     viber
 
-    davinci-resolve
+    #davinci-resolve
   ];
 }
