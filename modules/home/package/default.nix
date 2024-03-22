@@ -18,6 +18,8 @@
     #image
     inkscape
 
+    libnotify
+
     #pdf viewer/editor
     xournalpp
 
@@ -43,8 +45,10 @@
     libreoffice
     bitwarden
 
+    #python
     pipx # Install Python applications in isolated environments
     yarn
+    python311
 
     #music player
     amberol
@@ -54,11 +58,11 @@
     grc
     gnumake
     cmake
+    ninja
 
     #niche cli tools
     cmatrix
     du-dust # disk space visualizer
-    nitch # systhem fetch util
     neofetch # system fetch
     zoxide # faster cd
     ripgrep # grep replacement
@@ -70,6 +74,7 @@
     spicetify-cli
     cliphist # clipboard manager
     wl-clipboard
+    xclip
     translate-shell
     wf-recorder
     lazygit
@@ -81,29 +86,32 @@
     powertop
     speedtest-rs #speedtest
     htop
+    unzip
 
     #torrent/downloader
     deluge #torrent
     motrix
 
-    loupe
+    #maps
     mapscii
-
-    ffmpeg
     gnome.gnome-maps
-    gnome-text-editor
-    snapshot
-    gnome.gnome-calendar
-    python311
-    # swaylock-effects #lockscreen
 
+    gnome.gnome-calendar
+
+    #media
     vlc
     mpv # video players
-    kitty
-    # imv # image viewer
-    libnotify
+    loupe # image viwer
     obs-studio
+    ffmpeg
+    snapshot
+
+    #coding
     vscodium
+
+    # terminal
+    kitty
+    alacritty
 
     #audio
     pamixer # pulseaudio command line mixer
@@ -111,16 +119,14 @@
     playerctl # controller for media players
 
     qalculate-gtk # calculator
-    unzip
+
     zoom-us
     telegram-desktop
     xdg-utils
     inputs.alejandra.packages.${system}.default #formator
-    inputs.RustLover.packages.${system}.default #nvim-neve
+    # inputs.RustLover.packages.${system}.default #nvim-neve
     polkit_gnome #polkit gnome
 
     viber
-
-    davinci-resolve
   ];
 }
