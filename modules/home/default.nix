@@ -13,7 +13,7 @@
     ++ [(import ./cava)]
     ++ [(import ./gtk)]
     ++ [(import ./ags)]
-    ++ [(import ./nvim)]
+    #++ [(import ./nvim)]
     ++ [(import ./starship)]
     ++ [(import ./mako)] # notification deamon
     ++ [(import ./git)]

@@ -5,7 +5,7 @@
   ];
   qt = {
     enable = true;
-    platformTheme = "gtk";
+    platformTheme = "gtk3";
     style.name = "Catppuccin-Frappe-Standard-Blue-Dark";
   };
   gtk = {

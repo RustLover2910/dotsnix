@@ -5,11 +5,11 @@ nvchad = stdenv.mkDerivation rec {
 	version = "";
 	dontBuild = true;
 
-	src = pkgs.fetchFromGithub {
-		owner = "NvChad";
-		repo = "NvChad";
-		rev = "70f66adb594e6854eff5d39ccc13030559a75ae6";
-		sha256 = "09r1m560qv8xbgnxfp7nnplwiwr6hn6nk5cljz32njv9ld1g4bnx";
+	src = pkgs.fetchFromGitHub {
+		owner = "RustLover2910";
+		repo = "nvchad";
+		rev = "846e1b768b8fc4efee82acc31505e63e56615637";
+		sha256 = "sha256-1stoW1H8PqRZny9wOrkGd254UbM5c7Kx/tkfTTGMKsQ=";
 	};
 	installPhase = ''
 		mkdir $out

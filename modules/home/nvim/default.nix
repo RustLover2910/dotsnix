@@ -4,7 +4,7 @@
     vimAlias = true;
     viAlias = true;
   };
-	xdg.configFile."nvim/" = {
-    source = (pkgs.callPackage ./nvchad/default.nix{}).nvchad;
+  xdg.configFile."nvim/" = {
+    source = (pkgs.callPackage ./../nvchad/default.nix{}).nvchad;
   };
 }
