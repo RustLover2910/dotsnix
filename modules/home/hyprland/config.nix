@@ -227,6 +227,7 @@
       windowrulev2 = size 1200 650, class:^(kitty)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(zoom)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(floorp)$
+      windowrulev2 = opacity 1.0 override 1.0 override,class:^(org.gnome.Loupe)$
     '';
   };
 }
