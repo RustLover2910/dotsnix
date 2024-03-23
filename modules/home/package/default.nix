@@ -23,6 +23,7 @@
     #pdf viewer/editor
     xournalpp
 
+    #games
     openjdk17-bootstrap # for minecraft
     prismlauncher #minecraft
 
@@ -46,9 +47,10 @@
     bitwarden
 
     #python
-    pipx # Install Python applications in isolated environments
+    #pipx # Install Python applications in isolated environments
+    pipenv
     yarn
-    python311
+    python311Full
 
     #music player
     amberol

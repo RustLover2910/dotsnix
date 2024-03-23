@@ -21,26 +21,26 @@
       exec-once = [
         "hyprpaper"
         "hyprctl setcursor Nordzy-cursors 24 &"
-        "waybar"
-        "wl-paste --type text --watch cliphist store "
+        "ags"
+        "portals"
         "polkit-gnome"
-        "wl-gammarelay-rs"
+        "wl-paste --type text --watch cliphist store "
         "nm-applet"
         "blueman-applet"
+        "wl-gammarelay-rs"
         "mako"
         "gsettings set org.gnome.desktop.wm.preferences button-layout : "
         "discord"
         "viber"
         "[workspace 4 silent] telegram-desktop"
-        # "/usr/bin/env hyprland-monitor-attached /run/current-system/sw/bin/rokid-attached /run/current-system/sw/bin/rokid-detached"
       ];
 
       general = {
         gaps_in = 5;
         gaps_out = 7;
         border_size = 3;
-        #col.active_border = 0xffb4befe 0xffeba0ac 0xff74c7ec 45deg
-        "col.active_border" = "0xffeebebe 0xffca9ee6 0xffeebebe 45deg";
+        "col.active_border" = "0xffb4befe 0xffeba0ac 0xff74c7ec 45deg";
+        #"col.active_border" = "0xffeebebe 0xffca9ee6 0xffeebebe 45deg";
         "col.inactive_border" = "0xff303446";
         layout = "dwindle";
         "no_border_on_floating" = true;
@@ -228,6 +228,7 @@
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(zoom)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(floorp)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(org.gnome.Loupe)$
+      windowrulev2 = opacity 1.0 override 1.0 override,class:^(com.github.xournalpp.xournalpp)$
     '';
   };
 }

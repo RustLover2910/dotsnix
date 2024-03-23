@@ -2,10 +2,12 @@
   home.packages = [
     #pkgs.twemoji-color-font
     pkgs.noto-fonts-emoji
+    pkgs.gtk-engine-murrine
+    pkgs.gnome-themes-extra
   ];
   qt = {
     enable = true;
-    platformTheme = "gtk3";
+    platformTheme = "gtk";
     style.name = "Catppuccin-Frappe-Standard-Blue-Dark";
   };
   gtk = {

@@ -9,7 +9,6 @@
     };
   };
   home.packages = with pkgs; [
-    nvtop-intel
-    #intel_gpu_top
+    nvtopPackages.intel
   ];
 }

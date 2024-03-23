@@ -12,8 +12,9 @@
     ++ [(import ./hyprland)]
     ++ [(import ./cava)]
     ++ [(import ./gtk)]
+    ++ [(import ./overlay)]
     ++ [(import ./ags)]
-    #++ [(import ./nvim)]
+    ++ [(import ./gaming)]
     ++ [(import ./starship)]
     ++ [(import ./mako)] # notification deamon
     ++ [(import ./git)]

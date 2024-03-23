@@ -12,7 +12,9 @@
 
   programs.fish = {
     enable = true;
-    shellInit = " set -U fish_greeting"; #  && scheme set catppuccin ";
+    shellInit = ''
+      set -U fish_greeting
+    '';
     shellAliases = {
       #cd = "z";
       gg = "lazygit";
@@ -32,8 +34,8 @@
       ee = "yazi";
       #gitsh = "ssh -T git@github.com";
       npkg = "nvim /home/${username}/dotsnix/modules/home/package/default.nix";
-      nhm = "nvim /home/${username}/dotsnix/modules/home/";
-      nco = "nvim /home/${username}/dotsnix/modules/core/";
+      nhm = "yazi /home/${username}/dotsnix/modules/home/";
+      nco = "yazi /home/${username}/dotsnix/modules/core/";
       nix-ts = "sudo nixos-rebuild test --flake /home/${username}/dotsnix#nathannix";
       nix-sw = "sudo nixos-rebuild switch --flake /home/${username}/dotsnix#nathannix";
       nix-up = "sudo nix flake update /home/${username}/dotsnix# && sudo nixos-rebuild switch --upgrade --flake /home/${username}/dotsnix#nathannix";
