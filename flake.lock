@@ -751,11 +751,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1711227269,
-        "narHash": "sha256-gOCdiwQI6VttzWR8NDQBV3vBjTQlSGGZ/r+agDqbf1k=",
+        "lastModified": 1711283076,
+        "narHash": "sha256-Cda+XbHpvyz3HhdJ7FlXFoaazOWtdBoOWmEaj4ZFwRM=",
         "owner": "hyprwm",
         "repo": "hyprpicker",
-        "rev": "9f05fbdabedca3da1ae0f43cd2c5bc9f39f0e3b4",
+        "rev": "0eb49192a5cdd5e6e8e6c2c82c33857d78d6cd56",
         "type": "github"
       },
       "original": {
@@ -945,11 +945,11 @@
         "pre-commit-hooks": "pre-commit-hooks_2"
       },
       "locked": {
-        "lastModified": 1711199922,
-        "narHash": "sha256-Oz5WNOPp95K4JLyoNQKyEdaUM5JzliC62jwTpGPqYNE=",
+        "lastModified": 1711284540,
+        "narHash": "sha256-DTzi4ujZoxM3ZXStCwD6Lph3FdGtkBlvfYsDCRITjfA=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "7170aad28139cd3629b2b6ce4c9272bf41c2ad45",
+        "rev": "e7a3461fefd983ae3443e9aa849e9d1566ab47e4",
         "type": "github"
       },
       "original": {
@@ -960,11 +960,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1711277207,
-        "narHash": "sha256-aBWkx/5IQ7MLNa4uJHIL+88K7k5ou3OtfW2GrMTvr6M=",
+        "lastModified": 1711290879,
+        "narHash": "sha256-VSDs6VjMZx/ZucNE/mogKuiZQb1HflbEaT/yiTuJ+oQ=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "4331ae5ce1f4132be4cd1cb97c23637358d32a13",
+        "rev": "0e2ba010cca9f9001f904b5a23de4c84cdc3bec9",
         "type": "github"
       },
       "original": {
