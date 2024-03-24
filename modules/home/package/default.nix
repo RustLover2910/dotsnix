@@ -27,7 +27,7 @@
     openjdk17-bootstrap # for minecraft
     prismlauncher #minecraft
 
-    filelight # disk usage analyzer
+    # disk usage analyzer
     gparted
     baobab
 
@@ -37,7 +37,6 @@
 
     #notes
     logseq
-    trilium-desktop
     obsidian
 
     font-manager
@@ -114,6 +113,7 @@
     # terminal
     kitty
     alacritty
+    foot
 
     #audio
     pamixer # pulseaudio command line mixer
@@ -127,6 +127,7 @@
     xdg-utils
     inputs.alejandra.packages.${system}.default #formator
     inputs.RustLover.packages.${system}.default #nvim-neve
+    pylint
     polkit_gnome #polkit gnome
 
     viber

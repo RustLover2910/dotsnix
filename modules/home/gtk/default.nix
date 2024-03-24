@@ -39,7 +39,7 @@
     };
   };
   home = {
-    sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
+    #sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
     pointerCursor = {
       name = "Nordzy-cursors";
       package = pkgs.nordzy-cursor-theme;

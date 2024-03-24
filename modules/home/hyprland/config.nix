@@ -19,9 +19,9 @@
       };
 
       exec-once = [
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "hyprpaper"
-        "hyprctl setcursor Nordzy-cursors 24 &"
-        "ags"
+        "waybar"
         "portals"
         "polkit-gnome"
         "wl-paste --type text --watch cliphist store "

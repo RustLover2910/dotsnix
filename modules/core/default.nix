@@ -22,7 +22,7 @@ in {
       ++ [(import ./security.nix)]
       ++ [(import ./services.nix)]
       ++ [(import ./system.nix)]
-      ++ [(import ./steam.nix)]
+      #++ [(import ./steam.nix)]
       ++ [(import ./font.nix)]
       ++ [(import ./user.nix)]
       ++ [(import ./wayland.nix)]
