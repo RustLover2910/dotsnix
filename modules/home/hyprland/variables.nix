@@ -1,7 +1,7 @@
 {...}: {
   home.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    _JAVA_AWT_WM_NONREPARENTING = "1";
+    #_JAVA_AWT_WM_NONREPARENTING = "1";
     SSH_AUTH_SOCK = "/run/user/$(id -u)/ssh-agent";
     #  DISABLE_QT5_COMPAT = "0";
     GDK_BACKEND = "wayland";
@@ -16,14 +16,8 @@
     WLR_RENDERER = "vulkan";
     WLR_NO_HARDWARE_CURSORS = "1";
     XDG_SESSION_TYPE = "wayland";
-    XDG_CURRENT_DESKTOP = "Hyprland";
-    XDG_SESSION_DESKTOP = "Hyprland";
     GTK_USE_PORTAL = "1";
     NIXOS_XDG_OPEN_USE_PORTAL = "1";
-    XDG_CACHE_HOME = "\${HOME}/.cache";
-    XDG_CONFIG_HOME = "\${HOME}/.config";
-    XDG_BIN_HOME = "\${HOME}/.local/bin";
-    XDG_DATA_HOME = "\${HOME}/.local/share";
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
     GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";

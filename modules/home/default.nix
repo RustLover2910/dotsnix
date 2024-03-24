@@ -12,7 +12,7 @@
     ++ [(import ./hyprland)]
     ++ [(import ./cava)]
     ++ [(import ./gtk)]
-    ++ [(import ./overlay)]
+    #++ [(import ./overlay)]
     ++ [(import ./ags)]
     ++ [(import ./gaming)]
     ++ [(import ./starship)]

@@ -10,6 +10,6 @@ pkill $gtk
 pkill $port
 $hypr &
 sleep 2
-$gtk &
+$gtk & $port
 systemctl --user import-environment PATH
 systemctl --user restart xdg-desktop-portal.service

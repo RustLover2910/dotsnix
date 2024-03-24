@@ -5,7 +5,7 @@
   ...
 }: {
   nixpkgs.overlays = [
-    (_: final: prev: {
+    (final: prev: {
       pythonPackagesExtensions =
         prev.pythonPackagesExtensions
         ++ [
