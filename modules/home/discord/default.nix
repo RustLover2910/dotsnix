@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports =
-    [(import ./theme-template.nix)]
+    [(import ./catppuccin-frappe.nix)]
     ++ [(import ./everforest.nix)];
   home.packages = with pkgs; [
     (discord.override {
