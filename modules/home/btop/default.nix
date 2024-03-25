@@ -3,7 +3,7 @@
     enable = true;
 
     settings = {
-      color_theme = "catppuccin";
+      color_theme = "everforest-dark-soft";
       theme_background = false;
       update_ms = 400;
     };

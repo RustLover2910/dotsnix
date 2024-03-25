@@ -1,49 +1,38 @@
-{pkgs, ...}: {
-  home.packages = [
-    #pkgs.twemoji-color-font
-    pkgs.noto-fonts-emoji
-    pkgs.gtk-engine-murrine
-    pkgs.gnome-themes-extra
-  ];
-  qt = {
-    enable = true;
-    platformTheme = "gtk";
-    style.name = "Catppuccin-Frappe-Standard-Blue-Dark";
-  };
+{
+  config,
+  systemConfig,
+  inputs,
+  lib,
+  ...
+}: let
+  theme = systemConfig.theme.set;
+in {
   gtk = {
     enable = true;
     font = {
-      name = "Montserrat";
-      size = 13;
-    };
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "frappe";
-        accent = "blue";
-      };
+      name = "FiraMono Nerd Font";
+      size = 10;
     };
     theme = {
-      name = "Catppuccin-Frappe-Standard-Blue-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = ["blue"];
-        size = "standard";
-        tweaks = ["rimless"];
-        variant = "frappe";
-      };
+      name = theme.gtkThemeName;
+      package = theme.gtkThemePackage;
     };
-    cursorTheme = {
-      name = "Nordzy-cursors";
-      package = pkgs.nordzy-cursor-theme;
-      size = 24;
+    iconTheme = {
+      name = theme.iconThemeName;
+      package = theme.iconThemePackage;
     };
+    gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
   };
+
   home = {
-    #sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
+    sessionVariables = {
+      GTK_THEME = theme.gtkThemeName;
+    };
     pointerCursor = {
-      name = "Nordzy-cursors";
-      package = pkgs.nordzy-cursor-theme;
-      size = 24;
+      package = theme.cursorThemePackage;
+      name = theme.cursorThemeName;
+      size = 32;
+      gtk.enable = true;
     };
   };
 }
