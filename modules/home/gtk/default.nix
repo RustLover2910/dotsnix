@@ -1,11 +1,11 @@
 {pkgs, ...}: {
-  imports = import [../package/customs];
+  #imports = [(import ../package/customs)];
   home.packages = [
     #pkgs.twemoji-color-font
     pkgs.noto-fonts-emoji
     pkgs.gtk-engine-murrine
     pkgs.gnome-themes-extra
-    mypackages.everforest-gtk
+    #mypackages.everforest-gtk
   ];
   qt = {
     enable = true;

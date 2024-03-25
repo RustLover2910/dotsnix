@@ -26,6 +26,7 @@ in {
       ++ [(import ./font.nix)]
       ++ [(import ./user.nix)]
       ++ [(import ./wayland.nix)]
+      ++ [(import ./customs)]
       ++ [(import ./../../hosts/nixos/hardware-configuration.nix)];
   };
 }

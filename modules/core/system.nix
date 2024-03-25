@@ -10,12 +10,6 @@
       experimental-features = ["nix-command" "flakes"];
     };
   };
-  nixpkgs = {
-    overlays = [
-      inputs.nur.overlay
-    ];
-  };
-
   environment = {
     variables.EDITOR = "nvim";
     systemPackages = with pkgs; [

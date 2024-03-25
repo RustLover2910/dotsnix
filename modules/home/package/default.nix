@@ -3,7 +3,6 @@
   pkgs,
   ...
 }: {
-  imports = import ./customs;
   home.packages = with pkgs; [
     eza # ls replacement
     fzf # fuzzy finder
