@@ -3,7 +3,7 @@
   username,
   ...
 }: {
-  program.fish = {
+  programs.fish = {
     shellAliases = {
       #cd = "z";
       gg = "lazygit";
