@@ -223,8 +223,9 @@
       windowrule = float, ^(Bitwarden)$
       windowrule = noshadow, ^(Windscribe)$
       windowrule = float, title:^(Password Required - Ablaze Floorp)$
-      windowrulev2 = noblur, class:^(kitty)$
-      windowrulev2 = size 1200 650, class:^(kitty)$
+      #windowrulev2 = noblur, class:^(kitty)$
+      windowrulev2 = size 1200 700, class:^(kitty)$
+      windowrulev2 = opacity 1.0 override 1.0 override,class:^(kitty)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(zoom)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(floorp)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(org.gnome.Loupe)$

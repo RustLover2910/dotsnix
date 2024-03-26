@@ -16,7 +16,7 @@
       wget
       libsForQt5.qt5ct
       qt6Packages.qt6ct
-      mypackages.everforest-gtk
+      #mypackages.everforest-gtk
       curl
       git
     ];

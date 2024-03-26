@@ -34,6 +34,7 @@
     #file manager
     cinnamon.nemo-with-extensions # file manager
     yazi # cli file manager
+    gnome.file-roller
 
     #notes
     logseq

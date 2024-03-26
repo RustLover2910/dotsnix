@@ -1,8 +1,9 @@
-{
-  pkgs,
-  # mypackages,
-  ...
-}: {
+{pkgs, ...}: let
+  everforest-gtk = pkgs.callPackage ./everforest-gtk.nix {};
+in {
+  home.packages = [
+    everforest-gtk
+  ];
   gtk = {
     enable = true;
     font = {
@@ -18,7 +19,7 @@
     };
     theme = {
       name = "Everforest-Dark-BL";
-      package = pkgs.callPackage ./everforest-gtk.nix {};
+      package = everforest-gtk;
     };
     cursorTheme = {
       name = "Nordzy-cursors";

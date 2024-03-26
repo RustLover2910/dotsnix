@@ -1,15 +1,4 @@
 {pkgs, ...}: {
-  home.packages = [
-    pkgs.twemoji-color-font
-    pkgs.noto-fonts-emoji
-    pkgs.gtk-engine-murrine
-    pkgs.gnome-themes-extra
-  ];
-  qt = {
-    enable = true;
-    platformTheme = "gtk";
-    style.name = "gtk3";
-  };
   gtk = {
     enable = true;
     font = {
@@ -39,7 +28,7 @@
     };
   };
   home = {
-    #sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
+    sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
     pointerCursor = {
       name = "Nordzy-cursors";
       package = pkgs.nordzy-cursor-theme;

@@ -13,7 +13,7 @@
     ++ [(import ./cava)]
     ++ [(import ./gtk)]
     ++ [(import ./waybar)]
-    #++ [(import ./ags)]
+    ++ [(import ./chatgpt)]
     ++ [(import ./gaming)]
     ++ [(import ./starship)]
     ++ [(import ./mako)] # notification deamon
