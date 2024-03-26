@@ -7,6 +7,7 @@
     [(import ./btop)]
     ++ [(import ./discord)] # discord with catppuccin theme
     ++ [(import ./kitty)]
+    ++ [(import ./foot)]
     ++ [(import ./wofi)]
     ++ [(import ./fish)]
     ++ [(import ./hyprland)]

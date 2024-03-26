@@ -12,7 +12,7 @@
 
   # Install necessary packages
   environment.systemPackages = with pkgs; [
-    virt-manager
+    #virt-manager
     virt-viewer
     spice
     spice-gtk
@@ -21,6 +21,8 @@
     win-spice
     gnome.adwaita-icon-theme
   ];
+
+  programs.virt-manager.enable = true;
 
   # Manage the virtualisation services
   virtualisation = {
@@ -36,4 +38,3 @@
   };
   services.spice-vdagentd.enable = true;
 }
-

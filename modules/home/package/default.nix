@@ -114,7 +114,6 @@
     # terminal
     kitty
     alacritty
-    foot
 
     #audio
     pamixer # pulseaudio command line mixer

@@ -5,7 +5,6 @@
     corefonts
     dosis
     raleway
-    quattrocento
     comfortaa
     quicksand
     montserrat

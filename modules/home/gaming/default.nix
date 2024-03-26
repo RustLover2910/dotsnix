@@ -10,6 +10,6 @@
     winetricks
     mangohud
 
-    wine-staging
+    #wine-staging
   ];
 }
