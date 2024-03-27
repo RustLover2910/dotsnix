@@ -9,5 +9,5 @@
     printing.enable = true;
     blueman.enable = true;
   };
-  #programs.ssh.startAgent = true; #
+  programs.ssh.startAgent = true; #
 }

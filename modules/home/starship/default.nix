@@ -1,6 +1,7 @@
-{ lib
-, inputs
-, ...
+{
+  lib,
+  inputs,
+  ...
 }: {
   programs.starship = {
     enable = true;
@@ -14,14 +15,14 @@
         right_format = "$cmd_duration";
 
         directory = {
-          format = "[ ](bold #89b4fa)[ $path ]($style)";
+          format = "[  ](bold #89b4fa)[ $path ]($style)";
           style = "bold #b4befe";
         };
 
         character = {
-          success_symbol = "[ ](bold #89b4fa)[ ➜](bold green)";
+          success_symbol = "[  ](bold #89b4fa)[ ➜](bold green)";
           #error_symbol = "[ ](bold #89b4fa)[ ➜](bold red)";
-          error_symbol = "[ ](bold #89dceb)[ ✗](bold red)";
+          error_symbol = "[  ](bold #89dceb)[ ✗](bold red)";
         };
 
         cmd_duration = {
@@ -31,11 +32,11 @@
         };
 
         directory.substitutions = {
-          "~" = "󰋞 ";
-          "Documents" = "󰈙 ";
-          "Downloads" = " ";
-          "Music" = " ";
-          "Pictures" = " ";
+          "~" = " 󰋞 ";
+          "Documents" = " 󰈙 ";
+          "Downloads" = "  ";
+          "Music" = "  ";
+          "Pictures" = "  ";
         };
 
         palette = "catppuccin_frappe";

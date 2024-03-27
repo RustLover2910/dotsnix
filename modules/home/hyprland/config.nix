@@ -114,11 +114,11 @@
       "$mainMod" = "SUPER";
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = [
-        "$mainMod, T, exec, kitty"
+        "$mainMod, T, exec, foot"
         "$mainMod, W, exec, floorp"
         "$mainMod, C, killactive"
         "$mainMod, E, exec, nemo"
-        "$mainMod SHIFT, E, exec, kitty --hold yazi"
+        "$mainMod SHIFT, E, exec, foot --hold yazi"
         "$mainMod, V, togglefloating,"
         "$mainMod, R, exec, "
         "$mainMod, P, pseudo, # dwindle"
@@ -213,15 +213,17 @@
     #window rules
     extraConfig = ''
       #WindowsRules
-      windowrule = float,^(motrix)$
-      windowrule = float, ^(pavucontrol)$
+      windowrule = float,class^(Motrix)$
+      windowrule = float,class^(pavucontrol)$
       windowrulev2 = size 590 550,class:^(pavucontrol)$
       windowrulev2 = move 1321 50,class:^(pavucontrol)$
       windowrule = float, ^(polkit-gnome-authentication-agent-1)$
       windowrule = float, ^(kitty)$
+      windowrulev2 = size 1200 700, class:^(foot)$
+      windowrulev2 = opacity 0.9 override 0.9 override,class:^(foot)$
+      windowrule = float, ^(foot)$
       windowrule = float,^(.blueman-manager-wrapped)$
       windowrule = float, ^(Bitwarden)$
-      windowrule = noshadow, ^(Windscribe)$
       windowrule = float, title:^(Password Required - Ablaze Floorp)$
       #windowrulev2 = noblur, class:^(kitty)$
       windowrulev2 = size 1200 700, class:^(kitty)$
@@ -230,6 +232,20 @@
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(floorp)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(org.gnome.Loupe)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(com.github.xournalpp.xournalpp)$
+
+
+      windowrulev2 = float,class:^(file_progress)$
+      windowrulev2 = float,class:^(confirm)$
+      windowrulev2 = float,class:^(dialog)$
+      windowrulev2 = float,class:^(download)$
+      windowrulev2 = float,class:^(notification)$
+      windowrulev2 = float,class:^(error)$
+      windowrulev2 = float,class:^(confirmreset)$
+      windowrulev2 = float,title:^(Open File)$
+      windowrulev2 = float,title:^(branchdialog)$
+      windowrulev2 = float,title:^(Confirm to replace files)$
+      windowrulev2 = float,title:^(File Operation Progress)$
+
     '';
   };
 }

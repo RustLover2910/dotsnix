@@ -5,7 +5,7 @@
     SSH_AUTH_SOCK = "/run/user/$(id -u)/ssh-agent";
     #  DISABLE_QT5_COMPAT = "0";
     GDK_BACKEND = "wayland,x11";
-    TERMINAL = "kitty";
+    TERMINAL = "foot";
     BROWSER = "floorp";
     WLR_DRM_NO_ATOMIC = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";

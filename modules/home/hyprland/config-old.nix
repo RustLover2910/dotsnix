@@ -221,34 +221,23 @@
       bindm = $mainMod, mouse:273, resizewindow
       
       # windowrule
-     # windowrule = float,audacious
-     # windowrule = workspace 8 silent, audacious
       windowrule = pin,wofi
       windowrule = float,wofi
       windowrule = noborder,wofi
       windowrule = tile, neovide
       windowrule = idleinhibit focus,mpv
       windowrule = float,udiskie
-     # windowrule = float,title:^(Transmission)$
       windowrule = float,title:^(Volume Control)$
-      windowrule = float,title:^(Firefox — Sharing Indicator)$
-      windowrule = move 0 0,title:^(Firefox — Sharing Indicator)$
       windowrule = size 700 450,title:^(Volume Control)$
       windowrule = move 40 55%,title:^(Volume Control)$
       windowrulev2 = float, title:^(Picture-in-Picture)$
       windowrulev2 = opacity 1.0 override 1.0 override, title:^(Picture-in-Picture)$
       # windowrulev2 = opacity 1.0 override 1.0 override, title:^(.*YouTube.*)$
       windowrulev2 = pin, title:^(Picture-in-Picture)$
-      windowrule = float,imv
-      windowrule = center,imv
-      windowrule = size 1200 725,imv
       windowrulev2 = opacity 1.0 override 1.0 override, title:^(.*imv.*)$
       windowrule = float,mpv
       windowrule = center,mpv
       windowrulev2 = opacity 1.0 override 1.0 override, title:^(.*mpv.*)$
-      windowrule = tile,Aseprite
-      windowrulev2 = opacity 1.0 override 1.0 override, class:(Aseprite)
-      windowrulev2 = opacity 1.0 override 1.0 override, class:(Unity)
       windowrule = size 1200 725,mpv
       windowrulev2 = idleinhibit focus, class:^(mpv)$
       windowrulev2 = idleinhibit fullscreen, class:^(firefox)$

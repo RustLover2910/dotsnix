@@ -70,7 +70,7 @@
     ripgrep # grep replacement
     todo # cli todo list
     toipe # typing test in the terminal
-    yt-dlp # yt vid downloader
+    p7zip
     wf-recorder
     lazygit
     spicetify-cli

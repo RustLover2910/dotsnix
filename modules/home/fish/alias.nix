@@ -25,8 +25,8 @@
       npkg = "nvim /home/${username}/dotsnix/modules/home/package/default.nix";
       nhm = "yazi /home/${username}/dotsnix/modules/home/";
       nco = "yazi /home/${username}/dotsnix/modules/core/";
-      nix-ts = "sudo nixos-rebuild test --flake /home/${username}/dotsnix#nathannix";
-      nix-sw = "sudo nixos-rebuild switch --flake /home/${username}/dotsnix#nathannix";
+      nix-ts = "sudo nixos-rebuild test --flake /home/${username}/dotsnix#${username}";
+      nix-sw = "sudo nixos-rebuild switch --flake /home/${username}/dotsnix#${username}";
       nix-up = "sudo nix flake update /home/${username}/dotsnix# && sudo nixos-rebuild switch --upgrade --flake /home/${username}/dotsnix#nathannix";
       # nix-fup = "sudo nix flake update /home/${username}/dotsnix#";
       del = "sudo nix-collect-garbage -d ";
