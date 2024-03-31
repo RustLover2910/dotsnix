@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  imports = [(import ./catppuccin.nix)];
+  imports = [(import ./everforest.nix)];
   home.packages = [
     pkgs.twemoji-color-font
     pkgs.noto-fonts-emoji

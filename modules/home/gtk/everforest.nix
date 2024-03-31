@@ -7,8 +7,8 @@ in {
   gtk = {
     enable = true;
     font = {
-      name = "JetBrainsMono Nerd Font";
-      size = 12;
+      name = "Montserrat";
+      size = 13;
     };
     iconTheme = {
       name = "Papirus-Dark";
@@ -18,7 +18,7 @@ in {
       };
     };
     theme = {
-      name = "Everforest-Dark-BL";
+      name = "Everforest-Dark-B";
       package = everforest-gtk;
     };
     cursorTheme = {
@@ -27,8 +27,9 @@ in {
       size = 24;
     };
   };
+
   home = {
-    #sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
+    sessionVariables.GTK_THEME = "Everforest-Dark-B";
     pointerCursor = {
       name = "Nordzy-cursors";
       package = pkgs.nordzy-cursor-theme;

@@ -22,7 +22,7 @@
     NIXOS_XDG_OPEN_USE_PORTAL = "1";
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
-    GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
+    #GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
     XCURSOR_THEME = "Nordzy-cursors";
     XCURSOR_SIZE = "24";
   };

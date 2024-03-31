@@ -49,6 +49,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    chris-neovim = {
+      url = "github:siph/nixvim-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     catppuccin-cava = {
       url = "github:catppuccin/cava";

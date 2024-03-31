@@ -8,9 +8,6 @@
     fzf # fuzzy finder
     go
 
-    # 3d
-    blender
-
     #bowsers
     ungoogled-chromium #chromium
     floorp # firefox fork
@@ -98,6 +95,7 @@
     mapscii
     gnome.gnome-maps
 
+    #calender
     gnome.gnome-calendar
 
     #media
@@ -107,6 +105,10 @@
     obs-studio
     ffmpeg
     snapshot
+
+    #editor
+    openshot-qt
+    blender
 
     #coding
     vscodium
@@ -127,6 +129,7 @@
     xdg-utils
     inputs.alejandra.packages.${system}.default #formator
     inputs.RustLover.packages.${system}.default #nvim-neve
+    # inputs.chris-neovim.packages.${system}.default
     pylint
     polkit_gnome #polkit gnome
 

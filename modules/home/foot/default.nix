@@ -7,41 +7,9 @@
    
   # -*- conf -*-
 
-   # shell=$SHELL (if set, otherwise user's default shell from /etc/passwd)
-    # term=foot (or xterm-256color if built with -Dterminfo=disabled)
-    # login-shell=no
-
-    # app-id=foot
-    # title=foot
-    # locked-title=no
-
-    font=JetBrainsMono Nerd Font:size=14
-    # font-bold=<bold variant of regular font>
-    # font-italic=<italic variant of regular font>
-    # font-bold-italic=<bold+italic variant of regular font>
-    # font-size-adjustment=0.5
-    # line-height=<font metrics>
-    # letter-spacing=0
-    # horizontal-letter-offset=0
-    # vertical-letter-offset=0
-    # underline-offset=<font metrics>
-    # underline-thickness=<font underline thickness>
-    # box-drawings-uses-font-glyphs=no
-    # dpi-aware=auto
-
-    # initial-window-size-pixels=700x500  # Or,
-    # initial-window-size-chars=<COLSxROWS>
-    # initial-window-mode=windowed
-    # pad=0x0                             # optionally append 'center'
-    # resize-delay-ms=100
-
-    # bold-text-in-bright=no
-    # word-delimiters=,│`|:"'()[]{}<>
-    # selection-target=primary
-    # workers=<number of logical CPUs>
-    # utempter=/usr/lib/utempter/utempter
-
-   ## =========== Everforest - Dark - Medium ================= ##
+      font=JetBrainsMono Nerd Font:size=14
+     ## =========== Everforest - Dark - Medium ================= ##
+    [colors]
     [colors]
     alpha=1.0
     background=2f383e
@@ -63,10 +31,7 @@
     bright4=7fbbb3 # blue
     bright5=d699b6 # magenta
     bright6=83c092 # cyan
-    bright7=d3c6aa # white
-
-
-    [environment]
+    bright7=d3c6aa # white    [environment]
     # name=value
 
     [bell]
