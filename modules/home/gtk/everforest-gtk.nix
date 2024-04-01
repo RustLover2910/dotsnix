@@ -11,8 +11,8 @@ stdenvNoCC.mkDerivation {
   src = fetchFromGitHub {
     owner = "Fausto-Korpsvart";
     repo = "Everforest-GTK-Theme";
-    rev = "8481714cf9ed5148694f1916ceba8fe21e14937b";
-    hash = "sha256-NO12ku8wnW/qMHKxi5TL/dqBxH0+cZbe+fU0iicb9JU=";
+    rev = "2e18e0daff2268dd808101159b4be9e42a3a6db2";
+    hash = "sha256-G6kxv6R7sCim9m1XBGqIBMH52LVrSwJKEKS2vKHjKC4=";
   };
 
   propagatedUserEnvPkgs = [

@@ -18,7 +18,7 @@ in {
       };
     };
     theme = {
-      name = "Everforest-Dark-B";
+      name = "Everforest-Dark-Medium-BL";
       package = everforest-gtk;
     };
     cursorTheme = {
@@ -29,7 +29,7 @@ in {
   };
 
   home = {
-    sessionVariables.GTK_THEME = "Everforest-Dark-B";
+    sessionVariables.GTK_THEME = "Everforest-Dark-Medium-BL";
     pointerCursor = {
       name = "Nordzy-cursors";
       package = pkgs.nordzy-cursor-theme;

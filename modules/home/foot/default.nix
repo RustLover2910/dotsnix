@@ -10,30 +10,24 @@
       font=JetBrainsMono Nerd Font:size=14
      ## =========== Everforest - Dark - Medium ================= ##
     [colors]
-    [colors]
-    alpha=1.0
-    background=2f383e
-    foreground=d3c6aa
-
-    regular0=4b565c # black
-    regular1=e67e80 # red
-    regular2=a7c080 # green
-    regular3=dbbc7f # yellow
-    regular4=7fbbb3 # blue
-    regular5=d699b6 # magenta
-    regular6=83c092 # cyan
-    regular7=d3c6aa # white
-
-    bright0=4b565c # black
-    bright1=e67e80 # red
-    bright2=a7c080 # green
-    bright3=dbbc7f # yellow
-    bright4=7fbbb3 # blue
-    bright5=d699b6 # magenta
-    bright6=83c092 # cyan
-    bright7=d3c6aa # white    [environment]
-    # name=value
-
+    foreground=c6d0f5 # Text
+    background=303446 # Base
+    regular0=51576d   # Surface 1
+    regular1=e78284   # red
+    regular2=a6d189   # green
+    regular3=e5c890   # yellow
+    regular4=8caaee   # blue
+    regular5=f4b8e4   # pink
+    regular6=81c8be   # teal
+    regular7=b5bfe2   # Subtext 1
+    bright0=626880    # Surface 2
+    bright1=e78284    # red
+    bright2=a6d189    # green
+    bright3=e5c890    # yellow
+    bright4=8caaee    # blue
+    bright5=f4b8e4    # pink
+    bright6=81c8be    # teal
+    bright7=a5adce    # Subtext 0
     [bell]
     # urgent=no
     # notify=no

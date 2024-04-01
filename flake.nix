@@ -54,6 +54,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    Neve = {
+      url = "github:redyf/Neve";
+      #inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     catppuccin-cava = {
       url = "github:catppuccin/cava";
       flake = false;
