@@ -9,7 +9,7 @@
     go
 
     #bowsers
-    ungoogled-chromium #chromium
+    #ungoogled-chromium #chromium
     floorp # firefox fork
 
     #image
@@ -44,8 +44,8 @@
     bitwarden
 
     #python
-    #pipx # Install Python applications in isolated environments
-    pipenv
+    pipx # Install Python applications in isolated environments
+    #pipenv
     yarn
     python311Full
 
@@ -84,8 +84,13 @@
     ncdu # disk space
     powertop
     speedtest-rs #speedtest
+    lolcat
+    cowsay
     htop
     unzip
+
+    ani-cli
+    ueberzugpp
 
     #torrent/downloader
     deluge #torrent
@@ -128,8 +133,10 @@
     telegram-desktop
     xdg-utils
     inputs.alejandra.packages.${system}.default #formator
-    inputs.RustLover.packages.${system}.default #nvim-neve
+    inputs.Neve.packages.${system}.default #nvim-neve
     # inputs.chris-neovim.packages.${system}.default
+    inputs.lobster.packages.${system}.lobster
+
     pylint
     polkit_gnome #polkit gnome
 

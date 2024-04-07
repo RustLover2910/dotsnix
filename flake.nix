@@ -31,6 +31,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    lobster = {
+      url = "github:justchokingaround/lobster";
+    };
+
     ags = {
       url = "github:Aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,6 +48,10 @@
     hypridle = {
       url = "github:hyprwm/Hypridle";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
     };
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -61,6 +69,11 @@
 
     catppuccin-cava = {
       url = "github:catppuccin/cava";
+      flake = false;
+    };
+
+    catppuccin-lazygit = {
+      url = "github:catppuccin/lazygit";
       flake = false;
     };
 

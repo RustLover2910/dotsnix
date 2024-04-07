@@ -1,10 +1,27 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   programs = {
     dconf.enable = true;
     fish.enable = true;
-    #gnupg.agent = {
-    #  enable = true;
-    #  enableSSHSupport = true;
-    # };
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+      dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    };
   };
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "steam"
+      "steam-original"
+      "steam-run"
+    ];
+
+  #gnupg.agent = {
+  #  enable = true;
+  #  enableSSHSupport = true;
+  #  pinentryFlavor = "gnome3";
+  #};
 }

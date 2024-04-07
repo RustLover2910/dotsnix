@@ -39,7 +39,7 @@
         gaps_in = 5;
         gaps_out = 7;
         border_size = 3;
-        "col.active_border" = "0xffb4befe 0xffeba0ac 0xff74c7ec 45deg";
+        "col.active_border" = "0xffb4befe 0xffeba0ac 0xff74c7ec";
         #"col.active_border" = "0xffeebebe 0xffca9ee6 0xffeebebe 45deg";
         "col.inactive_border" = "0xff303446";
         layout = "dwindle";
@@ -77,25 +77,20 @@
 
       animation = {
         bezier = [
-          "fluent_decel, 0, 0.2, 0.4, 1"
-          "easeOutCirc, 0, 0.55, 0.45, 1"
-          "easeOutCubic, 0.33, 1, 0.68, 1"
-          "easeinoutsine, 0.37, 0, 0.63, 1"
+          "wind, 0.05, 0.9, 0.1, 1.05"
+          "winIn, 0.1, 1.1, 0.1, 1.1"
+          "winOut, 0.3, -0.3, 0, 1"
+          "liner, 1, 1, 1, 1"
         ];
         animation = [
-          "windowsIn, 1, 1.7, easeOutCubic, slide" # window open
-          "windowsOut, 1, 1.7, easeOutCubic, slide" # window close
-          "windowsMove, 1, 2.5, easeinoutsine, slide" # everything in between, moving, dragging, resizing
-
-          # fading
-          "fadeIn, 1, 3, easeOutCubic" # fade in (open) -> layers and windows
-          "fadeOut, 1, 3, easeOutCubic" # fade out (close) -> layers and windows
-          "fadeSwitch, 1, 5, easeOutCirc" # fade on changing activewindow and its opacity
-          "fadeShadow, 1, 5, easeOutCirc" # fade on changing activewindow for shadows
-          "fadeDim, 1, 6, fluent_decel" # the easing of the dimming of inactive windows
-          "border, 1, 2.7, easeOutCirc" # for animating the border's color switch speed
-          "workspaces, 1, 2, fluent_decel, slide" # styles: slide, slidevert, fade, slidefade, slidefadevert
-          "specialWorkspace, 1, 3, fluent_decel, slidevert"
+          "windows, 1, 6, wind, slide"
+          "windowsIn, 1, 6, winIn, slide"
+          "windowsOut, 1, 5, winOut, slide"
+          "windowsMove, 1, 5, wind, slide"
+          "border, 1, 1, liner"
+          "borderangle, 1, 30, liner, loop"
+          "fade, 1, 10, default"
+          "workspaces, 1, 5, wind"
         ];
       };
       dwindle = {
@@ -115,6 +110,7 @@
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = [
         "$mainMod, T, exec, foot"
+        #"$mainMod SHIFT, T, exec, foot --hold lolcat ~/welcome.txt"
         "$mainMod, W, exec, floorp"
         "$mainMod, C, killactive"
         "$mainMod, E, exec, nemo"
@@ -212,21 +208,34 @@
     };
     #window rules
     extraConfig = ''
+      bind = SUPER, grave, hyprexpo:expo, toggle
+
+      plugin {
+          hyprexpo {
+              columns = 3
+              gap_size = 5
+              bg_col = rgb(111111)
+              workspace_method = center current # [center/first] [workspace] e.g. first 1 or center m+1
+
+              enable_gesture = true # laptop touchpad, 4 fingers
+              gesture_distance = 300 # how far is the "max"
+              gesture_positive = true # positive = swipe down. Negative = swipe up.
+          }
+      }
+
       #WindowsRules
       windowrule = float,class^(Motrix)$
       windowrule = float,class^(pavucontrol)$
       windowrulev2 = size 590 550,class:^(pavucontrol)$
       windowrulev2 = move 1321 50,class:^(pavucontrol)$
       windowrule = float, ^(polkit-gnome-authentication-agent-1)$
-      windowrule = float, ^(kitty)$
       windowrulev2 = size 1200 700, class:^(foot)$
       windowrulev2 = opacity 0.9 override 0.9 override,class:^(foot)$
       windowrule = float, ^(foot)$
       windowrule = float,^(.blueman-manager-wrapped)$
       windowrule = float, ^(Bitwarden)$
       windowrule = float, title:^(Password Required - Ablaze Floorp)$
-      #windowrulev2 = noblur, class:^(kitty)$
-      windowrulev2 = size 1200 700, class:^(kitty)$
+      windowrule = float, class:^(nemo)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(kitty)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(zoom)$
       windowrulev2 = opacity 1.0 override 1.0 override,class:^(floorp)$

@@ -8,7 +8,7 @@
     gamemode
     gamescope
     winetricks
-    mangohud
+    #mangohud
 
     #wine-staging
   ];

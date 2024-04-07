@@ -27,12 +27,15 @@
   };
   wayland.windowManager.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.default;
     xwayland = {
       enable = true;
       # hidpi = true;
     };
-    # enableNvidiaPatches = false;
+    plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+    ];
     systemd.enable = true;
+    systemd.variables = ["--all"];
   };
-  # programs.brightnessctl.enable = true;
 }

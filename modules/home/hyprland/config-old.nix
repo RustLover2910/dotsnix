@@ -115,8 +115,8 @@
         bezier = easeinoutsine, 0.37, 0, 0.63, 1
 
         # Windows
-        animation = windowsIn, 1, 3, easeOutCubic, popin 30% # window open
-        animation = windowsOut, 1, 3, fluent_decel, popin 70% # window close.
+        animation = windowsIn, 1, 3, easeOutCubic, popin 10% # window open
+        animation = windowsOut, 1, 3, fluent_decel, popin 50% # window close.
         animation = windowsMove, 1, 2, easeinoutsine, slide # everything in between, moving, dragging, resizing.
         
         # Fade

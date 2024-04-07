@@ -3,7 +3,7 @@
     enable = true;
 
     settings = {
-      color_theme = "everforest-dark-medium";
+      color_theme = "catppuccin-frappe";
       theme_background = false;
       update_ms = 300;
     };

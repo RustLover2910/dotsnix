@@ -1,9 +1,9 @@
 {...}: {
-  xdg.configFile."hypr/wallpaper".source = ./wallpaper;
+  xdg.configFile."hypr/paper".source = ./paper;
   xdg.configFile."hypr/hyprlock.conf".text = ''
     background {
       monitor =
-      path = ~/.config/hypr/wallpaper/walllock.png # only png supported for now
+      path = ~/.config/hypr/paper/walllock.png # only png supported for now
       color = rgba(25, 20, 20, 1.0)
 
       # all these options are taken from hyprland, see https://wiki.hyprland.org/Configuring/Variables/#blur for explanations
@@ -57,5 +57,5 @@
     #}
   '';
 
-  xdg.configFile."hypr/wallpaper/walllock.png".source = ./wallpaper/walllock.png;
+  xdg.configFile."hypr/paper/walllock.png".source = ./paper/walllock.png;
 }
