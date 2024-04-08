@@ -18,7 +18,6 @@
     slurp
     glib
     wayland
-    direnv
   ];
   systemd = {
     user = {
