@@ -47,7 +47,7 @@
     pipx # Install Python applications in isolated environments
     #pipenv
     yarn
-    python311Full
+    python312Full
 
     #music player
     amberol

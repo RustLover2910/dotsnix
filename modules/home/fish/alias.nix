@@ -16,6 +16,7 @@
       cdnix = "z ~/dotsnix && codium ~/dotsnix ";
       nnix = "z ~/dotsnix && nvim ~/dotsnix ";
       part = "sudo -E gparted";
+      yy = "yazi";
     };
     shellAbbrs = {
       sshgit = "ssh-add /home/${username}/.ssh/id_ed25519 && ssh -T git@github.com";
