@@ -1,32 +1,33 @@
-{
-  inputs,
-  nixpkgs,
-  self,
-  username,
-  ...
-}: let
-  system = "x86_64-linux";
-  #flake_path = "/home/${username}/dotsnix";
-  pkgs = nixpkgs.legacyPackages.${system};
-  lib = nixpkgs.lib;
-in {
-  nathannix = lib.nixosSystem {
-    specialArgs = {inherit self inputs username;};
-    modules =
-      [(import ./bootloader.nix)]
-      ++ [(import ./hardware.nix)]
-      ++ [(import ./xserver.nix)]
-      ++ [(import ./network.nix)]
-      ++ [(import ./pipewire.nix)]
-      ++ [(import ./program.nix)]
-      ++ [(import ./security.nix)]
-      ++ [(import ./services.nix)]
-      ++ [(import ./system.nix)]
-      ++ [(import ./virtualization.nix)]
-      ++ [(import ./font.nix)]
-      ++ [(import ./user.nix)]
-      ++ [(import ./wayland.nix)]
-      #++ [(import ./customs)]
-      ++ [(import ./../../hosts/nixos/hardware-configuration.nix)];
+{username, ...}: {
+  imports =
+    [(import ./bootloader.nix)]
+    ++ [(import ./hardware.nix)]
+    ++ [(import ./xserver.nix)]
+    ++ [(import ./network.nix)]
+    ++ [(import ./pipewire.nix)]
+    ++ [(import ./program.nix)]
+    ++ [(import ./security.nix)]
+    ++ [(import ./services.nix)]
+    ++ [(import ./system.nix)]
+    ++ [(import ./virtualization.nix)]
+    ++ [(import ./font.nix)]
+    ++ [(import ./user.nix)]
+    ++ [(import ./wayland.nix)]
+    ++ [(import ./../../hosts/nixos/hardware-configuration.nix)];
+
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "openssl-1.1.1w"
+    ];
+  };
+  nix = {
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = ["nix-command" "flakes"];
+      allowed-users = ["${username}"];
+      substituters = ["https://hyprland.cachix.org"];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    };
   };
 }

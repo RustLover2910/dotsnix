@@ -3,7 +3,7 @@
     NIXOS_OZONE_WL = "1";
     _JAVA_AWT_WM_NONREPARENTING = "1";
     SSH_AUTH_SOCK = "/run/user/$(id -u)/ssh-agent";
-    #  DISABLE_QT5_COMPAT = "0";
+    EDITOR = "nvim";
     GDK_BACKEND = "wayland,x11";
     TERMINAL = "foot";
     BROWSER = "floorp";
@@ -22,7 +22,6 @@
     NIXOS_XDG_OPEN_USE_PORTAL = "1";
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
-    #GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
     XCURSOR_THEME = "Nordzy-cursors";
     XCURSOR_SIZE = "24";
   };

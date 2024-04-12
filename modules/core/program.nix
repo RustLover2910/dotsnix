@@ -18,10 +18,4 @@
       "steam-original"
       "steam-run"
     ];
-
-  #gnupg.agent = {
-  #  enable = true;
-  #  enableSSHSupport = true;
-  #  pinentryFlavor = "gnome3";
-  #};
 }

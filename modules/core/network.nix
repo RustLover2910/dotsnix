@@ -2,7 +2,6 @@
   networking = {
     hostName = "ultimatumnix";
     networkmanager.enable = true;
-    #nameservers = [ "1.1.1.1" ];
     firewall = {
       enable = true;
     };

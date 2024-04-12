@@ -4,7 +4,7 @@
   ...
 }: {
   home.packages = with pkgs; [
-    eza # ls replacement
+    inputs.eza.packages.${system}.default # ls replacement
     fzf # fuzzy finder
     go
 
@@ -30,7 +30,6 @@
 
     #file manager
     cinnamon.nemo-with-extensions # file manager
-    yazi # cli file manager
     gnome.file-roller
 
     #notes
@@ -64,7 +63,6 @@
     du-dust # disk space visualizer
     neofetch # system fetch
     zoxide # faster cd
-    ripgrep # grep replacement
     todo # cli todo list
     toipe # typing test in the terminal
     p7zip
@@ -78,8 +76,6 @@
     wf-recorder
     lazygit
     nix-search-cli
-    fd
-    wget
     man-pages # extra man pages
     ncdu # disk space
     powertop
@@ -133,7 +129,7 @@
     telegram-desktop
     xdg-utils
     inputs.alejandra.packages.${system}.default #formator
-    inputs.Neve.packages.${system}.default #nvim-neve
+    inputs.RustLover29.packages.${system}.default #nvim-neve
     # inputs.chris-neovim.packages.${system}.default
     inputs.lobster.packages.${system}.lobster
 

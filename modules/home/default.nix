@@ -1,8 +1,4 @@
-{
-  inputs,
-  username,
-  ...
-}: {
+{username, ...}: {
   imports =
     [(import ./btop)]
     ++ [(import ./discord)] # discord with catppuccin theme
@@ -25,4 +21,11 @@
     ++ [(import ./rust)]
     ++ [(import ./scripts)]
     ++ [(import ./package)];
+
+  home = {
+    username = "${username}";
+    homeDirectory = "/home/${username}";
+    stateVersion = "23.11";
+  };
+  programs.home-manager.enable = true;
 }

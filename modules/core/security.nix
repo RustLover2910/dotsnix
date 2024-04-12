@@ -1,6 +1,9 @@
 {...}: {
-  security.rtkit.enable = true;
-  security.sudo.enable = true;
-  security.polkit.enable = true;
-  security.pam.services.hyprlock = {};
+  security = {
+    rtkit.enable = true;
+    sudo.enable = true;
+    polkit.enable = true;
+    pam.services.hyprlock = {};
+    pam.services.gdm.enableGnomeKeyring = true;
+  };
 }
