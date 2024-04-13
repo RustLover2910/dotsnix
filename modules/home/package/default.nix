@@ -15,6 +15,7 @@
     #image
     inkscape
 
+    #noti
     libnotify
 
     #pdf viewer/editor
@@ -44,9 +45,15 @@
 
     #python
     pipx # Install Python applications in isolated environments
-    #pipenv
     yarn
     python312Full
+
+    # dev environments
+    devenv
+
+    #stress-test
+    stress
+    s-tui
 
     #music player
     amberol
@@ -86,7 +93,6 @@
     unzip
 
     ani-cli
-    ueberzugpp
 
     #torrent/downloader
     deluge #torrent
@@ -130,7 +136,7 @@
     xdg-utils
     inputs.alejandra.packages.${system}.default #formator
     inputs.RustLover29.packages.${system}.default #nvim-neve
-    # inputs.chris-neovim.packages.${system}.default
+    inputs.nix-inspect.packages.${system}.default
     inputs.lobster.packages.${system}.lobster
 
     pylint
