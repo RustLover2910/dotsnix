@@ -34,7 +34,6 @@
     gnome.file-roller
 
     #notes
-    logseq
     obsidian
 
     font-manager
@@ -48,9 +47,6 @@
     yarn
     python312Full
 
-    # dev environments
-    devenv
-
     #stress-test
     stress
     s-tui
@@ -58,7 +54,7 @@
     #music player
     amberol
 
-    # C / C++
+    # C / C++ || making packages
     gcc
     grc
     gnumake
@@ -72,8 +68,8 @@
     zoxide # faster cd
     todo # cli todo list
     toipe # typing test in the terminal
-    p7zip
-    wf-recorder
+
+    p7zip # 7z
     lazygit
     spicetify-cli
     cliphist # clipboard manager
@@ -110,6 +106,7 @@
     mpv # video players
     loupe # image viwer
     obs-studio
+    wf-recorder
     ffmpeg
     snapshot
 
@@ -131,15 +128,19 @@
 
     qalculate-gtk # calculator
 
-    zoom-us
-    telegram-desktop
+    zoom-us # zoom
+    telegram-desktop # telegram
+
     xdg-utils
+
     inputs.alejandra.packages.${system}.default #formator
+
     inputs.RustLover29.packages.${system}.default #nvim-neve
-    inputs.nix-inspect.packages.${system}.default
-    inputs.lobster.packages.${system}.lobster
+
+    inputs.lobster.packages.${system}.lobster # movies
 
     pylint
+    statix
     polkit_gnome #polkit gnome
 
     viber

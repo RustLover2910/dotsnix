@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   home.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     _JAVA_AWT_WM_NONREPARENTING = "1";
@@ -6,7 +6,7 @@
     EDITOR = "nvim";
     GDK_BACKEND = "wayland,x11";
     TERMINAL = "foot";
-    BROWSER = "floorp";
+    BROWSER = "${pkgs.floorp}/bin/floorp";
     WLR_DRM_NO_ATOMIC = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
