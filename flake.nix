@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nix-inspect.url = "github:bluskript/nix-inspect"; # module inspect
 
     #Hyprland
     hyprland = {

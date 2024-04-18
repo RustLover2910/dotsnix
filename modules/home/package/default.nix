@@ -18,6 +18,9 @@
     #noti
     libnotify
 
+    #flash card
+    anki
+
     #pdf viewer/editor
     xournalpp
 

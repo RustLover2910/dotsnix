@@ -4,29 +4,29 @@
     flavour = "frappe"; # One of `latte`, `frappe`, `macchiato`, or `mocha`
   in {
     enable = true;
-    enableZshIntegration = true;
+    enableFishIntegration = true;
     settings =
       # Catppuccin
       {
         scan_timeout = 10;
         add_newline = false;
         line_break.disabled = false;
-        right_format = "$time";
+        right_format = "$cmd_duration";
         character = {
           success_symbol = "[](#cbced3)";
           error_symbol = "[](#dd6777) ";
           vicmd_symbol = "[](#ecd3a0)";
-          format = "$symbol[ ](bold #b4befe) ";
+          format = "$symbol[  ](bold #b4befe) ";
         };
 
-        format = ''
-          $directory$git_branch$git_state$git_metrics$dart$lua$nodejs$package$python$rust$nix_shell$custom
-          $character
-        '';
+        # format = ''
+        #  $directory$git_branch$git_state$git_metrics$dart$lua$nodejs$package$python$rust$nix_shell$custom
+        #    $character
+        #  '';
 
         palette = "catppuccin_${flavour}";
         git_branch = {
-          symbol = " ";
+          symbol = "  ";
         };
         git_commit = {commit_hash_length = 5;};
 
@@ -50,7 +50,7 @@
         };
         shell = {
           disabled = true;
-          zsh_indicator = "zsh";
+          fish_indicator = "fish";
         };
 
         username = {
@@ -69,22 +69,19 @@
         directory = {
           read_only = " ";
           truncation_length = 3;
-          truncation_symbol = "./";
+          truncation_symbol = " ./";
           # style = "bold bg:none fg:#393939";
           # style = "bold bg:none fg:#7aa2f7";
           style = "bold bg:none fg:#b4befe";
           # style = "bold bg:none fg:#7dcfff";
           # style = "bold bg:none fg:#ec6a88";
         };
-
-        time = {
-          disabled = true;
-          use_12hr = true;
-          time_range = "-";
-          time_format = "%R";
-          utc_time_offset = "local";
-          format = "[ $time 󰥔]($style) ";
-          style = "bold #393939";
+        directory.substitutions = {
+          "~" = " 󰋞 ";
+          "Documents" = " 󰈙 ";
+          "Downloads" = "   ";
+          "Music" = "   ";
+          "Pictures" = "   ";
         };
 
         nix_shell = {
@@ -93,6 +90,11 @@
           impure_msg = "[impure-shell](red)";
           pure_msg = "[pure-shell](green)";
           unknown_msg = "[unknown-shell](yellow)";
+        };
+        cmd_duration = {
+          format = "[]($style)[[󰔚 ](bg:#161821 fg:#d4c097 bold)$duration](bg:#161821 fg:#BBC3DF)[ ]($style)";
+          disabled = false;
+          style = "bg:none fg:#161821";
         };
 
         custom = {
@@ -120,42 +122,4 @@
         }
         + /palettes/${flavour}.toml));
   };
-
-  # Mocha
-  #   {
-  #     add_newline = false;
-  #     format = ''
-  #       [](#b4befe)[  ](bg:#b4befe fg:black)[](bg:black fg:#b4befe)$directory[](black) $git_branch$nix_shell
-  #       $character
-  #     '';
-  #     directory = {
-  #       format = "[ $path ]($style)";
-  #       style = "bg:black";
-  #       truncate_to_repo = false;
-  #     };
-  #     git_branch = {
-  #       style = "bold yellow";
-  #     };
-  #     character = {
-  #       success_symbol = "[🠚 ](bold #b4befe)";
-  #       error_symbol = "[🠚 ](bold #dd6777)";
-  #     };
-  #     nix_shell = {
-  #       symbol = "[](bold #7aa2f7) ";
-  #   };
-  # };
-
-  # Oxocarbon
-  # {
-  #   scan_timeout = 10;
-  #   add_newline = true;
-  #   line_break.disabled = false;
-  #   format = "$symbol[󰉊 ](bold #ee5396) $directory$character";
-  #   right_format = "$time";
-  #   character = {
-  #     success_symbol = "[󰅂 ](bold #393939)";
-  #     error_symbol = "[󰅂 ](bold #393939)";
-  #     vicmd_symbol = "[󰅂 ](bold #393939)";
-  #   };
-  # };
 }
