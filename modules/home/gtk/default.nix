@@ -1,10 +1,10 @@
 {pkgs, ...}: {
   imports = [(import ./catppuccin.nix)];
-  home.packages = [
-    pkgs.twemoji-color-font
-    pkgs.noto-fonts-emoji
-    pkgs.gtk-engine-murrine
-    pkgs.gnome-themes-extra
+  home.packages = with pkgs; [
+    twemoji-color-font
+    noto-fonts-emoji
+    gtk-engine-murrine
+    gnome-themes-extra
   ];
   qt = {
     enable = true;

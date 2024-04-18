@@ -122,6 +122,9 @@
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"
 
+        #hyprexpo
+        "SUPER, grave, hyprexpo:expo, toggle"
+
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
@@ -139,6 +142,7 @@
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
+
         # Move active window to a workspace with mainMod + SHIFT + [0-9]
         "$mainMod SHIFT, 1, movetoworkspace, 1"
         "$mainMod SHIFT, 2, movetoworkspace, 2"
@@ -205,12 +209,45 @@
         ", xf86monbrightnessup, exec, brightnessctl set 5%+"
         ", xf86monbrightnessdown, exec, brightnessctl set 5%-"
       ];
-    };
-    #window rules
-    extraConfig = ''
-      bind = SUPER, grave, hyprexpo:expo, toggle
 
-      plugin {
+      #window rules
+
+      windowrule = [
+        "float,class^(Motrix)$"
+        "float,class^(pavucontrol)$"
+        "float, ^(polkit-gnome-authentication-agent-1)$"
+        "float, ^(foot)$"
+        "float,^(.blueman-manager-wrapped)$"
+        "float, ^(Bitwarden)$"
+        "float, title:^(Password Required - Ablaze Floorp)$"
+        "float, class:^(nemo)$"
+      ];
+      windowrulev2 = [
+        "size 590 550,class:^(pavucontrol)$"
+        "move 1321 50,class:^(pavucontrol)$"
+        "size 1200 700, class:^(foot)$"
+        "opacity 0.9 override 0.9 override,class:^(foot)$"
+        "opacity 1.0 override 1.0 override,class:^(kitty)$"
+        "opacity 1.0 override 1.0 override,class:^(zoom)$"
+        "opacity 1.0 override 1.0 override,class:^(floorp)$"
+        "opacity 1.0 override 1.0 override,class:^(org.gnome.Loupe)$"
+        "opacity 1.0 override 1.0 override,class:^(com.github.xournalpp.xournalpp)$"
+
+        "float,class:^(file_progress)$"
+        "float,class:^(confirm)$"
+        "float,class:^(dialog)$"
+        "float,class:^(download)$"
+        "float,class:^(notification)$"
+        "float,class:^(error)$"
+        "float,class:^(confirmreset)$"
+        "float,title:^(Open File)$"
+        "float,title:^(branchdialog)$"
+        "float,title:^(Confirm to replace files)$"
+        "float,title:^(File Operation Progress)$"
+      ];
+    };
+    extraConfig = ''
+       plugin {
           hyprexpo {
               columns = 3
               gap_size = 5
@@ -222,39 +259,6 @@
               gesture_positive = true # positive = swipe down. Negative = swipe up.
           }
       }
-
-      #WindowsRules
-      windowrule = float,class^(Motrix)$
-      windowrule = float,class^(pavucontrol)$
-      windowrulev2 = size 590 550,class:^(pavucontrol)$
-      windowrulev2 = move 1321 50,class:^(pavucontrol)$
-      windowrule = float, ^(polkit-gnome-authentication-agent-1)$
-      windowrulev2 = size 1200 700, class:^(foot)$
-      windowrulev2 = opacity 0.9 override 0.9 override,class:^(foot)$
-      windowrule = float, ^(foot)$
-      windowrule = float,^(.blueman-manager-wrapped)$
-      windowrule = float, ^(Bitwarden)$
-      windowrule = float, title:^(Password Required - Ablaze Floorp)$
-      windowrule = float, class:^(nemo)$
-      windowrulev2 = opacity 1.0 override 1.0 override,class:^(kitty)$
-      windowrulev2 = opacity 1.0 override 1.0 override,class:^(zoom)$
-      windowrulev2 = opacity 1.0 override 1.0 override,class:^(floorp)$
-      windowrulev2 = opacity 1.0 override 1.0 override,class:^(org.gnome.Loupe)$
-      windowrulev2 = opacity 1.0 override 1.0 override,class:^(com.github.xournalpp.xournalpp)$
-
-
-      windowrulev2 = float,class:^(file_progress)$
-      windowrulev2 = float,class:^(confirm)$
-      windowrulev2 = float,class:^(dialog)$
-      windowrulev2 = float,class:^(download)$
-      windowrulev2 = float,class:^(notification)$
-      windowrulev2 = float,class:^(error)$
-      windowrulev2 = float,class:^(confirmreset)$
-      windowrulev2 = float,title:^(Open File)$
-      windowrulev2 = float,title:^(branchdialog)$
-      windowrulev2 = float,title:^(Confirm to replace files)$
-      windowrulev2 = float,title:^(File Operation Progress)$
-
     '';
   };
 }

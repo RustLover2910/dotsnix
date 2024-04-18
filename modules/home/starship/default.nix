@@ -13,10 +13,10 @@
         line_break.disabled = false;
         right_format = "$cmd_duration";
         character = {
-          success_symbol = "[](#cbced3)";
-          error_symbol = "[](#dd6777) ";
-          vicmd_symbol = "[](#ecd3a0)";
-          format = "$symbol[  ](bold #b4befe) ";
+          success_symbol = "[  ](bold #b4befe)[ ✗][(#81c8be)]";
+          error_symbol = "[  ](bold #b4befe)[ ✗][(#dd6777)]";
+          #vicmd_symbol = "[](#ecd3a0)";
+          format = "[  ](bold #b4befe) ";
         };
 
         # format = ''
