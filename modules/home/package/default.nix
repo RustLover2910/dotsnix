@@ -4,6 +4,9 @@
   ...
 }: {
   home.packages = with pkgs; [
+    #Disk Benchmark
+    kdiskmark
+
     inputs.eza.packages.${system}.default # ls replacement
     fzf # fuzzy finder
     go
