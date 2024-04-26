@@ -2,7 +2,6 @@
   imports =
     [(import ./btop)]
     ++ [(import ./discord)] # discord with catppuccin theme
-    ++ [(import ./kitty)]
     ++ [(import ./foot)]
     ++ [(import ./wofi)]
     ++ [(import ./fish)]
@@ -11,7 +10,7 @@
     ++ [(import ./gtk)]
     ++ [(import ./waybar)]
     ++ [(import ./stylix)]
-    ++ [(import ./ags)]
+    ++ [(import ./lazygit)]
     ++ [(import ./direnv)]
     ++ [(import ./gaming)]
     ++ [(import ./starship)]

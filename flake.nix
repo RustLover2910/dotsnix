@@ -73,10 +73,6 @@
       url = "github:catppuccin/cava";
       flake = false;
     };
-    catppuccin-lazygit = {
-      url = "github:catppuccin/lazygit";
-      flake = false;
-    };
     catppuccin-starship = {
       url = "github:catppuccin/starship";
       flake = false;

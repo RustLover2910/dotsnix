@@ -1,4 +1,8 @@
-{username, ...}: {
+{
+  username,
+  lib,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     #enable = true;
 
@@ -39,9 +43,11 @@
         gaps_in = 5;
         gaps_out = 7;
         border_size = 3;
-        "col.active_border" = "0xffb4befe 0xffeba0ac 0xff74c7ec";
+
+        "col.active_border" = lib.mkDefault "0xffb4befe";
+        #"col.active_border" = "0xffb4befe 0xffeba0ac 0xff74c7ec";
         #"col.active_border" = "0xffeebebe 0xffca9ee6 0xffeebebe 45deg";
-        "col.inactive_border" = "0xff303446";
+        "col.inactive_border" = lib.mkDefault "0xff303446";
         layout = "dwindle";
         "no_border_on_floating" = true;
       };
@@ -70,7 +76,7 @@
         shadow_offset = "2 2";
         shadow_range = 20;
         shadow_render_power = 3;
-        "col.shadow" = "0x66000000";
+        "col.shadow" = lib.mkDefault "0x66000000";
         active_opacity = 1.0;
         inactive_opacity = 0.8;
       };

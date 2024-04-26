@@ -1,9 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   programs.btop = {
     enable = true;
 
     settings = {
-      color_theme = "catppuccin-frappe";
+      #color_theme = lib.mkDefault "catppuccin-frappe";
       theme_background = false;
       update_ms = 300;
     };

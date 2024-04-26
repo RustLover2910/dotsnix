@@ -86,7 +86,6 @@
     xclip
     translate-shell
     wf-recorder
-    lazygit
     nix-search-cli
     man-pages # extra man pages
     ncdu # disk space
