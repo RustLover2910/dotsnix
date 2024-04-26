@@ -42,6 +42,7 @@
       url = "github:Aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    gBar.url = "github:scorpion-26/gBar";
 
     #home-manager
     home-manager = {

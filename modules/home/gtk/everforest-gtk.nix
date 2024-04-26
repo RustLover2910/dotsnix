@@ -3,10 +3,11 @@
   fetchFromGitHub,
   gnome-themes-extra,
   gtk-engine-murrine,
+  lib,
 }:
 stdenvNoCC.mkDerivation {
   pname = "everforest-gtk-theme";
-  version = "unstable-2022-12-09";
+  version = "unstable-2023-20-03";
 
   src = fetchFromGitHub {
     owner = "Fausto-Korpsvart";
@@ -32,11 +33,11 @@ stdenvNoCC.mkDerivation {
     runHook postInstall
   '';
 
-  # meta = with lib; {
-  #   description = "A Gtk theme based on the Gruvbox colour pallete";
-  #   homepage = "https://www.pling.com/p/1681313/";
-  #   license = licenses.gpl3Only;
-  #   platforms = platforms.unix;
-  #   maintainers = [ maintainers.math-42 ];
-  # };
+  meta = with lib; {
+    description = "A GTK theme based on the colours of Sainnhe's great theme: Everforest for Neovim, the VinceLiuice's awesome: Graphite GTK theme and the creativity of Gusbemacbe's: Suru Plus Icon Theme.";
+    homepage = "https://www.gnome-look.org/p/1695467";
+    license = licenses.gpl3Only;
+    platforms = platforms.unix;
+    # maintainers = [maintainers.math-42];
+  };
 }

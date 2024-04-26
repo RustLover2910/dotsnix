@@ -13,7 +13,7 @@
   qt = {
     enable = true;
     platformTheme.name = "gtk";
-    style.name = "gtk3";
+    style.name = "gtk";
   };
 
   # Symlink the `~/.config/gtk-4.0/` folder declaratively to theme GTK-4 apps as well.

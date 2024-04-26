@@ -10,7 +10,7 @@
     ++ [(import ./cava)]
     ++ [(import ./gtk)]
     ++ [(import ./waybar)]
-    ++ [(import ./ags)]
+    ++ [(import ./gBar)]
     ++ [(import ./direnv)]
     ++ [(import ./gaming)]
     ++ [(import ./starship)]

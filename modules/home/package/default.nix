@@ -4,6 +4,9 @@
   ...
 }: {
   home.packages = with pkgs; [
+    #pdf merger
+    pdfarranger
+
     #Disk Benchmark
     kdiskmark
 
