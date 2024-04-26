@@ -85,8 +85,8 @@
       url = "github:yazi-rs/themes";
       flake = false;
     };
-    prism.url = "github:IogaMaster/prism";
     nix-colors.url = "github:misterio77/nix-colors";
+    stylix.url = "github:danth/stylix";
 
     #eza (ls replacement)
     eza = {
