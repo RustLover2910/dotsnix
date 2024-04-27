@@ -9,22 +9,22 @@
       name = "Montserrat";
       size = 13;
     };
-    iconTheme = {
+    iconTheme = lib.mkDefault {
       name = "Papirus-Dark";
       package = pkgs.catppuccin-papirus-folders.override {
         flavor = "frappe";
         accent = "blue";
       };
     };
-    theme = lib.mkDefault {
-      name = "Catppuccin-Frappe-Standard-Blue-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = ["blue"];
-        size = "standard";
-        tweaks = ["rimless"];
-        variant = "frappe";
-      };
-    };
+    # theme = lib.mkDefault {
+    #  name = "Catppuccin-Frappe-Standard-Blue-Dark";
+    #  package = pkgs.catppuccin-gtk.override {
+    #    accents = ["blue"];
+    ###    size = "standard";
+    #   tweaks = ["rimless"];
+    #   variant = "frappe";
+    #  };
+    # };
     cursorTheme = {
       name = "Nordzy-cursors";
       package = pkgs.nordzy-cursor-theme;
@@ -32,7 +32,7 @@
     };
   };
   home = {
-    sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
+    #sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
     pointerCursor = lib.mkDefault {
       name = "Nordzy-cursors";
       package = pkgs.nordzy-cursor-theme;

@@ -22,9 +22,9 @@
     ripgrep
     unar
   ];
-  xdg.configFile = {
-    "yazi/theme.toml".text =
-      builtins.readFile
-      "${inputs.yazi-theme}/catppuccin-frappe.yazi/flavor.toml";
-  };
+  #xdg.configFile = {
+  #  "yazi/theme.toml".text =
+  #    builtins.readFile
+  ##   "${inputs.yazi-theme}/catppuccin-frappe.yazi/flavor.toml";
+  # };
 }
