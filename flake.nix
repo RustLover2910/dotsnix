@@ -96,6 +96,7 @@
     nixvim,
     self,
     home-manager,
+    nix-colors,
     ...
   } @ inputs: let
     username = "nathannix";
@@ -108,7 +109,7 @@
     nixosConfigurations = {
       ${username} = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit inputs system username;
+          inherit inputs system username nix-colors;
         };
         modules = [
           ./modules/core/default.nix
@@ -117,7 +118,7 @@
             home-manager = {
               useUserPackages = true;
               useGlobalPkgs = true;
-              extraSpecialArgs = {inherit inputs username;};
+              extraSpecialArgs = {inherit inputs username nix-colors;};
               users.${username} = {
                 imports = [
                   ./modules/home/default.nix

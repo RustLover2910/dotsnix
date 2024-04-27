@@ -10,6 +10,9 @@
     #Disk Benchmark
     kdiskmark
 
+    #games
+    lutris
+
     inputs.eza.packages.${system}.default # ls replacement
     fzf # fuzzy finder
     go
