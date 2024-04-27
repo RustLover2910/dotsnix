@@ -11,7 +11,7 @@
     ++ [(import ./waybar)]
     ++ [(import ./stylix)]
     ++ [(import ./lazygit)]
-    #++ [(import ./direnv)]
+    ++ [(import ./cat)]
     ++ [(import ./gaming)]
     ++ [(import ./starship)]
     ++ [(import ./mako)] # notification deamon

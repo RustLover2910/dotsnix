@@ -18,7 +18,7 @@
     go
 
     #bowsers
-    #ungoogled-chromium #chromium
+    ungoogled-chromium #chromium
     floorp # firefox fork
 
     #image
