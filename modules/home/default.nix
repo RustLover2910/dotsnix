@@ -9,7 +9,7 @@
     ++ [(import ./cava)]
     ++ [(import ./gtk)]
     ++ [(import ./waybar)]
-    ++ [(import ./stylix)]
+    ++ [(import ./themes)]
     ++ [(import ./lazygit)]
     ++ [(import ./cat)]
     ++ [(import ./gaming)]
