@@ -9,6 +9,8 @@
       foot.enable = true;
       btop.enable = true;
       bat.enable = true;
+      fzf.enable = true;
+      firefox.enable = true;
       lazygit.enable = true;
     };
   };

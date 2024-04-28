@@ -236,6 +236,7 @@
         "opacity 1.0 override 1.0 override,class:^(kitty)$"
         "opacity 1.0 override 1.0 override,class:^(zoom)$"
         "opacity 1.0 override 1.0 override,class:^(floorp)$"
+        "opacity 1.0 override 1.0 override,class:^(firefox)$"
         "opacity 1.0 override 1.0 override,class:^(org.gnome.Loupe)$"
         "opacity 1.0 override 1.0 override,class:^(com.github.xournalpp.xournalpp)$"
 

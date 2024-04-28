@@ -18,8 +18,9 @@
     go
 
     #bowsers
-    ungoogled-chromium #chromium
+    #ungoogled-chromium #chromium
     floorp # firefox fork
+    firefox
 
     #image
     inkscape
@@ -65,6 +66,7 @@
 
     #music player
     amberol
+    spotify
 
     # C / C++ || making packages
     gcc
@@ -83,7 +85,7 @@
 
     p7zip # 7z
     lazygit
-    spicetify-cli
+    #picetify-cli
     cliphist # clipboard manager
     wl-clipboard
     xclip

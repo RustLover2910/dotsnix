@@ -13,6 +13,7 @@
     ++ [(import ./lazygit)]
     ++ [(import ./cat)]
     ++ [(import ./gaming)]
+    ++ [(import ./spotify)]
     ++ [(import ./starship)]
     ++ [(import ./mako)] # notification deamon
     ++ [(import ./git)]

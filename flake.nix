@@ -89,11 +89,13 @@
       url = "github:eza-community/eza";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    #spicetify
+    spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
 
   outputs = {
     nixpkgs,
-    nixvim,
     self,
     home-manager,
     nix-colors,
