@@ -12,9 +12,7 @@
     (nerdfonts.override {
       fonts = [
         "JetBrainsMono"
-        "MartianMono"
-        "FiraCode"
-        "DroidSansMono"
+        "Iosevka"
       ];
     })
   ];

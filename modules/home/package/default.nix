@@ -66,7 +66,6 @@
 
     #music player
     amberol
-    spotify
 
     # C / C++ || making packages
     gcc

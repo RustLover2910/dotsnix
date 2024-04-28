@@ -6,7 +6,7 @@
     EDITOR = "nvim";
     GDK_BACKEND = "wayland,x11";
     TERMINAL = "foot";
-    BROWSER = "${pkgs.firefox}/bin/firefox";
+    BROWSER = "${pkgs.floorp}/bin/floorp";
     WLR_DRM_NO_ATOMIC = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     #QT_SCALE_FACTOR = "1.75";

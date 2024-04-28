@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports =
-    [(import ./catppuccin-frappe.nix)]
+    [(import ./catppuccin-frappe-rosewater.nix)]
     ++ [(import ./everforest.nix)];
   home.packages = with pkgs; [
     (discord.override {

@@ -99,6 +99,7 @@
     self,
     home-manager,
     nix-colors,
+    spicetify-nix,
     ...
   } @ inputs: let
     username = "nathannix";
@@ -120,7 +121,7 @@
             home-manager = {
               useUserPackages = true;
               useGlobalPkgs = true;
-              extraSpecialArgs = {inherit inputs username nix-colors;};
+              extraSpecialArgs = {inherit inputs username spicetify-nix nix-colors;};
               users.${username} = {
                 imports = [
                   ./modules/home/default.nix

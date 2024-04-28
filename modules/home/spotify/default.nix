@@ -9,7 +9,7 @@ in {
   # import the flake's module for your system
   imports = [inputs.spicetify-nix.homeManagerModule];
 
-  home.packages = with pkgs; [spotify];
+  #home.packages = with pkgs; [spotify];
 
   # configure spicetify :)
   programs.spicetify = {
