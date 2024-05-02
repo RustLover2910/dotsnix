@@ -18,8 +18,8 @@
     go
 
     #bowsers
-    #ungoogled-chromium #chromium
-    floorp # firefox fork
+    ungoogled-chromium #chromium
+    #loorp # firefox fork
     firefox
 
     #image
@@ -57,7 +57,7 @@
 
     #python
     pipx # Install Python applications in isolated environments
-    yarn
+    #yarn
     python312Full
 
     #stress-test

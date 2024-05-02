@@ -1,10 +1,17 @@
 {
   pkgs,
-  username,
+  fenix,
   ...
 }: {
-  home.packages = with pkgs; [
-    rustc
-    cargo
+  nixpkgs.overlays = [fenix.overlays.default];
+  home.Packages = with pkgs; [
+    (fenix.complete.withComponents [
+      "cargo"
+      "clippy"
+      "rust-src"
+      "rustc"
+      "rustfmt"
+    ])
+    rust-analyzer-nightly
   ];
 }

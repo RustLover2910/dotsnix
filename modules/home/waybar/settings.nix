@@ -47,7 +47,7 @@
       format-alt = " {:%d/%m}";
     };
     "hyprland/workspaces" = {
-      active-only = false;
+      active-only = true;
       all-outputs = false;
       disable-scroll = false;
       on-scroll-up = "hyprctl dispatch workspace e-1";

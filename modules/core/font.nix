@@ -6,6 +6,7 @@
     dosis
     raleway
     comfortaa
+    times-newer-roman
     quicksand
     montserrat
     merriweather

@@ -92,6 +92,9 @@
 
     #spicetify
     spicetify-nix.url = "github:the-argus/spicetify-nix";
+
+    #Rust
+    rust-overlay.url = "github:oxalica/rust-overlay";
   };
 
   outputs = {
@@ -105,10 +108,6 @@
     username = "nathannix";
     system = "x86_64-linux";
   in {
-    #nixosConfigurations = import ./modules/core/default.nix {
-    #   inherit self nixpkgs inputs username;
-    # };
-
     nixosConfigurations = {
       ${username} = nixpkgs.lib.nixosSystem {
         specialArgs = {
