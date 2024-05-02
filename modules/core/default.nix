@@ -13,7 +13,7 @@
     ++ [(import ./font.nix)]
     ++ [(import ./user.nix)]
     ++ [(import ./wayland.nix)]
-    ++ [(import ./overlay.nix)]
+    # ++ [(import ./overlay.nix)]
     ++ [(import ./../../hosts/nixos/hardware-configuration.nix)];
 
   nixpkgs.config = {

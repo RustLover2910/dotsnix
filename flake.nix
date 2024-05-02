@@ -103,6 +103,7 @@
     home-manager,
     nix-colors,
     spicetify-nix,
+    rust-overlay,
     ...
   } @ inputs: let
     username = "nathannix";
@@ -115,6 +116,10 @@
         };
         modules = [
           ./modules/core/default.nix
+          ({pkgs, ...}: {
+            nixpkgs.overlays = [rust-overlay.overlays.default];
+            environment.systemPackages = [pkgs.rust-bin.stable.latest.default];
+          })
           home-manager.nixosModules.home-manager
           {
             home-manager = {

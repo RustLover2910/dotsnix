@@ -19,7 +19,6 @@
     ++ [(import ./git)]
     ++ [(import ./yazi)]
     ++ [(import ./yt-dlp)]
-    #++ [(import ./rust)]
     ++ [(import ./scripts)]
     ++ [(import ./package)];
 

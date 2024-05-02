@@ -110,6 +110,9 @@
     mapscii
     gnome.gnome-maps
 
+    #eww
+    pkg-config
+
     #calender
     gnome.gnome-calendar
 
