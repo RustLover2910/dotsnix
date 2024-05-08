@@ -31,9 +31,9 @@
       enable = true;
       # hidpi = true;
     };
-    plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-    ];
+    # plugins = [
+    ##   inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+    # ];
     systemd.enable = true;
     systemd.variables = ["--all"];
   };

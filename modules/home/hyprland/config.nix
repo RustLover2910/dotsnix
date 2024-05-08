@@ -34,9 +34,9 @@
         "wl-gammarelay-rs"
         "mako"
         "gsettings set org.gnome.desktop.wm.preferences button-layout : "
-        "discord"
         "viber"
         "[workspace 4 silent] telegram-desktop"
+        "discord"
       ];
 
       general = {
@@ -44,7 +44,7 @@
         gaps_out = 7;
         border_size = 3;
 
-        "col.active_border" = lib.mkDefault "0xffb4befe";
+        "col.active_border" = lib.mkDefault "0xffb4befe 0xffF7BCCA";
         #"col.active_border" = "0xffb4befe 0xffeba0ac 0xff74c7ec";
         #"col.active_border" = "0xffeebebe 0xffca9ee6 0xffeebebe 45deg";
         "col.inactive_border" = lib.mkDefault "0xff303446";
@@ -129,7 +129,7 @@
         "$mainMod SHIFT, F, fullscreen, 1"
 
         #hyprexpo
-        "SUPER, grave, hyprexpo:expo, toggle"
+        # "SUPER, grave, hyprexpo:expo, toggle"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"

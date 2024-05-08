@@ -67,9 +67,9 @@
         };
 
         directory = {
-          read_only = " ";
+          read_only = "  ";
           truncation_length = 3;
-          truncation_symbol = " ./";
+          truncation_symbol = " ./ ";
           # style = "bold bg:none fg:#393939";
           # style = "bold bg:none fg:#7aa2f7";
           style = "bold bg:none fg:#b4befe";
@@ -101,7 +101,6 @@
           nix = {
             disabled = false;
             detect_files = ["flake.nix" "default.nix" "shell.nix"];
-            # format = "via [$symbol nix-shell]($style) ";
             command = ''
               if [ -e flake.nix ] || [ -e default.nix ] || [ -e shell.nix ]; then
                 echo " (nix-shell)"

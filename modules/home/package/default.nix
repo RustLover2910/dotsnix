@@ -4,6 +4,16 @@
   ...
 }: {
   home.packages = with pkgs; [
+    #wine
+    wineWowPackages.stagingFull
+    protonup-qt
+
+    #image editor
+    swappy
+    krita
+
+    #
+
     #pdf merger
     pdfarranger
 
@@ -15,7 +25,6 @@
 
     inputs.eza.packages.${system}.default # ls replacement
     fzf # fuzzy finder
-    go
 
     #bowsers
     ungoogled-chromium #chromium
@@ -49,16 +58,15 @@
     #notes
     obsidian
 
-    font-manager
     gnome.gnome-tweaks
-    openvpn
-    libreoffice
-    bitwarden
 
-    #python
-    pipx # Install Python applications in isolated environments
-    #yarn
-    python312Full
+    openvpn
+
+    #office
+    libreoffice
+
+    #passowrd manager
+    bitwarden
 
     #stress-test
     stress
@@ -71,6 +79,7 @@
     gcc
     grc
     gnumake
+    glib
     cmake
     ninja
 
@@ -100,7 +109,7 @@
     htop
     unzip
 
-    ani-cli
+    ani-cli #anime
 
     #torrent/downloader
     deluge #torrent
@@ -109,9 +118,6 @@
     #maps
     mapscii
     gnome.gnome-maps
-
-    #eww
-    pkg-config
 
     #calender
     gnome.gnome-calendar
@@ -153,6 +159,8 @@
     inputs.RustLover29.packages.${system}.default #nvim-neve
 
     inputs.lobster.packages.${system}.lobster # movies
+
+    inputs.eww.packages.${system}.eww #eww
 
     pylint
     statix

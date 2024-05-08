@@ -1,16 +1,11 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   environment = {
     variables.EDITOR = "nvim";
     systemPackages = with pkgs; [
       wget
       ntfs3g
-      wl-clipboard
-      unzip
       curl
+      polkit_gnome
       git
     ];
   };

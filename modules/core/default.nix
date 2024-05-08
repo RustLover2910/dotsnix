@@ -1,20 +1,22 @@
 {username, ...}: {
-  imports =
-    [(import ./bootloader.nix)]
-    ++ [(import ./hardware.nix)]
-    ++ [(import ./xserver.nix)]
-    ++ [(import ./network.nix)]
-    ++ [(import ./pipewire.nix)]
-    ++ [(import ./program.nix)]
-    ++ [(import ./security.nix)]
-    ++ [(import ./services.nix)]
-    ++ [(import ./system.nix)]
-    ++ [(import ./virtualization.nix)]
-    ++ [(import ./font.nix)]
-    ++ [(import ./user.nix)]
-    ++ [(import ./wayland.nix)]
-    # ++ [(import ./overlay.nix)]
-    ++ [(import ./../../hosts/nixos/hardware-configuration.nix)];
+  imports = [
+    ./bootloader.nix
+    ./hardware.nix
+    ./xserver.nix
+    ./network.nix
+    ./pipewire.nix
+    ./program.nix
+    ./security.nix
+    ./services.nix
+    ./system.nix
+    ./virtualization.nix
+    ./polkit.nix
+    ./font.nix
+    ./user.nix
+    ./wayland.nix
+    ./overlay.nix
+    ./../../hosts/nixos/hardware-configuration.nix
+  ];
 
   nixpkgs.config = {
     allowUnfree = true;

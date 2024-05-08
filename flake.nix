@@ -6,7 +6,7 @@
 
     #Hyprland
     hyprland = {
-      url = "github:hyprwm/Hyprland";
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland-contrib = {
@@ -43,6 +43,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     gBar.url = "github:scorpion-26/gBar";
+    eww = {
+      url = "github:elkowar/eww";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     #home-manager
     home-manager = {
@@ -65,7 +69,7 @@
     #inputs.nixpkgs.follows = "nixpkgs";
     #  };
     RustLover29 = {
-      url = "github:RustLover2910/Nixvim-neve";
+      url = "github:RustLover2910/nixvim";
     };
 
     #themes

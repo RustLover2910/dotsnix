@@ -19,6 +19,7 @@
     };
     shellAbbrs = {
       sshgit = "ssh-add /home/${username}/.ssh/id_ed25519 && ssh -T git@github.com";
+      b = "btop";
       e = "z";
       ee = "yazi";
       #gitsh = "ssh -T git@github.com";

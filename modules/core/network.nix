@@ -13,6 +13,8 @@
     cloudflare-warp
   ];
 
-  systemd.packages = [pkgs.cloudflare-warp]; # for warp-cli
-  systemd.targets.multi-user.wants = ["warp-svc.service"]; # causes warp-svc to be started automatically
+  systemd = {
+    packages = [pkgs.cloudflare-warp]; # for warp-cli
+    targets.multi-user.wants = ["warp-svc.service"]; # causes warp-svc to be started automatically
+  };
 }
