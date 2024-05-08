@@ -11,6 +11,7 @@
     ./system.nix
     ./virtualization.nix
     ./polkit.nix
+    ./nix.nix
     ./font.nix
     ./user.nix
     ./wayland.nix
@@ -23,14 +24,5 @@
     permittedInsecurePackages = [
       "openssl-1.1.1w"
     ];
-  };
-  nix = {
-    settings = {
-      auto-optimise-store = true;
-      experimental-features = ["nix-command" "flakes"];
-      allowed-users = ["${username}"];
-      substituters = ["https://hyprland.cachix.org"];
-      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-    };
   };
 }
