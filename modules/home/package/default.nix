@@ -4,6 +4,9 @@
   ...
 }: {
   home.packages = with pkgs; [
+    #Drawing
+    krita
+
     #wine
     wineWowPackages.stagingFull
     protonup-qt
