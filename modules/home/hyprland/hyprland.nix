@@ -12,7 +12,7 @@
     hyprpaper
     wl-gammarelay-rs
     wofi
-    rofi-wayland
+    inputs.anyrun.packages.${system}.anyrun
     brightnessctl
     grim
     slurp
@@ -31,8 +31,8 @@
       enable = true;
       # hidpi = true;
     };
-    # plugins = [
-    ##   inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+    ## plugins = [
+    #   inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
     # ];
     systemd.enable = true;
     systemd.variables = ["--all"];

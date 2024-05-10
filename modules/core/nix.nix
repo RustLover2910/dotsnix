@@ -1,15 +1,15 @@
 {username, ...}: {
   nix = {
+    gc = {
+      automatic = true;
+      options = "--delete-older-than 2d";
+    };
+    optimise.automatic = true;
+
     settings = {
       auto-optimise-store = true;
 
       experimental-features = ["nix-command" "flakes"];
-
-      gc = {
-        automatic = true;
-        options = "--delete-older-than 3d";
-      };
-      optimise.automatic = true;
 
       allowed-users = ["${username}"];
       trusted-users = ["root" "@wheel"];

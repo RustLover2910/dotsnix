@@ -15,7 +15,7 @@
     ./font.nix
     ./user.nix
     ./wayland.nix
-    ./overlay.nix
+    # ./overlay.nix
     ./../../hosts/nixos/hardware-configuration.nix
   ];
 

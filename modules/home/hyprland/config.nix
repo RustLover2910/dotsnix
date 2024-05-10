@@ -25,7 +25,6 @@
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "hyprpaper"
-        "waybar"
         "portals"
         "polkit-gnome"
         "wl-paste --type text --watch cliphist store "
@@ -51,7 +50,9 @@
         layout = "dwindle";
         "no_border_on_floating" = true;
       };
-
+      debug = {
+        disable_logs = 0;
+      };
       misc = {
         disable_hyprland_logo = 1;
         vfr = true;
@@ -113,11 +114,11 @@
       };
 
       "$mainMod" = "SUPER";
-      # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = [
         "$mainMod, T, exec, foot"
-        #"$mainMod SHIFT, T, exec, foot --hold lolcat ~/welcome.txt"
-        "$mainMod, W, exec, floorp"
+        "$mainMod, W, exec, waybar"
+        # "$mainMod SHIFT W, exec, pkill waybar"
+        #"$mainMod SHIFT F,exec,firefox"
         "$mainMod, C, killactive"
         "$mainMod, E, exec, nemo"
         "$mainMod SHIFT, E, exec, foot --hold yazi"
@@ -129,7 +130,7 @@
         "$mainMod SHIFT, F, fullscreen, 1"
 
         #hyprexpo
-        # "SUPER, grave, hyprexpo:expo, toggle"
+        #"SUPER, grave, hyprexpo:expo, toggle"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"

@@ -48,6 +48,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    #runner
+    anyrun = {
+      url = "github:Kirottu/anyrun";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     #home-manager
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -69,7 +75,7 @@
     #inputs.nixpkgs.follows = "nixpkgs";
     #  };
     RustLover29 = {
-      url = "github:RustLover2910/nixvim";
+      url = "github:RustLover2910/Nixvim-neve";
     };
 
     #themes
