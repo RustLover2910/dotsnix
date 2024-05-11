@@ -119,7 +119,7 @@
         "$mainMod, T, exec, foot"
         "$mainMod, W, exec, waybar"
         "$mainMod SHIFT, W, exec, kwb"
-        #"$mainMod SHIFT F,exec,firefox"
+        "$mainMod, Q, exec, wlogout"
         "$mainMod, C, killactive"
         "$mainMod, E, exec, nemo"
         "$mainMod SHIFT, E, exec, foot --hold yazi"
@@ -129,6 +129,9 @@
         "$mainMod, J, togglesplit, # dwindle"
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"
+
+        #date time
+        "ALT, P, exec, dt date"
 
         #hyprexpo
         #"SUPER, grave, hyprexpo:expo, toggle"
@@ -186,7 +189,7 @@
         "$mainMod, R, exec, anyrun"
 
         # Mute
-        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ",XF86AudioMute, exec, volctrl mute"
         ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
 
         #Audio
@@ -206,13 +209,12 @@
 
       binde = [
         # Volume
-        ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+"
-        ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-"
-        "SHIFT, XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SOURCE@ 5%+"
-        "SHIFT, XF86AudioLowerVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SOURCE@ 5%-"
+        ", XF86AudioRaiseVolume, exec, volctrl up "
+        ", XF86AudioLowerVolume, exec, volctrl down"
+
         # Brightness
-        ", xf86monbrightnessup, exec, brightnessctl set 5%+"
-        ", xf86monbrightnessdown, exec, brightnessctl set 5%-"
+        ", xf86monbrightnessup, exec, brightctrl up"
+        ", xf86monbrightnessdown, exec, brightctrl down"
       ];
 
       #window rules

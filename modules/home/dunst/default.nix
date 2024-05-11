@@ -132,64 +132,23 @@
 
         ### Text ###
 
-        font = JetBrainsMono Nerd Font 11
+        font = JetBrainsMono Nerd Font 13
 
         # The spacing between lines.  If the height is smaller than the
         # font height, it will get raised to the font height.
         line_height = 0
 
-        # Possible values are:
-        # full: Allow a small subset of html markup in notifications:
-        #        <b>bold</b>
-        #        <i>italic</i>
-        #        <s>strikethrough</s>
-        #        <u>underline</u>
-        #
-        #        For a complete reference see
-        #        <https://docs.gtk.org/Pango/pango_markup.html>.
-        #
-        # strip: This setting is provided for compatibility with some broken
-        #        clients that send markup even though it's not enabled on the
-        #        server. Dunst will try to strip the markup but the parsing is
-        #        simplistic so using this option outside of matching rules for
-        #        specific applications *IS GREATLY DISCOURAGED*.
-        #
-        # no:    Disable markup parsing, incoming notifications will be treated as
-        #        plain text. Dunst will not advertise that it has the body-markup
-        #        capability if this is set as a global setting.
-        #
-        # It's important to note that markup inside the format option will be parsed
-        # regardless of what this is set to.
-        markup = full
-
-        # The format of the message.  Possible variables are:
-        #   %a  appname
-        #   %s  summary
-        #   %b  body
-        #   %i  iconname (including its path)
-        #   %I  iconname (without its path)
-        #   %p  progress value if set ([  0%] to [100%]) or nothing
-        #   %n  progress value if set without any extra characters
-        #   %%  Literal %
-        # Markup is allowed
         format = "<b>%s</b>\n%b"
 
         # Alignment of message text.
-        # Possible values are "left", "center" and "right".
         alignment = left
 
         # Vertical alignment of message text and icon.
-        # Possible values are "top", "center" and "bottom".
         vertical_alignment = center
 
-        # Show age of message if message is older than show_age_threshold
-        # seconds.
-        # Set to -1 to disable.
-        show_age_threshold = 60
+       show_age_threshold = 15
 
-        # Specify where to make an ellipsis in long lines.
-        # Possible values are "start", "middle" and "end".
-        ellipsize = middle
+       ellipsize = middle
 
         # Ignore newlines '\n' in notifications.
         ignore_newline = no
@@ -203,23 +162,8 @@
         # Display indicators for URLs (U) and actions (A).
         show_indicators = yes
 
-        ### Icons ###
-
-        # Recursive icon lookup. You can set a single theme, instead of having to
-        # define all lookup paths.
-        enable_recursive_icon_lookup = true
-
-        # Set icon theme (only used for recursive icon lookup)
-        icon_theme = "Tela-dracula"
-        # You can also set multiple icon themes, with the leftmost one being used first.
-        # icon_theme = "Adwaita, breeze"
-
-        # Align icons left/right/top/off
         icon_position = left
 
-        # Scale small icons up to this size, set to 0 to disable. Helpful
-        # for e.g. small files or high-dpi screens. In case of conflict,
-        # max_icon_size takes precedence over this.
         min_icon_size = 32
 
         # Scale larger icons down to this size, set to 0 to disable
@@ -228,10 +172,6 @@
         # Paths to default icons (only neccesary when not using recursive icon lookup)
         icon_path = /usr/share/icons/Papirus-Dark/
 
-        ### History ###
-
-        # Should a notification popped up from history be sticky or timeout
-        # as if it would normally do.
         sticky_history = yes
 
         # Maximum amount of notifications kept in history

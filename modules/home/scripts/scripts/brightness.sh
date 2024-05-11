@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 up() {
   brightnessctl s 5%+
   brightness_raw=$(brightnessctl get)
