@@ -28,7 +28,7 @@
     package = inputs.hyprland.packages.${pkgs.system}.default;
     xwayland = {
       enable = true;
-      hidpi = true;
+      # hidpi = true;
     };
     ## plugins = [
     #   inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo

@@ -28,7 +28,7 @@
         "portals"
         "polkit-gnome"
         "wl-paste --type text --watch cliphist store "
-        #"waybar"
+        "waybar"
         "nm-applet"
         "blueman-applet"
         "wl-gammarelay-rs"

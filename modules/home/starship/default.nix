@@ -13,10 +13,10 @@
         line_break.disabled = false;
         right_format = "$cmd_duration";
         character = {
-          success_symbol = "[  ](bold #b4befe)[ ✗][(#81c8be)]";
-          error_symbol = "[  ](bold #b4befe)[ ✗][(#dd6777)]";
+          success_symbol = "[  ](#b4befe)[ ✗][(#81c8be)]";
+          error_symbol = "[  ]( #b4befe)[ ✗][(#dd6777)]";
           #vicmd_symbol = "[](#ecd3a0)";
-          format = "[  ](bold #b4befe) ";
+          format = "[  ](#b4befe) ";
         };
 
         # format = ''
@@ -69,7 +69,7 @@
         directory = {
           read_only = "  ";
           truncation_length = 3;
-          truncation_symbol = " ./ ";
+          truncation_symbol = " ./";
           # style = "bold bg:none fg:#393939";
           # style = "bold bg:none fg:#7aa2f7";
           style = "bold bg:none fg:#b4befe";

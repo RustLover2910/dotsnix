@@ -5,6 +5,7 @@
 in {
   home.packages = with pkgs; [
     polkit-gnome
+    bc
     killwaybar
     portals
   ];
