@@ -144,8 +144,8 @@
     };
     "custom/launcher" = {
       format = "";
-      on-click = "killall rofi || ~/.config/rofi/scripts/launcher_t1";
-      on-click-right = "pkill wofi || wallpaper-picker";
+      on-click = "anyrun || pkill anyrun";
+      #on-click-right = "pkill wofi || wallpaper-picker";
       tooltip = "false";
     };
     battery = {

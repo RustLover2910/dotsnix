@@ -8,11 +8,10 @@
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
     hyprpicker
     hypridle
+    wlogout
     hyprlock
     hyprpaper
     wl-gammarelay-rs
-    wofi
-    inputs.anyrun.packages.${system}.anyrun
     brightnessctl
     grim
     slurp
@@ -29,7 +28,7 @@
     package = inputs.hyprland.packages.${pkgs.system}.default;
     xwayland = {
       enable = true;
-      # hidpi = true;
+      hidpi = true;
     };
     ## plugins = [
     #   inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo

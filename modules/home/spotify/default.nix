@@ -7,7 +7,9 @@
   spicePkgs = spicetify-nix.packages.${pkgs.system}.default;
 in {
   # import the flake's module for your system
-  imports = [inputs.spicetify-nix.homeManagerModule];
+  imports = [
+    inputs.spicetify-nix.homeManagerModule
+  ];
 
   #home.packages = with pkgs; [spotify];
 

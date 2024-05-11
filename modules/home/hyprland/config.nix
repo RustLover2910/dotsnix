@@ -28,6 +28,7 @@
         "portals"
         "polkit-gnome"
         "wl-paste --type text --watch cliphist store "
+        #"waybar"
         "nm-applet"
         "blueman-applet"
         "wl-gammarelay-rs"
@@ -117,7 +118,7 @@
       bind = [
         "$mainMod, T, exec, foot"
         "$mainMod, W, exec, waybar"
-        # "$mainMod SHIFT W, exec, pkill waybar"
+        "$mainMod SHIFT, W, exec, kwb"
         #"$mainMod SHIFT F,exec,firefox"
         "$mainMod, C, killactive"
         "$mainMod, E, exec, nemo"
@@ -179,13 +180,10 @@
 
         # Lockscreen
         "$mainMod SHIFT, L, exec, hyprlock"
-        # Rofi
-        #"$mainMod SHIFT, P, exec, bash /home/${username}/.config/rofi/bin/powermenu.sh"
-        #"$mainMod SHIFT, B, exec, rofi-bluetooth"
 
+        #color picker
         "$mainMod, Z, exec, hyprpicker -a"
-        "$mainMod, R, exec, killall rofi || /home/${username}/.config/rofi/scripts/launcher_t1" #rofi -show drun
-        "$mainMod, Q, exec, killall rofi || /home/${username}/.config/rofi/scripts/powermenu_t1"
+        "$mainMod, R, exec, anyrun"
 
         # Mute
         ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
