@@ -21,7 +21,7 @@
     ./wlogout
     ./starship
     ./anyrun
-    ./mako # notification deamon
+    ./dunst # notification deamon
     ./git
     ./yazi
     ./yt-dlp
