@@ -131,7 +131,7 @@
         "$mainMod SHIFT, F, fullscreen, 1"
 
         #date time
-        "ALT, P, exec, dt date"
+        "ALT, P, exec, dt da"
 
         #hyprexpo
         #"SUPER, grave, hyprexpo:expo, toggle"

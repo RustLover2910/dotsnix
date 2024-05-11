@@ -4,10 +4,12 @@
       "hypr/paper".source = ./paper;
       "hypr/hyprpaper.conf".text = ''
         preload = ~/.config/hypr/paper/angelstairway.png
-        wallpaper = ,~/.config/hypr/paper/angelstairway.png
+        preload = ~/.config/hypr/paper/nanomortisclock.png
+        wallpaper = ,~/.config/hypr/paper/nanomortisclock.png
         ipc = off
       '';
-      "hypr/paper/ladyblue.jpg".source = ./paper/angelstairway.png;
+      "hypr/paper/ladyblue.png".source = ./paper/angelstairway.png;
+      "hypr/paper/nanomortisclock.png".source = ./paper/nanomortisclock.png;
     };
   };
 }
