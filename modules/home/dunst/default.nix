@@ -39,7 +39,7 @@
         height = 400
 
         # Position the notification in the top right corner
-        origin = top-center
+        origin = bottom-right
 
         # Offset from the origin
         offset = 0x10
@@ -141,7 +141,7 @@
         format = "<b>%s</b>\n%b"
 
         # Alignment of message text.
-        alignment = center
+        alignment = left
 
         # Vertical alignment of message text and icon.
         vertical_alignment = center
