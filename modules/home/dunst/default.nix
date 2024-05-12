@@ -33,16 +33,16 @@
         # dynamic width from 0 to 300
         # width = (0, 300)
         # constant width of 300
-        width = 300
+        width = (200, 500)
 
         # The maximum height of a single notification, excluding the frame.
-        height = 300
+        height = 400
 
         # Position the notification in the top right corner
-        origin = top-right
+        origin = top-center
 
         # Offset from the origin
-        offset = 10x10
+        offset = 0x10
 
         # Scale factor. It is auto-detected if value is 0.
         scale = 0
@@ -66,7 +66,7 @@
         # Set the minimum width for the progress bar
         progress_bar_min_width = 150
 
-        # Set the maximum width for the progress bar
+        # Set the maximum width? for the progress bar
         progress_bar_max_width = 300
 
         # Corner radius for the progress bar. 0 disables rounded corners.
@@ -104,7 +104,7 @@
         frame_width = 3
 
         # Defines color of the frame around the notification window.
-        frame_color = "#ca9ee6"
+        frame_color = "#EAC1D8"
 
         # Size of gap to display between notifications - requires a compositor.
         # If value is greater than 0, separator_height will be ignored and a border
@@ -141,7 +141,7 @@
         format = "<b>%s</b>\n%b"
 
         # Alignment of message text.
-        alignment = left
+        alignment = center
 
         # Vertical alignment of message text and icon.
         vertical_alignment = center

@@ -11,5 +11,7 @@
     };
   };
 
-  home.packages = [pkgs.gh];
+  home.packages = [
+    pkgs.gh
+  ];
 }

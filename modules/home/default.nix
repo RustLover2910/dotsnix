@@ -16,6 +16,7 @@
     ./themes
     ./lazygit
     ./cat
+    ./languages
     ./gaming
     ./spotify
     ./wlogout

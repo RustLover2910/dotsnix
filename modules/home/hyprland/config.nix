@@ -66,7 +66,7 @@
 
         blur = {
           enabled = true;
-          size = 3;
+          size = 4;
           passes = 1;
           ignore_opacity = 1;
           new_optimizations = true;
@@ -131,7 +131,8 @@
         "$mainMod SHIFT, F, fullscreen, 1"
 
         #date time
-        "ALT, P, exec, dt da"
+        "$mainMod, D, exec, dt ti"
+        "$mainMod SHIFT, D, exec, dt da"
 
         #hyprexpo
         #"SUPER, grave, hyprexpo:expo, toggle"

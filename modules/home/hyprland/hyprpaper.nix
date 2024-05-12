@@ -8,7 +8,7 @@
         wallpaper = ,~/.config/hypr/paper/nanomortisclock.png
         ipc = off
       '';
-      "hypr/paper/ladyblue.png".source = ./paper/angelstairway.png;
+      "hypr/paper/angelstairway.png".source = ./paper/angelstairway.png;
       "hypr/paper/nanomortisclock.png".source = ./paper/nanomortisclock.png;
     };
   };
