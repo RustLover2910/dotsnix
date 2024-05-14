@@ -203,6 +203,7 @@
         "$mainMod, Print, exec, grimblast --notify --cursor save area ~/Pictures/Screenshots/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
         ",Print, exec, grimblast --notify --cursor  copy area"
       ];
+
       bindm = [
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
@@ -221,13 +222,15 @@
       #window rules
 
       windowrule = [
-        "float,class^(Motrix)$"
-        "float,class^(pavucontrol)$"
+        "float, class^(Motrix)$"
+        "float, class^(pavucontrol)$"
         "float, ^(polkit-gnome-authentication-agent-1)$"
         "float, ^(foot)$"
-        "float,^(.blueman-manager-wrapped)$"
+        "float, ^(.blueman-manager-wrapped)$"
         "float, ^(Bitwarden)$"
-        "float, title:^(Password Required - Ablaze Floorp)$"
+        "float, title:^(Save Document?)$"
+        "noblur, title:^(Save Document?)$"
+        "float, title:^(Password Required - Mozilla Firefox)$"
         "float, class:^(nemo)$"
       ];
       windowrulev2 = [

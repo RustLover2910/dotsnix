@@ -31,12 +31,9 @@ up() {
     get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
     volume="${get_volume: -2}"
     dunstify -a "VOLUME" "   Volume " " $volume% " -h string:x-dunst-stack-tag:VOLUME -t 1000
-  elif [[ "${get_volume: -6}" == "MUTED" || "${get_volume: -4}" == "0.00"  ]]
+  elif [[ "${get_volume: -7}" == "[MUTED]" || "${get_volume: -4}" == "0.00"  ]]
   then
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
-    get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
-    volume="${get_volume: -2}"
-    dunstify -a "VOLUME" "   Volume " " $volume% " -h string:x-dunst-stack-tag:VOLUME -t 1000
+    dunstify -a "VOLUME" "   Muted" -h string:x-dunst-stack-tag:VOLUME -t 1000
   else
     wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
     get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
@@ -62,7 +59,7 @@ down() {
     get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
     volume="${get_volume//.}"
     dunstify -a "VOLUME" "   Volume " " ${volume: -2}% " -h string:x-dunst-stack-tag:VOLUME -t 1000
-  elif [[ "${get_volume: -6}" == "MUTED" || "${get_volume: -4}" == "0.00"  ]]
+  elif [[ "${get_volume: -7}" == "[MUTED]" || "${get_volume: -4}" == "0.00"  ]]
   then
     dunstify -a "VOLUME" "   Muted" -h string:x-dunst-stack-tag:VOLUME -t 1000
   else
@@ -74,24 +71,13 @@ down() {
 }
 
 mute() {
-  if muted_or_not
+  if [[ "${get_volume: -7}" == "[MUTED]" || "${get_volume: -4}" == "0.00"  ]]
   then
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     dunstify -a "VOLUME" "   Unmuted" -h string:x-dunst-stack-tag:VOLUME -t 1000
   else
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     dunstify -a "VOLUME" "   Muted" -i /home/archyboy/.local/share/icons/Tela-dracula-dark/16@2x/panel/audio-volume-muted.svg -u normal -r 91190 -t 1000
-  fi
-}
-
-muted_or_not() {
-  get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
-
-  if [[ "${get_volume: -6}" == "MUTED" || "${get_volume: -4}" == "0.00"  ]]
-  then
-    return 0
-  else 
-    return 1
   fi
 }
 
