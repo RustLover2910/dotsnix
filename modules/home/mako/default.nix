@@ -6,14 +6,14 @@
   services = {
     mako = {
       enable = true;
-      font = lib.mkDefault "JetBrainsMono Nerd Font 13";
+      font = "JetBrainsMono Nerd Font 13";
       padding = "15";
       height = 100;
       width = 500;
       defaultTimeout = 5000;
       borderSize = 2;
       borderRadius = 5;
-      backgroundColor = "#33384B";
+      backgroundColor = "#303446";
       borderColor = "#b4befe";
       progressColor = "over #33384B";
       textColor = "#cdd6f4";

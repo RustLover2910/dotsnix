@@ -11,6 +11,7 @@
         layout = "us";
         variant = "";
       };
+      digimend.enable = true;
       displayManager = {
         gdm.enable = true;
       };

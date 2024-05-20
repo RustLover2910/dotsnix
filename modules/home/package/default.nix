@@ -31,6 +31,7 @@
     ungoogled-chromium #chromium
     #loorp # firefox fork
     firefox
+    librewolf
 
     #image
     inkscape
@@ -95,7 +96,6 @@
     p7zip # 7z
     cliphist # clipboard manager
     wl-clipboard
-    xclip
     translate-shell
     wf-recorder
     nix-search-cli
@@ -164,5 +164,6 @@
     polkit_gnome #polkit gnome
 
     viber
+    statix
   ];
 }

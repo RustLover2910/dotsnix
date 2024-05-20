@@ -1,6 +1,6 @@
 {
-  username,
   lib,
+  pkgs,
   ...
 }: {
   wayland.windowManager.hyprland = {
@@ -12,10 +12,13 @@
       input = {
         kb_layout = "us, de";
         kb_options = "grp:alt_shift_toggle";
-
+        kb_variant = "";
+        kb_model = "";
+        kb_rules = "";
         follow_mouse = 1;
 
         touchpad = {
+          #disable_while_typing = true;
           natural_scroll = 1;
         };
 
@@ -24,19 +27,16 @@
 
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "hyprpaper"
+        "${pkgs.hyprpaper}/bin/hyprpaper"
+        "gsettings set org.gnome.desktop.wm.preferences button-layout : "
         "portals"
         "polkit-gnome"
         "wl-paste --type text --watch cliphist store "
-        "waybar"
-        "nm-applet"
+        "nm-applet &"
         "blueman-applet"
         "wl-gammarelay-rs"
-        "mako"
-        "gsettings set org.gnome.desktop.wm.preferences button-layout : "
-        "viber"
-        "[workspace 4 silent] telegram-desktop"
-        "discord"
+        "mako &"
+        "waybar &"
       ];
 
       general = {
@@ -44,21 +44,23 @@
         gaps_out = 7;
         border_size = 3;
 
-        "col.active_border" = lib.mkDefault "0xffb4befe 0xffF7BCCA";
+        "col.active_border" = "0xffb4befe 0xffF7BCCA";
         #"col.active_border" = "0xffb4befe 0xffeba0ac 0xff74c7ec";
         #"col.active_border" = "0xffeebebe 0xffca9ee6 0xffeebebe 45deg";
-        "col.inactive_border" = lib.mkDefault "0xff303446";
+        "col.inactive_border" = "0xff303446";
         layout = "dwindle";
         "no_border_on_floating" = true;
       };
+
       debug = {
         disable_logs = 0;
       };
+
       misc = {
         disable_hyprland_logo = 1;
         vfr = true;
-        disable_splash_rendering = true;
         mouse_move_enables_dpms = true;
+        splash_font_family = "JetBrainsMono Nerd Font";
       };
 
       decoration = {
@@ -69,9 +71,11 @@
           size = 4;
           passes = 1;
           ignore_opacity = 1;
+          contrast = 1.3;
           new_optimizations = true;
-          xray = false;
+          xray = 0;
         };
+
         fullscreen_opacity = 1;
         drop_shadow = true;
         shadow_ignore_window = true;
@@ -101,6 +105,7 @@
           "workspaces, 1, 5, wind"
         ];
       };
+
       dwindle = {
         pseudotile = 1; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = 1; # you probably want this
@@ -118,21 +123,27 @@
       bind = [
         "$mainMod, T, exec, foot"
         "$mainMod, W, exec, waybar"
-        "$mainMod SHIFT, W, exec, kwb"
         "$mainMod, Q, exec, wlogout"
-        "$mainMod, C, killactive"
         "$mainMod, E, exec, nemo"
-        "$mainMod SHIFT, E, exec, foot --hold yazi"
+        "$mainMod, A, exec, librewolf"
+        "$mainMod, G, exec, gmode"
+
         "$mainMod, V, togglefloating,"
-        "$mainMod, R, exec, "
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, J, togglesplit, # dwindle"
         "$mainMod, F, fullscreen, 0"
+
         "$mainMod SHIFT, F, fullscreen, 1"
+        "$mainMod SHIFT, W, exec, kwb"
+        "$mainMod SHIFT, E, exec, foot --hold yazi"
 
         #date time
         "$mainMod, D, exec, dt ti"
         "$mainMod SHIFT, D, exec, dt da"
+
+        # Close a window or quit Hyprland.
+        "$mainMod, C, killactive,"
+        "$mainMod SHIFT, M, exit,"
 
         #hyprexpo
         #"SUPER, grave, hyprexpo:expo, toggle"
@@ -220,29 +231,31 @@
       ];
 
       #window rules
-
       windowrule = [
-        "float, class^(Motrix)$"
-        "float, class^(pavucontrol)$"
+        "float, ^(Motrix)$"
+        "float, ^(pavucontrol)$"
         "float, ^(polkit-gnome-authentication-agent-1)$"
         "float, ^(foot)$"
-        "float, ^(.blueman-manager-wrapped)$"
-        "float, ^(Bitwarden)$"
+        "float, ^(.blueman-manager-wrapped$)"
+        "float, title:^(Bitwarden)$"
         "float, title:^(Save Document?)$"
-        "noblur, title:^(Save Document?)$"
         "float, title:^(Password Required - Mozilla Firefox)$"
-        "float, class:^(nemo)$"
+        "float, title:^(Save As)$"
+        "float, class:^(confirm)$"
+        "float, ^(nemo)$"
       ];
       windowrulev2 = [
         "size 590 550,class:^(pavucontrol)$"
         "move 1321 50,class:^(pavucontrol)$"
         "size 1200 700, class:^(foot)$"
         "opacity 0.9 override 0.9 override,class:^(foot)$"
-        "opacity 1.0 override 1.0 override,class:^(kitty)$"
         "opacity 1.0 override 1.0 override,class:^(zoom)$"
+        "opacity 1.0 override 1.0 override,title:^(Save Document?)$"
         "opacity 1.0 override 1.0 override,class:^(floorp)$"
         "opacity 1.0 override 1.0 override,class:^(firefox)$"
         "opacity 1.0 override 1.0 override,class:^(org.gnome.Loupe)$"
+
+        "opacity 1.0 override 1.0 override,title:^(Zoom Meeting)$"
         "opacity 1.0 override 1.0 override,class:^(com.github.xournalpp.xournalpp)$"
 
         "float,class:^(file_progress)$"
@@ -258,19 +271,19 @@
         "float,title:^(File Operation Progress)$"
       ];
     };
-    extraConfig = ''
-       plugin {
-          hyprexpo {
-              columns = 3
-              gap_size = 5
-              bg_col = rgb(111111)
-              workspace_method = center current # [center/first] [workspace] e.g. first 1 or center m+1
-
-              enable_gesture = true # laptop touchpad, 4 fingers
-              gesture_distance = 300 # how far is the "max"
-              gesture_positive = true # positive = swipe down. Negative = swipe up.
-          }
-      }
-    '';
+    #extraConfig = ''
+    #   plugin {
+    #      hyprexpo {
+    #          columns = 3
+    #          gap_size = 5
+    #          bg_col = rgb(111111)
+    #          workspace_method = center current # [center/first] [workspace] e.g. first 1 or center m+1
+    #
+    #         enable_gesture = true # laptop touchpad, 4 fingers
+    #          gesture_distance = 300 # how far is the "max"
+    #          gesture_positive = true # positive = swipe down. Negative = swipe# up.
+    #     }
+    #  }
+    # '';
   };
 }

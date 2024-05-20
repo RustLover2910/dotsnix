@@ -5,18 +5,18 @@
 }: {
   gtk = {
     enable = true;
-    font = lib.mkDefault {
+    font = {
       name = "Montserrat";
       size = 13;
     };
-    iconTheme = lib.mkDefault {
+    iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.catppuccin-papirus-folders.override {
         flavor = "frappe";
         accent = "blue";
       };
     };
-    theme = lib.mkDefault {
+    theme = {
       name = "Catppuccin-Frappe-Standard-Blue-Dark";
       package = pkgs.catppuccin-gtk.override {
         accents = ["blue"];
@@ -33,7 +33,7 @@
   };
   home = {
     sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
-    pointerCursor = lib.mkDefault {
+    pointerCursor = {
       name = "Nordzy-cursors";
       package = pkgs.nordzy-cursor-theme;
       size = 24;

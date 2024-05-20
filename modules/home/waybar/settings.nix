@@ -7,13 +7,12 @@
     tertiary_accent = "f5f5f5";
     background = "11111B";
     opacity = ".9";
-    cursor = "Numix-Cursor";
   },
   ...
 }: {
   programs.waybar.settings.mainBar = {
-    position = "top";
-    layer = "top";
+    position = "bottom";
+    layer = "bottom";
     # height= 15;
     margin-top = 0;
     margin-bottom = 0;
