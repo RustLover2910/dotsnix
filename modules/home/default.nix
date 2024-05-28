@@ -16,6 +16,7 @@
     ./themes
     ./lazygit
     ./cat
+    ./eww
     ./languages
     ./gaming
     ./spotify

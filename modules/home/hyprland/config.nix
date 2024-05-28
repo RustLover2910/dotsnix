@@ -27,16 +27,15 @@
 
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "${pkgs.hyprpaper}/bin/hyprpaper"
+        "${pkgs.hyprpaper}/bin/hyprpaper &"
         "gsettings set org.gnome.desktop.wm.preferences button-layout : "
         "portals"
         "polkit-gnome"
         "wl-paste --type text --watch cliphist store "
-        "nm-applet &"
-        "blueman-applet"
-        "wl-gammarelay-rs"
-        "mako &"
-        "waybar &"
+        "${pkgs.networkmanagerapplet}/bin/nm-applet &"
+        "${pkgs.blueman}/bin/blueman-applet &"
+        "${pkgs.wl-gammarelay-rs}/bin/wl-gammarelay-rs"
+        "${pkgs.waybar}/bin/waybar &"
       ];
 
       general = {

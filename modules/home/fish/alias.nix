@@ -5,6 +5,7 @@
 }: {
   programs.fish = {
     shellAliases = {
+      ia = "ip address";
       gg = "lazygit";
       cwp = "warp-cli connect";
       dwp = "warp-cli disconnect";

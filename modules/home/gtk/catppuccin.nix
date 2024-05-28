@@ -6,8 +6,8 @@
   gtk = {
     enable = true;
     font = {
-      name = "Montserrat";
-      size = 13;
+      name = "JetBrainsMono Nerd Font";
+      size = 12;
     };
     iconTheme = {
       name = "Papirus-Dark";

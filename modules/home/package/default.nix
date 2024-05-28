@@ -13,6 +13,7 @@
 
     #image editor
     swappy
+    inkscape
     krita
 
     #pdf merger
@@ -28,13 +29,10 @@
     fzf # fuzzy finder
 
     #bowsers
-    ungoogled-chromium #chromium
+    #ngoogled-chromium #chromium
     #loorp # firefox fork
     firefox
-    librewolf
-
-    #image
-    inkscape
+    brave
 
     #noti
     libnotify
@@ -158,8 +156,6 @@
     inputs.RustLover29.packages.${system}.default #nvim-neve
 
     inputs.lobster.packages.${system}.lobster # movies
-
-    inputs.eww.packages.${system}.eww #eww
 
     polkit_gnome #polkit gnome
 
