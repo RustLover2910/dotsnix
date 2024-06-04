@@ -136,6 +136,9 @@
     pavucontrol # pulseaudio volume controle (GUI)
     playerctl # controller for media players
 
+    kitty
+    vscodium
+
     qalculate-gtk # calculator
 
     zoom-us # zoom

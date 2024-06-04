@@ -88,11 +88,11 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1717440077,
-        "narHash": "sha256-/lEc5GI1Y3g6qwEmPxhE0g5HHh4LPS7XNEOF530pkyo=",
+        "lastModified": 1717516947,
+        "narHash": "sha256-PNgJlrfuWh7Z98EyCsFKtkLbWrOm5bd8RW+GQ/2kBdo=",
         "owner": "Kirottu",
         "repo": "anyrun",
-        "rev": "de2b05bddbf1dcf220379018eaed4158f34e7863",
+        "rev": "4355d933cc8f52f5597005b48b6d75877a93afd2",
         "type": "github"
       },
       "original": {
