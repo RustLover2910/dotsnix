@@ -27,6 +27,12 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    #wallpaper
+    swww = {
+      url = "github:LGFae/swww";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     #nix formatter
     alejandra = {
       url = "github:kamadorueda/alejandra/3.0.0";

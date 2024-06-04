@@ -12,7 +12,7 @@
     kernelPackages = pkgs.linuxPackages_latest;
   };
   fileSystems."/home/${username}/MIGHTYBACKUP" = {
-    device = "/dev/nvme0n1p7";
+    device = "/dev/nvme1n1p7";
     fsType = "ext4";
     options = ["defaults" "user"];
   };

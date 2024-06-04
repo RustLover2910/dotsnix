@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  username,
   ...
 }: {
   wayland.windowManager.hyprland = {
@@ -18,7 +19,7 @@
         follow_mouse = 1;
 
         touchpad = {
-          #disable_while_typing = true;
+          disable_while_typing = true;
           natural_scroll = 1;
         };
 
@@ -27,10 +28,12 @@
 
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "${pkgs.hyprpaper}/bin/hyprpaper &"
+        #"${pkgs.hyprpaper}/bin/hyprpaper &"
         "gsettings set org.gnome.desktop.wm.preferences button-layout : "
         "portals"
-        "polkit-gnome"
+        "swww-daemon &"
+        "swww img /home/${username}/Astronaut.png"
+        #"polkit-gnome"
         "wl-paste --type text --watch cliphist store "
         "${pkgs.networkmanagerapplet}/bin/nm-applet &"
         "${pkgs.blueman}/bin/blueman-applet &"
@@ -57,9 +60,9 @@
 
       misc = {
         disable_hyprland_logo = 1;
-        vfr = true;
+        #vfr = true;
         mouse_move_enables_dpms = true;
-        splash_font_family = "JetBrainsMono Nerd Font";
+        splash_font_family = "Iosevka Nerd Font";
       };
 
       decoration = {
@@ -68,7 +71,7 @@
         blur = {
           enabled = true;
           size = 4;
-          passes = 1;
+          #  passes = 1;
           ignore_opacity = 1;
           contrast = 1.3;
           new_optimizations = true;
@@ -228,7 +231,6 @@
         ", xf86monbrightnessup, exec, brightctrl up"
         ", xf86monbrightnessdown, exec, brightctrl down"
       ];
-
       #window rules
       windowrule = [
         "float, ^(Motrix)$"
@@ -243,17 +245,17 @@
         "float, class:^(confirm)$"
         "float, ^(nemo)$"
       ];
+
       windowrulev2 = [
         "size 590 550,class:^(pavucontrol)$"
-        "move 1321 50,class:^(pavucontrol)$"
+        "move 1321 1000,class:^(pavucontrol)$"
         "size 1200 700, class:^(foot)$"
-        "opacity 0.9 override 0.9 override,class:^(foot)$"
+        "opacity 0.9 override 0.8 override,class:^(foot)$"
         "opacity 1.0 override 1.0 override,class:^(zoom)$"
         "opacity 1.0 override 1.0 override,title:^(Save Document?)$"
         "opacity 1.0 override 1.0 override,class:^(floorp)$"
         "opacity 1.0 override 1.0 override,class:^(firefox)$"
         "opacity 1.0 override 1.0 override,class:^(org.gnome.Loupe)$"
-
         "opacity 1.0 override 1.0 override,title:^(Zoom Meeting)$"
         "opacity 1.0 override 1.0 override,class:^(com.github.xournalpp.xournalpp)$"
 
@@ -270,6 +272,9 @@
         "float,title:^(File Operation Progress)$"
       ];
     };
+    extraConfig = ''
+      layerrule = blur,waybar
+    '';
     #extraConfig = ''
     #   plugin {
     #      hyprexpo {

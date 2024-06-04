@@ -50,7 +50,7 @@
       #text = $USER
       #color = rgba(200, 200, 200, 1.0)
       #font_size = 25
-      #font_family = JetBrainsMono Nerd Font Medium
+      #font_family = Iosevka Nerd Font Medium
 
       #position = 0, 50
       #halign = center

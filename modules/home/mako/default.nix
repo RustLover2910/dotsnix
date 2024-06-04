@@ -6,7 +6,7 @@
   services = {
     mako = {
       enable = true;
-      font = "JetBrainsMono Nerd Font 13";
+      font = "Iosevka Nerd Font 15";
       padding = "15";
       height = 100;
       width = 500;

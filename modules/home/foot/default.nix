@@ -7,7 +7,7 @@
    
   # -*- conf -*-
 
-      font=JetBrainsMono Nerd Font:size=14
+      font=Iosevka Nerd Font:size=15
      ## =========== Everforest - Dark - Medium ================= ##
     [colors]
     foreground=c6d0f5 # Text

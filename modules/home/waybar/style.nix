@@ -1,7 +1,7 @@
 {
   custom ? {
-    font = "JetBrainsMono Nerd Font";
-    fontsize = "14";
+    font = "Iosevka Nerd Font";
+    fontsize = "16";
     primary_accent = "cba6f7";
     secondary_accent = "89b4fa";
     tertiary_accent = "cdd6f4";

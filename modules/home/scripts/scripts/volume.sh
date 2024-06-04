@@ -1,86 +1,74 @@
 #!/usr/bin/env sh
 
-get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
-volume="${get_volume: -4}"
-max="1.0"
-max_volume="0.95"
-high="0.7"
+get_volume() {
+wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1
+}
 
+# Extract volume percentage from the output
+extract_volume() {
+  echo "$1" | grep -oP '\d+(\.\d+)?' | awk '{print int($1 * 100)}'
+}
+
+notify_volume() {
+  local volume=$1
+  if [ $volume -ge 50 ]
+  then
+    dunstify -a "VOLUME" "   Volume" " ${volume}% " -h string:x-dunst-stack-tag:VOLUME -t 1000
+  else
+    dunstify -a "VOLUME" "   Volume" " ${volume}% " -h string:x-dunst-stack-tag:VOLUME -t 1000
+  fi
+}
+
+notify_mute() {
+  local status=$1
+  dunstify -a "VOLUME" "$status" -h string:x-dunst-stack-tag:VOLUME -t 1000
+}
+
+# Increase volume
 up() {
-  if [ $(bc <<< "$volume >= $max") -eq 1 ]
-  then
-    #echo "Full  Volume!"
-    get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
-    volume="${get_volume//.}"
-    dunstify -a "VOLUME" "   Volume " " ${volume: -3}% " -t 1000
-  elif [ $(bc <<< "$volume >= $max_volume ") -eq 1 ]
-  then
+  volume=$(extract_volume "$(get_volume)")
+  if [ $volume -ge 100 ]; then
+    notify_volume "$volume"
+  else
     wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
-    get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
-    volume="${get_volume//.}"
-    dunstify -a "VOLUME" "   Volume " " ${volume: -3}% " -h string:x-dunst-stack-tag:VOLUME -t 1000
-  elif [ $(bc <<< "$volume >=  $high ") -eq 1 ]
-  then
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
-    get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
-    volume="${get_volume: -2}"
-    dunstify -a "VOLUME" "   Volume " " $volume% " -h string:x-dunst-stack-tag:VOLUME -t 1000
-  elif [ $(bc <<< "$volume >= "0.4" ") -eq 1 ]
-  then
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
-    get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
-    volume="${get_volume: -2}"
-    dunstify -a "VOLUME" "   Volume " " $volume% " -h string:x-dunst-stack-tag:VOLUME -t 1000
- else
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
-    get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
-    volume="${get_volume: -2}"
-    dunstify -a "VOLUME" "   Volume " " $volume% " -h string:x-dunst-stack-tag:VOLUME -t 1000
+    volume=$(extract_volume "$(get_volume)")
+    notify_volume "$volume"
   fi
 }
 
+# Decrease volume
 down() {
-  if [ $(bc <<< "$volume >=  $high ") -eq 1 ]
+  volume=$(extract_volume "$(get_volume)")
+  if [ $volume -e 0 ]
   then
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-    get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
-    volume="${get_volume//.}"
-    dunstify -a "VOLUME" "   Volume " " ${volume: -2}% " -h string:x-dunst-stack-tag:VOLUME -t 1000
-  elif [ "${get_volume: -4}" == "0.05" ]
+    notify_mute "   Muted"
+  elif [ $volume -le 5 ]
   then
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-    dunstify -a "VOLUME" "   Muted" -h string:x-dunst-stack-tag:VOLUME -t 1000
-  elif [ $(bc <<< "$volume >= "0.4" ") -eq 1 ]
-  then
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-    get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
-    volume="${get_volume//.}"
-    dunstify -a "VOLUME" "   Volume " " ${volume: -2}% " -h string:x-dunst-stack-tag:VOLUME -t 1000
-  elif [[ "${get_volume: -7}" == "[MUTED]" || "${get_volume: -4}" == "0.00"  ]]
-  then
-    dunstify -a "VOLUME" "   Muted" -h string:x-dunst-stack-tag:VOLUME -t 1000
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%
+    notify_mute "   Muted"
   else
     wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-    get_volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>&1)"
-    volume="${get_volume: -2}"
-    dunstify -a "VOLUME" "   Volume " " $volume% " -h string:x-dunst-stack-tag:VOLUME -t 1000
+    volume=$(extract_volume "$(get_volume)")
+    notify_volume "$volume"
   fi
 }
 
+# Toggle mute
 mute() {
-  if [[ "${get_volume: -7}" == "[MUTED]" || "${get_volume: -4}" == "0.00"  ]]
-  then
+  mute_status=$(get_volume)
+  if echo "$mute_status" | grep -q "[MUTED]"; then
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-    dunstify -a "VOLUME" "   Unmuted" -h string:x-dunst-stack-tag:VOLUME -t 1000
+    notify_mute "   Unmuted"
   else
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-    dunstify -a "VOLUME" "   Muted" -i /home/archyboy/.local/share/icons/Tela-dracula-dark/16@2x/panel/audio-volume-muted.svg -u normal -r 91190 -t 1000
+    notify_mute "   Muted"
   fi
 }
 
+# Handle script arguments
 case "$1" in
   up) up;;
   down) down;;
   mute) mute;;
+  *) echo "Usage: $0 {up|down|mute}"; exit 1;;
 esac
-

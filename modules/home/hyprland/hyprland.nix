@@ -4,17 +4,15 @@
   ...
 }: {
   home.packages = with pkgs; [
-    swww
+    inputs.swww.packages.${pkgs.system}.swww
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
-    hyprpicker
-    hypridle
+    inputs.hyprpicker.packages.${pkgs.system}.default
+    inputs.hyprlock.packages.${pkgs.system}.default
+    inputs.hypridle.packages.${pkgs.system}.default
     wlogout
-    hyprlock
     hyprpaper
     wl-gammarelay-rs
     brightnessctl
-    grim
-    slurp
     glib
     wayland
   ];

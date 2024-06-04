@@ -1,12 +1,12 @@
 {
   custom ? {
-    font = "JetBrainsMono Nerd Font";
-    fontsize = "13";
+    font = "Iosevka Nerd Font";
+    fontsize = "16";
     primary_accent = "cba6f7";
     secondary_accent = "89b4fa";
     tertiary_accent = "f5f5f5";
     background = "11111B";
-    opacity = ".9";
+    opacity = ".98";
   },
   ...
 }: {
@@ -39,12 +39,29 @@
       "battery"
       "clock"
     ];
+
     clock = {
-      format = " {:%H:%M}";
+      format = "  {:%H:%M}";
       tooltip = "true";
-      tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      format-alt = " {:%d/%m}";
+      tooltip-format = "<tt><small>{calendar}</small></tt>";
+      format-alt = "  {:%H:%M   %Y, %d %B, %A}";
+
+      calendar = {
+        mode = "year";
+        mode-mon-col = 3;
+        weeks-pos = "right";
+        on-scroll = 1;
+      };
+
+      actions = {
+        on-click-right = "mode";
+        on-click-forward = "tz_up";
+        on-click-backward = "tz_down";
+        on-scroll-up = "shift_up";
+        on-scroll-down = "shift_down";
+      };
     };
+
     "hyprland/workspaces" = {
       active-only = false;
       all-outputs = false;

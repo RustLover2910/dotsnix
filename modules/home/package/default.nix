@@ -7,13 +7,17 @@
     #Drawing
     krita
 
+    protonvpn-gui # vpn
+
+    #todolist
+    planify
+
     #wine
     wineWowPackages.stagingFull
     protonup-qt
 
     #image editor
     swappy
-    inkscape
     krita
 
     #pdf merger
@@ -30,7 +34,7 @@
 
     #bowsers
     #ngoogled-chromium #chromium
-    #loorp # firefox fork
+    floorp # firefox fork
     firefox
     brave
 
@@ -58,9 +62,7 @@
     #notes
     obsidian
 
-    gnome.gnome-tweaks
-
-    openvpn
+    openvpn #vpn
 
     #office
     libreoffice
@@ -94,9 +96,9 @@
     p7zip # 7z
     cliphist # clipboard manager
     wl-clipboard
-    translate-shell
-    wf-recorder
-    nix-search-cli
+    translate-shell # translater using google translate api
+    wf-recorder # screen recorder
+    nix-search-cli #nix pkg searcher
     man-pages # extra man pages
     ncdu # disk space
     powertop
@@ -117,37 +119,31 @@
     gnome.gnome-maps
 
     #calender
-    gnome.gnome-calendar
+    calcurse
+
+    #mail
+    protonmail-desktop
+
+    #passowrd
+    keepassxc
 
     #media
     vlc
     mpv # video players
-    loupe # image viwer
+    imv # image viwer
     obs-studio
-    wf-recorder
-    ffmpeg
-    snapshot
-
-    #editor
-    openshot-qt
-    blender
-
-    #coding
-    vscodium
-
-    # terminal
-    kitty
-    alacritty
-
-    #audio
-    pamixer # pulseaudio command line mixer
+    # pamixer # pulseaudio command line mixer
     pavucontrol # pulseaudio volume controle (GUI)
     playerctl # controller for media players
 
     qalculate-gtk # calculator
 
     zoom-us # zoom
+
+    #communicate
     telegram-desktop # telegram
+    jami
+    sginal-desktop
 
     xdg-utils
 

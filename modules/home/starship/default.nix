@@ -20,15 +20,15 @@
         };
 
         character = {
-          success_symbol = "[  ](bold #89b4fa)[ ➜](bold green)";
-          #error_symbol = "[ ](bold #89b4fa)[ ➜](bold red)";
-          error_symbol = "[  ](bold #89dceb)[ ✗](bold red)";
+          success_symbol = "[  ](bold #89b4fa)[ ➜ ](bold green)";
+          #error_symbol = "[ ](bold #89b4fa)[ ➜ ](bold red)";
+          error_symbol = "[  ](bold #89dceb)[ ✗ ](bold red)";
         };
 
         cmd_duration = {
-          format = "[]($style)[[󰔚 ](bg:#161821 fg:#d4c097 bold)$duration](bg:#161821 fg:#BBC3DF)[ ]($style)";
+          format = "[]($style)[[󰔚 ](bg:#292C3C fg:#d4c097 bold)$duration](bg:#292C3C fg:#BBC3DF)[ ]($style)";
           disabled = false;
-          style = "bg:none fg:#161821";
+          style = "bg:none fg:#292C3C";
         };
 
         directory.substitutions = {
