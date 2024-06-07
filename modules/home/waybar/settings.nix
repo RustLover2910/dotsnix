@@ -44,7 +44,7 @@
       format = "  {:%H:%M}";
       tooltip = "true";
       tooltip-format = "<tt><small>{calendar}</small></tt>";
-      format-alt = "  {:%H:%M   %Y, %d %B, %A}";
+      format-alt = "  {:%H:%M    %Y, %d %B, %A}";
 
       calendar = {
         mode = "year";

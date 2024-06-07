@@ -30,13 +30,19 @@
           disabled = false;
           style = "bg:none fg:#292C3C";
         };
+        git_branch = {
+          symbol = "  ";
+        };
+        directory = {
+          read_only = "  ";
 
-        directory.substitutions = {
-          "~" = "󰋞 ";
-          "Documents" = "󰈙 ";
-          "Downloads" = " ";
-          "Music" = " ";
-          "Pictures" = " ";
+          substitutions = {
+            "~" = "󰋞 ";
+            "Documents" = "󰈙 ";
+            "Downloads" = " ";
+            "Music" = " ";
+            "Pictures" = " ";
+          };
         };
 
         palette = "catppuccin_frappe";

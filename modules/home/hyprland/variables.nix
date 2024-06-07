@@ -6,12 +6,12 @@
     EDITOR = "nvim";
     GDK_BACKEND = "wayland,x11";
     TERMINAL = "foot";
-    BROWSER = "${pkgs.firefox}/bin/firefox";
+    BROWSER = "${pkgs.floorp}/bin/floorp";
     WLR_DRM_NO_ATOMIC = "1";
-    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-    #QT_SCALE_FACTOR = "1.75";
+    # QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    QT_SCALE_FACTOR = "1.75";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    QT_QPA_PLATFORM = "wayland,xcb";
+    QT_QPA_PLATFORM = "xcb";
     MOZ_ENABLE_WAYLAND = "1";
     WLR_BACKEND = "vulkan";
     WLR_RENDERER = "vulkan";

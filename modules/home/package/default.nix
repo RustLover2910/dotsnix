@@ -8,9 +8,13 @@
     krita
 
     protonvpn-gui # vpn
-
+    #protonvpn-cli
+    nodejs
     #todolist
     planify
+
+    #ereader
+    foliate
 
     #wine
     wineWowPackages.stagingFull
@@ -35,7 +39,6 @@
     #bowsers
     #ngoogled-chromium #chromium
     floorp # firefox fork
-    firefox
     brave
 
     #noti
@@ -146,7 +149,7 @@
     #communicate
     telegram-desktop # telegram
     jami
-    sginal-desktop
+    signal-desktop
 
     xdg-utils
 

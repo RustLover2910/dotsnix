@@ -13,8 +13,8 @@
         line_break.disabled = false;
         right_format = "$cmd_duration";
         character = {
-          success_symbol = "[  ](#b4befe)[ ✗][(#81c8be)]";
-          error_symbol = "[  ]( #b4befe)[ ✗][(#dd6777)]";
+          success_symbol = "[  ](#b4befe)[ ✗ ][(#81c8be)]";
+          error_symbol = "[  ]( #b4befe)[ ✗ ][(#dd6777)]";
           #vicmd_symbol = "[](#ecd3a0)";
           format = "[  ](#b4befe) ";
         };

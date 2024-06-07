@@ -128,7 +128,7 @@
     nixosConfigurations = {
       ${username} = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit inputs system self username;
+          inherit inputs system username nix-colors;
         };
         modules = [
           ./modules/core/default.nix
@@ -141,7 +141,7 @@
             home-manager = {
               useUserPackages = true;
               useGlobalPkgs = true;
-              extraSpecialArgs = {inherit inputs self username;};
+              extraSpecialArgs = {inherit inputs username spicetify-nix nix-colors;};
               users.${username} = {
                 imports = [
                   ./modules/home/default.nix

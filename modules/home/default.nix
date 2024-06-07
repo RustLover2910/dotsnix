@@ -1,7 +1,6 @@
 {
   username,
   inputs,
-  self,
   pkgs,
   ...
 }: {
