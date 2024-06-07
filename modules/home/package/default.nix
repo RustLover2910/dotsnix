@@ -66,6 +66,7 @@
     obsidian
 
     openvpn #vpn
+    wg-quick
 
     #office
     libreoffice
