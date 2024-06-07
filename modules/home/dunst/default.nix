@@ -11,7 +11,7 @@
         width = "(200,500)";
         height = 400;
         origin = "top-right";
-        offset = "15x15";
+        offset = "10x10";
         notification_limit = 10;
         progress_bar = true;
         font = "Iosevka Nerd Font 14";
