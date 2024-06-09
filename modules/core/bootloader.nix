@@ -9,6 +9,7 @@
       efi.canTouchEfiVariables = true;
       systemd-boot.configurationLimit = 10;
     };
+    supportedFilesystems = ["ntfs"];
     kernelPackages = pkgs.linuxPackages_latest;
   };
   fileSystems."/home/${username}/MIGHTYBACKUP" = {

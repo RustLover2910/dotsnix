@@ -8,13 +8,13 @@
     };
     settings = {
       global = {
-        width = "(200,500)";
+        width = "300";
         height = 400;
         origin = "top-right";
         offset = "10x10";
         notification_limit = 10;
         progress_bar = true;
-        font = "Iosevka Nerd Font 14";
+        font = "Iosevka Nerd Font 15";
         padding = 5;
         horizontal_padding = 8;
         progress_bar_height = 10;
@@ -33,12 +33,12 @@
         stack_duplicates = true;
         show_indicators = "yes";
         corner_radius = 8;
-        mouse_left_click = "open_url";
-        mouse_middle_click = "close_all";
-        mouse_right_click = "close_current";
+        mouse_left_click = "close_current";
+        mouse_middle_click = "do_action, close_current";
+        mouse_right_click = "close_all";
       };
       urgency_normal = {
-        background = "#37474f";
+        background = "#303446";
         foreground = "#c6d0f5";
         timeout = 10;
       };

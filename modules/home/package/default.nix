@@ -8,8 +8,9 @@
     krita
 
     protonvpn-gui # vpn
-    #protonvpn-cli
     nodejs
+    ventoy-full
+
     #todolist
     planify
 
@@ -66,7 +67,7 @@
     obsidian
 
     openvpn #vpn
-    wg-quick
+    wireguard-tools
 
     #office
     libreoffice

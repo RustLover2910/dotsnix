@@ -11,6 +11,7 @@
     ./fish
     ./hyprland
     ./cava
+    ./xdgfiles
     ./gtk
     ./waybar
     ./themes

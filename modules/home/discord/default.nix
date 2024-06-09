@@ -1,8 +1,10 @@
 {pkgs, ...}: {
-  imports =
-    [(import ./catppuccin-frappe-rosewater.nix)]
-    ++ [(import ./everforest.nix)]
-    ++ [(import ./nord.nix)];
+  imports = [
+    #./catppuccin-frappe.nix
+    ./catppuccin-frappe-rosewater.nix
+    ./theme.nix
+    ./nord.nix
+  ];
 
   home.packages = with pkgs; [
     (discord.override {

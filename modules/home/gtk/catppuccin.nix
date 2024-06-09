@@ -13,13 +13,13 @@
       name = "Papirus-Dark";
       package = pkgs.catppuccin-papirus-folders.override {
         flavor = "frappe";
-        accent = "blue";
+        accent = "pink";
       };
     };
     theme = {
       name = "Catppuccin-Frappe-Standard-Blue-Dark";
       package = pkgs.catppuccin-gtk.override {
-        accents = ["blue"];
+        accents = ["pink"];
         size = "standard";
         tweaks = ["rimless"];
         variant = "frappe";
