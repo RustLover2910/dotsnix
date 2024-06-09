@@ -32,7 +32,7 @@
         "gsettings set org.gnome.desktop.wm.preferences button-layout : "
         "portals"
         "swww-daemon &"
-        "swww img /home/${username}/Astronaut.png"
+        "swww img /home/${username}/wallpaper/source/SadCloud.png"
         #"polkit-gnome"
         "wl-paste --type text --watch cliphist store "
         "${pkgs.networkmanagerapplet}/bin/nm-applet &"

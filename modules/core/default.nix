@@ -9,13 +9,12 @@
     ./security.nix
     ./services.nix
     ./system.nix
-    ./virtualization.nix
+    #./virtualization.nix
     ./polkit.nix
     ./nix.nix
     ./font.nix
     ./user.nix
     ./wayland.nix
-    # ./overlay.nix
     ./../../hosts/nixos/hardware-configuration.nix
   ];
 

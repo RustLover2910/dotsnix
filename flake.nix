@@ -97,6 +97,10 @@
       url = "github:yazi-rs/themes";
       flake = false;
     };
+    lazygit-theme = {
+      url = "github:catppuccin/lazygit";
+      flake = false;
+    };
     nix-colors.url = "github:misterio77/nix-colors";
     stylix.url = "github:danth/stylix";
 
