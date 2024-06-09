@@ -47,8 +47,6 @@
         border_size = 3;
 
         "col.active_border" = "0xffb4befe 0xffF7BCCA";
-        #"col.active_border" = "0xffb4befe 0xffeba0ac 0xff74c7ec";
-        #"col.active_border" = "0xffeebebe 0xffca9ee6 0xffeebebe 45deg";
         "col.inactive_border" = "0xff303446";
         layout = "dwindle";
         "no_border_on_floating" = true;
@@ -231,6 +229,7 @@
         ", xf86monbrightnessup, exec, brightctrl up"
         ", xf86monbrightnessdown, exec, brightctrl down"
       ];
+
       #window rules
       windowrule = [
         "float, ^(Motrix)$"
@@ -238,11 +237,7 @@
         "float, ^(polkit-gnome-authentication-agent-1)$"
         "float, ^(foot)$"
         "float, ^(.blueman-manager-wrapped$)"
-        "float, title:^(Bitwarden)$"
-        "float, title:^(Save Document?)$"
-        "float, title:^(Password Required - Mozilla Firefox)$"
-        "float, title:^(Save As)$"
-        "float, class:^(confirm)$"
+        "float,^(Bitwarden)$"
         "float, ^(nemo)$"
       ];
 
@@ -250,6 +245,8 @@
         "size 590 550,class:^(pavucontrol)$"
         "move 1321 1000,class:^(pavucontrol)$"
         "size 1200 700, class:^(foot)$"
+
+        #opacity
         "opacity 0.9 override 0.8 override,class:^(foot)$"
         "opacity 1.0 override 1.0 override,class:^(zoom)$"
         "opacity 1.0 override 1.0 override,title:^(Save Document?)$"
@@ -270,6 +267,10 @@
         "float,title:^(branchdialog)$"
         "float,title:^(Confirm to replace files)$"
         "float,title:^(File Operation Progress)$"
+        "float,title:^(Save Document?)$"
+        "float,title:^(Password Required - Ablaze Floorp)$"
+        "float,title:^(Save As)$"
+        "float,class:^(confirm)$"
       ];
     };
     extraConfig = ''
