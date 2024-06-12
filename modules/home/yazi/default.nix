@@ -23,8 +23,6 @@
     unar
   ];
   xdg.configFile = {
-    "yazi/theme.toml".text =
-      builtins.readFile
-      "${inputs.yazi-theme}/catppuccin-frappe.yazi/flavor.toml";
+    "yazi/theme.toml".source = "${inputs.yazi-theme}/catppuccin-frappe.yazi/flavor.toml";
   };
 }

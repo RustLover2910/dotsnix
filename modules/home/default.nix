@@ -38,5 +38,7 @@
     stateVersion = "23.11";
   };
 
-  programs.home-manager.enable = true; #let home-manager manage itself
+  programs.home-manager = {
+    enable = true; #let home-manager manage itself
+  };
 }

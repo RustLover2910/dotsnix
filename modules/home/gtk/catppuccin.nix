@@ -19,7 +19,7 @@
     theme = {
       name = "Catppuccin-Frappe-Standard-Blue-Dark";
       package = pkgs.catppuccin-gtk.override {
-        accents = ["pink"];
+        accents = ["blue"];
         size = "standard";
         tweaks = ["rimless"];
         variant = "frappe";

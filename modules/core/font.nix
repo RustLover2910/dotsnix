@@ -6,7 +6,6 @@
     dosis
     raleway
     comfortaa
-    times-newer-roman
     quicksand
     montserrat
     merriweather
@@ -14,6 +13,8 @@
       fonts = [
         "JetBrainsMono"
         "Iosevka"
+        "FiraCode"
+        "IosevkaTerm"
       ];
     })
   ];

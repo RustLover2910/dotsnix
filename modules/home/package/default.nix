@@ -8,8 +8,8 @@
     krita
 
     protonvpn-gui # vpn
-    nodejs
-    ventoy-full
+    badvpn
+    shadowsocks-libev
 
     #todolist
     planify
@@ -28,9 +28,6 @@
     #pdf merger
     pdfarranger
 
-    #Disk Benchmark
-    kdiskmark
-
     #games
     lutris
 
@@ -38,7 +35,6 @@
     fzf # fuzzy finder
 
     #bowsers
-    #ngoogled-chromium #chromium
     floorp # firefox fork
     brave
 
@@ -55,16 +51,19 @@
     openjdk17-bootstrap # for minecraft
     prismlauncher #minecraft
 
-    # disk usage analyzer
-    gparted
+    # disks
+    gparted #disk format
+    #analyzer
     baobab
+    ncdu
+    du-dust
 
     #file manager
     cinnamon.nemo-with-extensions # file manager
     gnome.file-roller
 
     #notes
-    obsidian
+    # obsidian
 
     openvpn #vpn
     wireguard-tools
@@ -92,7 +91,6 @@
 
     #niche cli tools
     cmatrix
-    du-dust # disk space visualizer
     neofetch # system fetch
     zoxide # faster cd
     todo # cli todo list
@@ -105,12 +103,10 @@
     wf-recorder # screen recorder
     nix-search-cli #nix pkg searcher
     man-pages # extra man pages
-    ncdu # disk space
     powertop
     speedtest-rs #speedtest
     lolcat
     cowsay
-    htop
     unzip
 
     ani-cli #anime
@@ -141,6 +137,9 @@
     pavucontrol # pulseaudio volume controle (GUI)
     playerctl # controller for media players
 
+    #youtube
+    freetube
+
     kitty
     vscodium
 
@@ -160,8 +159,6 @@
     inputs.RustLover29.packages.${system}.default #nvim-neve
 
     inputs.lobster.packages.${system}.lobster # movies
-
-    polkit_gnome #polkit gnome
 
     viber
     statix

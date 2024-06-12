@@ -84,6 +84,12 @@
       url = "github:RustLover2910/Nixvim-neve";
     };
 
+    #wallpaper
+    wallpaper = {
+      url = "github:RustLover2910/wallpaper";
+      flake = false;
+    };
+
     #themes
     catppuccin-cava = {
       url = "github:catppuccin/cava";
@@ -95,6 +101,14 @@
     };
     yazi-theme = {
       url = "github:yazi-rs/themes";
+      flake = false;
+    };
+    btop-theme = {
+      url = "github:catppuccin/btop";
+      flake = false;
+    };
+    bat-theme = {
+      url = "github:catppuccin/bat";
       flake = false;
     };
     lazygit-theme = {

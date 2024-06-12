@@ -5,7 +5,6 @@
       wget
       ntfs3g
       curl
-      polkit_gnome
       git
     ];
   };

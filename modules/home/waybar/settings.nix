@@ -162,7 +162,7 @@
       format = "";
       on-click = "anyrun || pkill anyrun";
       #on-click-right = "pkill wofi || wallpaper-picker";
-      tooltip = "false";
+      tooltip = "true";
     };
     battery = {
       interval = 2;

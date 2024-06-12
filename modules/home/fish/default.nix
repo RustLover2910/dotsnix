@@ -8,6 +8,7 @@
     shellInit = ''
       set -U fish_greeting
       set -U fish_user_paths ~/.cargo/bin/ $fish_user_paths
+      set -U BAT_THEME 'CatppuccinFrappe'
       set -Ux FZF_DEFAULT_OPTS "\
       --color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
       --color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \

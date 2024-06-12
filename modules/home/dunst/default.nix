@@ -8,7 +8,7 @@
     };
     settings = {
       global = {
-        width = "300";
+        width = "(250,500)";
         height = 400;
         origin = "top-right";
         offset = "10x10";
