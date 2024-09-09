@@ -140,7 +140,7 @@
     rust-overlay,
     ...
   } @ inputs: let
-    username = "nathannix";
+    username = "nixnate";
     system = "x86_64-linux";
   in {
     nixosConfigurations = {

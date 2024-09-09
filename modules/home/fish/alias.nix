@@ -29,7 +29,7 @@
       co = "yazi /home/${username}/dotsnix/modules/core/";
       nts = "sudo nixos-rebuild test --flake /home/${username}/dotsnix#${username}";
       nsw = "sudo nixos-rebuild switch --flake /home/${username}/dotsnix#${username}";
-      nup = "sudo nix flake update /home/${username}/dotsnix# && sudo nixos-rebuild switch --upgrade --flake /home/${username}/dotsnix#nathannix";
+      nup = "sudo nix flake update /home/${username}/dotsnix# && sudo nixos-rebuild switch --upgrade --flake /home/${username}/dotsnix#nixnate";
       del = "sudo nix-collect-garbage -d ";
     };
   };
